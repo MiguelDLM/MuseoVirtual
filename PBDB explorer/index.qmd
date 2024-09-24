@@ -1,0 +1,105 @@
+---
+title: "Paleobiology Explorer"
+output: 
+  html_document:
+    theme: cosmo
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 2
+    number_sections: true
+    fig_width: 6
+    fig_height: 4
+    fig_caption: true
+    code_folding: show
+    code_download: true
+    code_copy: true
+    lib_dir: libs
+    css: style.css
+    self_contained: false
+filters:
+  - shinylive
+
+---
+
+# Paleobiology Explorer
+
+Esta es una aplicación Shiny que te permite explorar la base de datos de Paleobiología.
+
+:::{.column-page}
+```{shinylive-r}
+#| standalone: true
+library(shiny)
+library(ggplot2)
+library(plotly)
+library(jsonlite)
+
+ui <- fluidPage(
+    titlePanel("Paleobiology Database Explorer"),
+    
+    fluidRow(
+        column(12,
+            textInput("taxon", "Enter Taxon", value = ""),
+            selectInput("geologic_period", "Geologic Period", 
+                        choices = c("Precambrian", "Cambrian", "Ordovician", "Silurian", 
+                                    "Devonian", "Carboniferous", "Permian", "Triassic", 
+                                    "Jurassic", "Cretaceous", "Paleogene", "Neogene", 
+                                    "Quaternary")),
+            actionButton("search", "Search")
+        )
+    ),
+    
+    fluidRow(
+        column(12,
+            plotlyOutput("interactive_plot"),
+            verbatimTextOutput("data_head")
+        )
+    )
+)
+
+server <- function(input, output, session) {
+    observeEvent(input$search, {
+        req(input$taxon, input$geologic_period)
+        
+        # Define the URL for the PBDB data in JSON format
+        data_url <- paste0("https://paleobiodb.org/data1.2/occs/list.json?base_name=", 
+                           input$taxon, "&interval=", input$geologic_period)
+        
+        # Download and read the data directly
+        pbdb_data <- tryCatch({
+            fromJSON(data_url)$records
+        }, error = function(e) {
+            cat("Error reading JSON data:", e$message, "\n")
+            return(NULL)
+        })
+        
+        if (is.null(pbdb_data)) {
+            cat("No data to display due to error.\n")
+            return(NULL)
+        }
+        
+        cat("Data loaded with", nrow(pbdb_data), "rows\n")
+        cat("Variables:", names(pbdb_data), "\n")
+
+        output$data_head <- renderPrint({
+            head(pbdb_data[, 1:4])
+        })
+        
+        output$interactive_plot <- renderPlotly({
+            # Make sure these columns exist in the dataset
+            if("paleolat" %in% colnames(pbdb_data) & "paleolng" %in% colnames(pbdb_data)){
+                gg <- ggplot(pbdb_data, aes(x = paleolng, y = paleolat)) +
+                      geom_point(aes(color = taxon_name)) +
+                      theme_minimal()
+                ggplotly(gg)
+            } else {
+                ggplotly(ggplot() + ggtitle("No data found for this taxon"))
+            }
+        })
+    })
+}
+
+shinyApp(ui, server)
+
+```
+:::

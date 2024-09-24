@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Paleobiology Explorer",
+    "section": "",
+    "text": "Paleobiology Explorer\nEsta es una aplicación Shiny que te permite explorar la base de datos de Paleobiología.\n\n#| standalone: true\nlibrary(shiny)\nlibrary(ggplot2)\nlibrary(plotly)\nlibrary(jsonlite)\n\nui &lt;- fluidPage(\n    titlePanel(\"Paleobiology Database Explorer\"),\n    \n    fluidRow(\n        column(12,\n            textInput(\"taxon\", \"Enter Taxon\", value = \"\"),\n            selectInput(\"geologic_period\", \"Geologic Period\", \n                        choices = c(\"Precambrian\", \"Cambrian\", \"Ordovician\", \"Silurian\", \n                                    \"Devonian\", \"Carboniferous\", \"Permian\", \"Triassic\", \n                                    \"Jurassic\", \"Cretaceous\", \"Paleogene\", \"Neogene\", \n                                    \"Quaternary\")),\n            actionButton(\"search\", \"Search\")\n        )\n    ),\n    \n    fluidRow(\n        column(12,\n            plotlyOutput(\"interactive_plot\"),\n            verbatimTextOutput(\"data_head\")\n        )\n    )\n)\n\nserver &lt;- function(input, output, session) {\n    observeEvent(input$search, {\n        req(input$taxon, input$geologic_period)\n        \n        # Define the URL for the PBDB data in JSON format\n        data_url &lt;- paste0(\"https://paleobiodb.org/data1.2/occs/list.json?base_name=\", \n                           input$taxon, \"&interval=\", input$geologic_period)\n        \n        # Download and read the data directly\n        pbdb_data &lt;- tryCatch({\n            fromJSON(data_url)$records\n        }, error = function(e) {\n            cat(\"Error reading JSON data:\", e$message, \"\\n\")\n            return(NULL)\n        })\n        \n        if (is.null(pbdb_data)) {\n            cat(\"No data to display due to error.\\n\")\n            return(NULL)\n        }\n        \n        cat(\"Data loaded with\", nrow(pbdb_data), \"rows\\n\")\n        cat(\"Variables:\", names(pbdb_data), \"\\n\")\n\n        output$data_head &lt;- renderPrint({\n            head(pbdb_data[, 1:4])\n        })\n        \n        output$interactive_plot &lt;- renderPlotly({\n            # Make sure these columns exist in the dataset\n            if(\"paleolat\" %in% colnames(pbdb_data) & \"paleolng\" %in% colnames(pbdb_data)){\n                gg &lt;- ggplot(pbdb_data, aes(x = paleolng, y = paleolat)) +\n                      geom_point(aes(color = taxon_name)) +\n                      theme_minimal()\n                ggplotly(gg)\n            } else {\n                ggplotly(ggplot() + ggtitle(\"No data found for this taxon\"))\n            }\n        })\n    })\n}\n\nshinyApp(ui, server)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
