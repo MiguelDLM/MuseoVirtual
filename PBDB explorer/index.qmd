@@ -1,5 +1,5 @@
 ---
-title: "Paleobiology Explorer"
+title: "Paleobiology DataBase Explorer"
 output: 
   html_document:
     theme: cosmo
@@ -22,7 +22,6 @@ filters:
 
 ---
 
-# Paleobiology Explorer
 
 Esta es una aplicación Shiny que te permite explorar la base de datos de Paleobiología.
 
@@ -33,9 +32,119 @@ library(shiny)
 library(ggplot2)
 library(plotly)
 library(jsonlite)
+library(countrycode)
+
+# Define a named vector for variable names and their descriptions
+variable_names <- c(
+    oid = "Occurrence Number",
+    eid = "Reidentification Number",
+    cid = "Collection Number",
+    tna = "Accepted Name",
+    rnk = "Accepted Rank",
+    tid = "Accepted Number",
+    oei = "Early Interval",
+    eag = "Max Ma",
+    lag = "Min Ma",
+    aut = "Reference Author",
+    pby = "Reference Publication Year",
+    rid = "Reference Number",
+    phl = "Phylum",
+    cll = "Class",
+    odl = "Order",
+    fml = "Family",
+    gnl = "Genus",
+    abv = "Abundance Value",
+    abu = "Abundance Unit",
+    lng = "Longitude",
+    lat = "Latitude",
+    ocm = "Occurrence Comments",
+    cnm = "Collection Name",
+    aka = "Collection AKA",
+    cc2 = "Country",
+    stp = "State",
+    prc = "Precision",
+    gsc = "Geographic Scale",
+    ggc = "Geographic Comments",
+    pm1 = "Paleomodel",
+    gpl = "Geoplate",
+    ps1 = "Paleoage",
+    pln = "Paleolongitude",
+    pla = "Paleolatitude",
+    sfm = "Formation",
+    ssc = "Stratigraphic Scale",
+    scm = "Stratigraphic Comments",
+    ldc = "Lithology Description",
+    lt1 = "Lithology 1",
+    la1 = "Lithology Adjective 1",
+    ff1 = "Fossils from Lithology 1",
+    env = "Environment",
+    cps = "Component Size Classes",
+    tpm = "Preservation Modes",
+    tpq = "Preservation Quality",
+    tpt = "Temporal Resolution",
+    tpc = "Concentration",
+    tpf = "Fragmentation",
+    cct = "Collection Type",
+    ccx = "Collection Methods",
+    ccu = "Museum",
+    ccc = "Collectors",
+    ccd = "Collection Dates",
+    jev = "Taxon Environment",
+    jmo = "Motility",
+    jlh = "Life Habit",
+    jdt = "Diet",
+    jre = "Reproduction",
+    jon = "Ontogeny",
+    jco = "Composition",
+    jsa = "Skeletal Architecture",
+    idn = "Identified Name",
+    sgr = "Stratigraphic Group",
+    lf1 = "Lithification 1",
+    ccv = "Collection Coverage",
+    ccs = "Collection Size",
+    ccm = "Collection Comments",
+    gcm = "Geology Comments",
+    tps = "Spatial Resolution",
+    tpl = "Lagerstätten",
+    pcm = "Preservation Comments",
+    cny = "County",
+    ptd = "Protected Status",
+    lt2 = "Lithology 2",
+    la2 = "Lithology Adjective 2",
+    lf2 = "Lithification 2",
+    acm = "Component Comments",
+    tpr = "Sorting",
+    tcm = "Taxonomy Comments",
+    iid = "Identified Number",
+    tdf = "Difference",
+    srs = "Regional Section",
+    srb = "Regional Bed",
+    sru = "Regional Bed Unit",
+    sro = "Regional Order",
+    ccr = "Rock Censused",
+    cpt = "Feeding/Predation Traces",
+    tpb = "Bioerosion",
+    tpe = "Encrustation",
+    sls = "Local Section",
+    slb = "Local Bed",
+    slu = "Local Bed Unit",
+    slo = "Local Order",
+    lm1 = "Minor Lithology 1",
+    ff2 = "Fossils from Lithology 2",
+    cpa = "Articulated Parts",
+    cpb = "Associated Parts",
+    oli = "Late Interval",
+    lm2 = "Minor Lithology 2",
+    cpc = "Common Body Parts",
+    tpo = "Orientation",
+    szn = "Stratigraphic Zone",
+    tec = "Tectonic Setting",
+    tpa = "Abundance in Sediment",
+    smb = "Stratigraphic Member",
+    idr = "Identified Rank"
+)
 
 ui <- fluidPage(
-    titlePanel("Paleobiology Database Explorer"),
     
     fluidRow(
         column(12,
@@ -51,6 +160,7 @@ ui <- fluidPage(
     
     fluidRow(
         column(12,
+            selectInput("variable", "Select Variable", choices = NULL),
             plotlyOutput("interactive_plot"),
             verbatimTextOutput("data_head")
         )
@@ -58,48 +168,72 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
+    pbdb_data <- reactiveVal(NULL)
+    
     observeEvent(input$search, {
         req(input$taxon, input$geologic_period)
         
         # Define the URL for the PBDB data in JSON format
         data_url <- paste0("https://paleobiodb.org/data1.2/occs/list.json?base_name=", 
-                           input$taxon, "&interval=", input$geologic_period)
+                           input$taxon, "&interval=", input$geologic_period, "&show=full,loc")
         
         # Download and read the data directly
-        pbdb_data <- tryCatch({
+        data <- tryCatch({
             fromJSON(data_url)$records
         }, error = function(e) {
             cat("Error reading JSON data:", e$message, "\n")
             return(NULL)
         })
         
-        if (is.null(pbdb_data)) {
+        if (is.null(data)) {
             cat("No data to display due to error.\n")
             return(NULL)
         }
         
-        cat("Data loaded with", nrow(pbdb_data), "rows\n")
-        cat("Variables:", names(pbdb_data), "\n")
-
-        output$data_head <- renderPrint({
-            head(pbdb_data[, 1:4])
-        })
+        cat("Data loaded with", nrow(data), "rows\n")
+        cat("Variables:", ncol(data), "\n", names(data), "\n")
+        data$cc2 <- countrycode::countrycode(data$cc2, origin = "iso2c", destination = "country.name")
+        # Update the reactive value
+        pbdb_data(data)
+        
+        
+        # Update the selectInput choices with the variable names and their descriptions
+        choices <- setNames(names(data), variable_names[names(data)])
+        updateSelectInput(session, "variable", choices = choices)
+        
+        # Render the head of the data with only the first 4 columns
+        # output$data_head <- renderPrint({
+        #     head(data[, 1:4])
+        # })
+    })
+    
+    observeEvent(input$variable, {
+        req(input$variable)
         
         output$interactive_plot <- renderPlotly({
-            # Make sure these columns exist in the dataset
-            if("paleolat" %in% colnames(pbdb_data) & "paleolng" %in% colnames(pbdb_data)){
-                gg <- ggplot(pbdb_data, aes(x = paleolng, y = paleolat)) +
-                      geom_point(aes(color = taxon_name)) +
-                      theme_minimal()
+            data <- pbdb_data()
+            req(data)
+            
+            # Ensure the selected variable exists in the dataset
+            if(input$variable %in% colnames(data)){
+                gg <- ggplot(data, aes_string(x = input$variable)) +
+                    geom_bar() +
+                    theme_minimal() +
+                    xlab(variable_names[input$variable]) +
+                    ylab("Count") +
+                    ggtitle(paste("Count of Occurrences by", variable_names[input$variable])) +
+                    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+                
                 ggplotly(gg)
             } else {
-                ggplotly(ggplot() + ggtitle("No data found for this taxon"))
+                ggplotly(ggplot() + ggtitle("Selected variable not found in the data"))
             }
         })
     })
 }
 
 shinyApp(ui, server)
-
 ```
 :::
+
+*Datos generados a partir de la base de datos de Paleobiología (PBDB) en [paleobiodb.org](https://paleobiodb.org/).*
