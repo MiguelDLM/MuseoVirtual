@@ -2,11 +2,16 @@
 
 .shinylive-viewer {
   width: 100%;
-  height: 800px;
+  height: 1200px;
 }
 
 /* Aumentar el tamaño del contenedor principal */
 .main-container {
   max-width: 90%; /* Ajusta este valor según sea necesario */
   margin: 0 auto; /* Centrar el contenedor */
+}
+
+.plot-container plotly {
+  width: 100%;
+  height: 100%;
 }

@@ -22,8 +22,7 @@ filters:
 
 ---
 
-
-Esta es una aplicación Shiny que te permite explorar la base de datos de Paleobiología.
+This shiny app allows you to explore the Paleobiology Database (PBDB) data for occurrences of a specific taxon within a geologic period. You can select two variables to compare and filter the data by their values. The app will display a bar plot with the count of occurrences of one variable by the other.
 
 :::{.column-page}
 ```{shinylive-r}
@@ -33,12 +32,16 @@ library(ggplot2)
 library(plotly)
 library(jsonlite)
 library(countrycode)
+library(shinyWidgets)
 
-# Define a named vector for variable names and their descriptions
+# Diccionario de nombres descriptivos
 variable_names <- c(
     oid = "Occurrence Number",
     eid = "Reidentification Number",
     cid = "Collection Number",
+    idn = "Identified Name",
+    iid = "Identified Number",
+    tdf = "Difference",
     tna = "Accepted Name",
     rnk = "Accepted Rank",
     tid = "Accepted Number",
@@ -57,11 +60,11 @@ variable_names <- c(
     abu = "Abundance Unit",
     lng = "Longitude",
     lat = "Latitude",
-    ocm = "Occurrence Comments",
     cnm = "Collection Name",
     aka = "Collection AKA",
     cc2 = "Country",
     stp = "State",
+    cny = "County",
     prc = "Precision",
     gsc = "Geographic Scale",
     ggc = "Geographic Comments",
@@ -76,17 +79,22 @@ variable_names <- c(
     ldc = "Lithology Description",
     lt1 = "Lithology 1",
     la1 = "Lithology Adjective 1",
+    lm1 = "Minor Lithology 1",
     ff1 = "Fossils from Lithology 1",
+    lt2 = "Lithology 2",
+    la2 = "Lithology Adjective 2",
     env = "Environment",
+    tec = "Tectonic Setting",
     cps = "Component Size Classes",
+    cpb = "Associated Parts",
     tpm = "Preservation Modes",
     tpq = "Preservation Quality",
-    tpt = "Temporal Resolution",
+    tps = "Spatial Resolution",
     tpc = "Concentration",
-    tpf = "Fragmentation",
     cct = "Collection Type",
     ccx = "Collection Methods",
-    ccu = "Museum",
+    ccv = "Collection Coverage",
+    ccs = "Collection Size",
     ccc = "Collectors",
     ccd = "Collection Dates",
     jev = "Taxon Environment",
@@ -97,72 +105,82 @@ variable_names <- c(
     jon = "Ontogeny",
     jco = "Composition",
     jsa = "Skeletal Architecture",
-    idn = "Identified Name",
+    jth = "Theropod",
+    idr = "Identified Rank",
+    oli = "Late Interval",
+    ocm = "Occurrence Comments",
     sgr = "Stratigraphic Group",
-    lf1 = "Lithification 1",
-    ccv = "Collection Coverage",
-    ccs = "Collection Size",
-    ccm = "Collection Comments",
+    lm2 = "Minor Lithology 2",
+    ff2 = "Fossils from Lithology 2",
     gcm = "Geology Comments",
-    tps = "Spatial Resolution",
-    tpl = "Lagerstätten",
-    pcm = "Preservation Comments",
-    cny = "County",
+    cpa = "Articulated Parts",
+    tpt = "Temporal Resolution",
     ptd = "Protected Status",
-    lt2 = "Lithology 2",
-    la2 = "Lithology Adjective 2",
+    lf1 = "Lithification 1",
     lf2 = "Lithification 2",
-    acm = "Component Comments",
-    tpr = "Sorting",
+    tpo = "Orientation",
+    tpf = "Fragmentation",
+    ccm = "Collection Comments",
     tcm = "Taxonomy Comments",
-    iid = "Identified Number",
-    tdf = "Difference",
-    srs = "Regional Section",
-    srb = "Regional Bed",
-    sru = "Regional Bed Unit",
-    sro = "Regional Order",
-    ccr = "Rock Censused",
-    cpt = "Feeding/Predation Traces",
     tpb = "Bioerosion",
-    tpe = "Encrustation",
+    pcm = "Preservation Comments",
+    flg = "Flag",
+    cpc = "Common Body Parts",
+    smb = "Stratigraphic Member",
     sls = "Local Section",
     slb = "Local Bed",
     slu = "Local Bed Unit",
     slo = "Local Order",
-    lm1 = "Minor Lithology 1",
-    ff2 = "Fossils from Lithology 2",
-    cpa = "Articulated Parts",
-    cpb = "Associated Parts",
-    oli = "Late Interval",
-    lm2 = "Minor Lithology 2",
-    cpc = "Common Body Parts",
-    tpo = "Orientation",
-    szn = "Stratigraphic Zone",
-    tec = "Tectonic Setting",
+    ccu = "Museum",
+    tpe = "Encrustation",
+    cpt = "Feeding/Predation Traces",
+    tpl = "Lagerstätten",
     tpa = "Abundance in Sediment",
-    smb = "Stratigraphic Member",
-    idr = "Identified Rank"
+    tpr = "Sorting",
+    acm = "Component Comments",
+    cns = "Census",
+    ccr = "Rock Censused",
+    cpd = "Collection Period",
+    szn = "Stratigraphic Zone",
+    srs = "Regional Section",
+    srb = "Regional Bed",
+    sro = "Regional Order"
 )
 
 ui <- fluidPage(
-    
     fluidRow(
-        column(12,
-            textInput("taxon", "Enter Taxon", value = ""),
+        column(6,
+            textInput("taxon", "Enter Taxon", value = "")
+        ),
+        column(6,
             selectInput("geologic_period", "Geologic Period", 
                         choices = c("Precambrian", "Cambrian", "Ordovician", "Silurian", 
                                     "Devonian", "Carboniferous", "Permian", "Triassic", 
                                     "Jurassic", "Cretaceous", "Paleogene", "Neogene", 
-                                    "Quaternary")),
+                                    "Quaternary"))
+        )
+    ),
+    fluidRow(
+        column(12,
             actionButton("search", "Search")
         )
     ),
     
     fluidRow(
+        column(6,
+            selectInput("x_variable", "Select Y Variable", choices = NULL),
+            uiOutput("x_values_ui")
+        ),
+        column(6,
+            selectInput("y_variable", "Select X Variable", choices = NULL),
+            uiOutput("y_values_ui")
+        )
+    ),
+    
+    fluidRow(
         column(12,
-            selectInput("variable", "Select Variable", choices = NULL),
-            plotlyOutput("interactive_plot"),
-            verbatimTextOutput("data_head")
+            plotlyOutput("interactive_plot", width = "90vw", height = "90vh"),
+            #verbatimTextOutput("data_head")
         )
     )
 )
@@ -192,41 +210,83 @@ server <- function(input, output, session) {
         
         cat("Data loaded with", nrow(data), "rows\n")
         cat("Variables:", ncol(data), "\n", names(data), "\n")
+        
+        # Convertir códigos de país a nombres de país
         data$cc2 <- countrycode::countrycode(data$cc2, origin = "iso2c", destination = "country.name")
+        
+        # Corregir manualmente los nombres de país específicos
+        data$cc2[is.na(data$cc2)] <- "Unknown"
+        data$cc2[data$cc2 == "AA"] <- "Aruba"
+        data$cc2[data$cc2 == "UK"] <- "United Kingdom"
+        
         # Update the reactive value
         pbdb_data(data)
         
-        
         # Update the selectInput choices with the variable names and their descriptions
         choices <- setNames(names(data), variable_names[names(data)])
-        updateSelectInput(session, "variable", choices = choices)
+        updateSelectInput(session, "x_variable", choices = sort(choices))
+        updateSelectInput(session, "y_variable", choices = sort(choices))
         
         # Render the head of the data with only the first 4 columns
-        # output$data_head <- renderPrint({
-        #     head(data[, 1:4])
-        # })
+        output$data_head <- renderPrint({
+            head(data[, 1:4])
+        })
     })
     
-    observeEvent(input$variable, {
-        req(input$variable)
+    observeEvent(input$x_variable, {
+        req(input$x_variable)
+        data <- pbdb_data()
+        req(data)
+        
+        # Get unique values for the selected x_variable
+        unique_x_values <- unique(data[[input$x_variable]])
+        
+        # Create checkboxes for unique x_variable values
+        output$x_values_ui <- renderUI({
+            pickerInput("x_values", "Select X Values", choices = unique_x_values, selected = unique_x_values, multiple = TRUE, options = list(`actions-box` = TRUE, `live-search` = TRUE, `size` = 10))
+        })
+    })
+    
+    observeEvent(input$y_variable, {
+        req(input$y_variable)
+        data <- pbdb_data()
+        req(data)
+        
+        # Get unique values for the selected y_variable
+        unique_y_values <- unique(data[[input$y_variable]])
+        
+        # Create checkboxes for unique y_variable values
+        output$y_values_ui <- renderUI({
+            pickerInput("y_values", "Select Y Values", choices = unique_y_values, selected = unique_y_values, multiple = TRUE, options = list(`actions-box` = TRUE, `live-search` = TRUE, `size` = 10))
+        })
+    })
+    
+    observeEvent(c(input$x_variable, input$y_variable, input$x_values, input$y_values), {
+        req(input$x_variable, input$y_variable, input$x_values, input$y_values)
         
         output$interactive_plot <- renderPlotly({
             data <- pbdb_data()
             req(data)
             
-            # Ensure the selected variable exists in the dataset
-            if(input$variable %in% colnames(data)){
-                gg <- ggplot(data, aes_string(x = input$variable)) +
-                    geom_bar() +
-                    theme_minimal() +
-                    xlab(variable_names[input$variable]) +
-                    ylab("Count") +
-                    ggtitle(paste("Count of Occurrences by", variable_names[input$variable])) +
-                    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1))
+            # Ensure the selected variables exist in the dataset
+            if(input$x_variable %in% colnames(data) && input$y_variable %in% colnames(data)){
+                # Filtrar los datos para omitir los valores NA en las variables seleccionadas
+                filtered_data <- data[!is.na(data[[input$x_variable]]) & !is.na(data[[input$y_variable]]), ]
+                
+                # Filtrar los datos en función de los valores seleccionados
+                filtered_data <- filtered_data[filtered_data[[input$x_variable]] %in% input$x_values & filtered_data[[input$y_variable]] %in% input$y_values, ]
+                
+                gg <- ggplot(filtered_data, aes_string(y = input$x_variable, fill = input$y_variable)) +
+                      geom_bar(position = "dodge") +
+                      theme_minimal() +
+                      ylab(variable_names[input$x_variable]) +
+                      xlab(paste("Count of", variable_names[input$y_variable])) +
+                      ggtitle(paste("Count of occurrences of", variable_names[input$y_variable], "by", variable_names[input$x_variable])) +
+                      theme(axis.text.y = element_text(angle = 0, vjust = 0.5, hjust = 1))
                 
                 ggplotly(gg)
             } else {
-                ggplotly(ggplot() + ggtitle("Selected variable not found in the data"))
+                ggplotly(ggplot() + ggtitle("Selected variables not found in the data"))
             }
         })
     })
@@ -236,4 +296,4 @@ shinyApp(ui, server)
 ```
 :::
 
-*Datos generados a partir de la base de datos de Paleobiología (PBDB) en [paleobiodb.org](https://paleobiodb.org/).*
+*Data source: The data is retrieved from the Paleobiology Database (PBDB) using the API available at [paleobiodb.org](https://paleobiodb.org/).*
