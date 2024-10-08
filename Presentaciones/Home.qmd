@@ -1,0 +1,17 @@
+---
+title: "Presentaciones del Museo Virtual Nacional"
+author: "E. Miguel Díaz de León Muñóz"
+date:  "2024-10-08"
+last-modified: today
+format: html
+---
+
+# Bienvenido a las presentaciones del Museo Virtual Nacional
+
+En esta página encontrarás las presentaciones utilizadas en las conferencias y talleres del Museo Virtual Nacional. El sitio se irá actualizando con nuevas presentaciones y contenido conforme se vayan realizando nuevas presentaciones. Si te interesa que realicemos una presentación en tu institución, no dudes en contactarnos a través de nuestro correo electrónico: [contacto@museovirtualnacional.com](mailto:contacto@museovirtualnacional.com)
+
+## Presentaciones Disponibles
+
+- [Paleontólogos sin Fósiles: Técnicas de Paleontología Virtual](paleo_sin_fosiles.qmd)
+
+Mantente atento para más actualizaciones y nuevas presentaciones.

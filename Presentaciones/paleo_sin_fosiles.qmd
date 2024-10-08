@@ -1,0 +1,274 @@
+---
+title: "Paleontólogos sin Fósiles: Técnicas de Paleontología Virtual"
+author: "E. Miguel Díaz de León Muñóz"
+date: today
+format: 
+    revealjs:  
+        theme: white
+        transition: slide
+        center: true  
+        slideNumber: true
+        width: 1920
+        height: 1080
+        css: styles.css
+        logo: logo.png
+        incremental: true
+        controls: true
+        progress: true
+---
+
+# Introducción a la Paleontología Virtual
+
+La paleontología virtual es una disciplina emergente que utiliza tecnologías digitales para estudiar fósiles y reconstruir el pasado. Como herramienta digital, utiliza principalmente modelos 3D, escaneo láser y reconstrucción digital.
+
+::: {.r-stack}
+![Reconstrucción digital de *Magericyon anceps*](images/reconstruction.png){.fragment width=50%}
+
+
+![Reconstrucción digital de *Magericyon anceps*](images/reconstruction_wireframe.png){.fragment width=50%}
+
+:::
+---
+
+# Modelos 3D
+
+La creación de lo modelos 3D para estudios paleontológicos se basa en tres técnicas principales:
+
+---
+
+**Escaneo láser**. Se utilizan dispositivos de escaneo láser para capturar la forma de los fósiles.
+
+![scanner 3d](images/scaner.png)  
+
+---
+
+**Fotogrametría**. Se toman fotografías de los fósiles desde diferentes ángulos y se procesan con software especializado.
+
+![Fotogrametria](images/photogrammetry-3d-illustration-icon-png.png)
+
+---
+
+**Tomografía computarizada**. Se toman imágenes de secciones transversales mediante rayos-X de los fósiles y se reconstruyen en 3D.
+
+![Ct scanner](images/CT.png)
+
+---
+
+# Principales usos de los modelos 3D en paleontología:
+
+-  Preservación del patriomonio paleontológico.
+-  Difusión del conocimiento.
+-  Reconstrucción de la vida de los organismos extintos.
+
+::: {.fragment .highlight-red fragment-index=1}
+- Análisis biomecánico.
+- Estudio de la morfología de los fósiles.
+:::
+
+---
+
+# 1. Morfometría Geométrica: Estudio de la morfología de los fósiles 
+
+::: {.fragment fragment-index=1}
+¿Cómo describir la forma de esta figura?
+:::
+
+<div class="shapes">
+  <div class="shape shape1 fragment" data-fragment-index="1"></div>
+  <div class="shape shape2 fragment" data-fragment-index="2"></div>
+  <div class="shape shape3 fragment" data-fragment-index="3"></div>
+</div>
+
+---
+
+# 1. Morfometría Geométrica: Anatomía Comparada
+
+::: {.fragment fragment-index=1}
+En paleontología, cuando se describe una nueva especie, es necesario describir su forma y compararla con otras especies. 
+:::
+
+::: {.fragment fragment-index=2}
+![Comparación de cráneos de primates](images/skulls.jpg){width=35%}
+:::
+
+---
+
+# 1. Morfometría Geométrica: De lo cualitativo a lo cuantitativo
+
+::: {.fragment fragment-index=1}
+La morfometría geométrica permite cuantificar la forma de los fósiles y compararla estadísticamente.
+:::
+
+---
+
+# 1. Morfometría Geométrica: Morfometría 2D
+
+::: {.fragment fragment-index=2}
+Para usar esta técnica podemos tomar fotografías de los fósiles y marcar puntos anatómicos en ellos que sean homólogos entre las diferentes especies.
+:::
+
+::: {.fragment fragment-index=3}
+![Ejemplo clásico del uso de landmarks](images/geometrics_morphometrics.jpg){width=35%}
+:::
+
+---
+
+# 1. Morfometría Geométrica: Morfometría 3D
+
+::: {.fragment fragment-index=1}
+Con modelos 3D podemos marcar puntos anatómicos en los fósiles y comparar la forma de los fósiles en 3D.
+:::
+
+::: {.fragment fragment-index=2}
+![Ejemplo de morfometría 3D](images/geometrics_morphometrics_3d.png){width=35%}
+:::
+
+---
+
+# 1. Morfometría Geométrica: ¿Y qué hacemos con los datos?
+
+::: {.fragment fragment-index=1}
+Con los datos obtenidos de la morfometría geométrica podemos hacer análisis estadísticos para comparar la forma de los fósiles.
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.fragment fragment-index=2}
+Podemos por ejemplo comparar como la forma:
+
+- Cambia a lo largo del tiempo.
+- Cambia entre diferentes especies.
+- Cambia entre diferentes sexos.
+- Cambia entre diferentes poblaciones.
+- Una forma particular se relaciona con una función particular.
+:::
+:::
+::: {.column width="50%"}
+::: {.fragment fragment-index=2}
+![¿La forma influye en qué tan rápido nada un pez?](images/fishes_geometric_morphometrics.png){width=100%}
+:::
+:::
+:::
+
+---
+
+# 2. Análisis Biomecánico: Estudio de la función de los fósiles
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+Algunas preguntas que podemos responder con análisis biomecánicos son:
+
+- ¿Qué tan rápido corría una especie de dinosaurio?
+- ¿Qué tan fuerte mordía un mamífero extinto?
+- ¿Qué tan rápido nadaba un pez extinto?
+- ¿Podía este animal volar?
+- ¿Podía este animal trepar?
+- ¿Podía este animal cavar?
+:::
+:::
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+![Análisis biomecánico de un dinosaurio](images/tyrannosaurus_speed.jpg){width=100%}
+:::
+:::
+:::
+
+--- 
+
+# 2. Análisis Biomecánico: ¿Qué necesitamos para hacer un análisis biomecánico 3D?
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+Para hacer un análisis biomecánico 3D necesitamos:
+
+- Un modelo 3D del fósil.
+- Un software que nos permita editar el modelo 3D.
+- Un software que nos permita hacer simulaciones de la función del fósil.
+:::
+:::
+::: {.column width="50%"}
+::: {.fragment fragment-index=2}
+![Blender, un software de modelado 3D](images/blender.png){width=40%}
+:::
+::: {.fragment fragment-index=3}
+![Abaqus, un software de simulación biomecánica](images/Abaqus_Logo.png){width=30%}
+:::
+:::
+:::
+
+---
+
+# 2. Análisis Biomecánico: Análisis de Elementos Finitos (FEA)
+
+::: {.fragment fragment-index=1}
+Una técnica común para hacer análisis biomecánicos es el análisis de elementos finitos.
+:::
+
+::: {.fragment fragment-index=2}
+En este tipo de análisis se divide el modelo 3D en elementos finitos y simula la reacción del fósil a diferentes fuerzas.
+:::
+
+::: {.fragment fragment-index=3}
+![Análisis de elementos finitos](images/skulls_FEA.png){width=100%}
+:::
+
+---
+
+# 2. Análisis Biomecánico: Análisis de Elementos Finitos (FEA)
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+Existen muchos tipos de análisis de elementos finitos, uno de los más comunes es analizar la distribución de las fuerzas musculares en los fósiles y cómo estas fuerzas se distribuyen en el hueso. Con este tipo de análisis podemos, por ejemplo, estimar la fuerza de mordida de un animal extinto.
+:::
+:::
+::: {.column width="50%"}
+::: {.fragment fragment-index=2}
+![Análisis de elementos finitos](images/skulls_FEA.png){width=100%}
+:::
+:::
+:::
+
+---
+
+# 2. Análisis Biomecánico: Análisis de Elementos Finitos (FEA)
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+Para poder estimar la fuerza de mordida de un animal extinto necesitamos:
+
+- Un modelo 3D del cráneo del animal.
+- Reconstruir los músculos de la mandíbula y el cráneo.
+- Definir las fuerzas de los músculos.
+- Definir las propiedades mecánicas de los músculos y los huesos.
+- Definir las condiciones de la simulación.
+:::
+:::
+::: {.column width="50%"}
+::: {.fragment fragment-index=2}
+![Reconstrucción de músculos del cráneo de un mamífero usando MyoGenerator](images/reconstruction.png){width=100%}
+:::
+:::
+:::
+
+---
+
+# 2. Análisis Biomecánico: Análisis de Elementos Finitos (FEA)
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.fragment fragment-index=1}
+En este ejemplo podemos ver cómo investigadores han usado análisis de elementos finitos para estimar la fuerza de mordida de el *Tyrannosaurus rex* de diferentes edades.
+:::
+:::
+::: {.column width="50%"}
+::: {.fragment fragment-index=2}
+![Análisis de elementos finitos de *Tyrannosaurus rex*](images/tyrannosaurus_biteforce.jpg){width=50%}
+:::
+:::
+:::
+
+---
