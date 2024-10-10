@@ -180,7 +180,7 @@ Algunas preguntas que podemos responder con análisis biomecánicos son:
 
 ::: {.columns}
 ::: {.column width="50%"}
-::: {.fragment fragment-index=1}
+::: {.fragment data-fragment-index="1"}
 Para hacer un análisis biomecánico 3D necesitamos:
 
 - Un modelo 3D del fósil.
@@ -189,10 +189,10 @@ Para hacer un análisis biomecánico 3D necesitamos:
 :::
 :::
 ::: {.column width="50%"}
-::: {.fragment fragment-index=2}
+::: {.fragment data-fragment-index="2"}
 ![Blender, un software de modelado 3D](images/blender.png){width=40%}
 :::
-::: {.fragment fragment-index=3}
+::: {.fragment data-fragment-index="3"}
 ![Abaqus, un software de simulación biomecánica](images/Abaqus_Logo.png){width=30%}
 :::
 :::
@@ -211,7 +211,7 @@ En este tipo de análisis se divide el modelo 3D en elementos finitos y simula l
 :::
 
 ::: {.fragment fragment-index=3}
-![Análisis de elementos finitos](images/skulls_FEA.png){width=100%}
+![Análisis de elementos finitos](images/hamaca.png)
 :::
 
 ---
@@ -262,6 +262,8 @@ Para poder estimar la fuerza de mordida de un animal extinto necesitamos:
 ::: {.column width="50%"}
 ::: {.fragment fragment-index=1}
 En este ejemplo podemos ver cómo investigadores han usado análisis de elementos finitos para estimar la fuerza de mordida de el *Tyrannosaurus rex* de diferentes edades.
+
+Los investigadores llegaron a la conclusión de que los individuos juveniles no tenían una mordida relativamente fuerte como para romper huesos.
 :::
 :::
 ::: {.column width="50%"}
@@ -270,5 +272,141 @@ En este ejemplo podemos ver cómo investigadores han usado análisis de elemento
 :::
 :::
 :::
+
+---
+
+# 2. Análisis Biomecánico: Biomecánica muscular
+
+::: {.fragment fragment-index=1}
+Otro tipo de análisis biomecánico que se puede hacer con modelos 3D es el análisis de la biomecánica muscular.
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.fragment fragment-index=2}
+Con este tipo de estudios podemos por ejemplo:
+
+- Estimar la fuerza de mordida
+- Estimar el ángulo de apertura o máximo rango de movimiento de un hueso
+- Estimar la velocidad de cierre de la mandíbula
+:::
+:::
+::: {.column width="50%"}
+::: {.fragment fragment-index=3}
+![Estimación de apertura máxima de un *T. rex* Lautenschlager (2015)](images/gape_tyrannosaurus.png){width=100%}
+:::
+:::
+:::
+
+---
+
+# 2. Análisis Biomecánico: Estimación de apertura máxima de la mandíbula
+
+::: {.fragment fragment-index=1}
+Usando modelos 3D del cráneo y la mandíbula, podemos estimar el ángulo de apertura máxima.
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.fragment fragment-index=2}
+Para esto necesitamos:
+
+- Un modelo 3D del cráneo y la mandíbula.
+- Definir las articulaciones de la mandíbula.
+- Definir los puntos de inserción de los músculos.
+- Definir las propiedades mecánicas de los músculos (Cuánto se puede estirar, usualamente se usa un valor máximo de 1.7 veces)
+- Definir las condiciones de la simulación.
+:::
+:::
+::: {.column width="50%"}
+::: {.fragment fragment-index=3}
+![Estimación de apertura máxima de un *T. rex* Lautenschlager (2015)](images/gape_tyrannosaurus.png){width=100%}
+:::
+:::
+:::
+
+---
+
+# 2. Análisis Biomecánico: Estimación de apertura máxima de la mandíbula
+
+
+::: {.fragment fragment-index=1}
+Usando este enfoque, Lautenschlager (2015) estimó la apertura máxima de tres especies de dinosaurios terópodos (*Tyrannosaurus rex*, *Allosaurus fragilis* y *Erlikosaurus andrewsi*).
+:::
+
+::: {.fragment fragment-index=2}
+![Estimación de apertura máxima de diferentes dinosaurios Lautenschlager (2015)](images/maximum_gape.png){width=30%}
+:::
+
+---
+
+# 3. Análisis Biométrico: Estudio de apertura máxima de la mandíbula
+
+::: {.fragment fragment-index=1}
+Ejemplo animado de la estimación de la apertura máxima de un lobo
+:::
+
+
+::: {.fragment fragment-index=2}
+![](images/run_simulation.gif){width=100%}
+:::
+
+---
+
+# 3. Análisis Biométrico: Estudio de apertura máxima de la mandíbula
+
+::: {.fragment fragment-index=1}
+![](images/maximum_gape_wolf.png){width=100%}
+:::
+
+
+
+
+
+---
+
+# 3. Análisis Biométrico: Estudio de apertura máxima de la mandíbula
+
+::: {.fragment fragment-index=1}
+Ejemplo de la tasa de crecimiento del músculo masseter en un lobo
+:::
+
+::: {.fragment fragment-index=2}
+<div style="display: flex; justify-content: center;">
+  <iframe src="images/growth_proportion.html" width="800px" height="800px"></iframe>
+</div>
+:::
+---
+
+# 3. Análisis Biométrico: Otras aplicaciones posibles
+
+![Biomecánica del caminar en *T. rex*](images/0000-0120.mp4){width=100%}
+
+---
+
+
+# Conclusiones
+
+- La paleontología virtual es una disciplina emergente que cada día tiene más relevancia en la paleontología.
+- Gracias a las técnicas de modelado 3D, los paleontólogos pueden estudiar la forma y la función de los fósiles sin necesidad de manipular los fósiles.
+- El uso de modelos 3D en paleontología ha permitido responder preguntas que antes eran imposibles de responder.
+- La paleontología virtual es una disciplina interdisciplinaria que combina la paleontología con la ingeniería, la biología y la informática.
+
+---
+
+# Qué sigue en la paleontología virtual
+
+Con el fin de seguir avanzando en la paleontología virtual, es necesario seguir desarrollando herramientas y técnicas que permitan a los paleontólogos estudiar los fósiles de manera más eficiente y precisa. Para esto, es necesario:
+
+- Más colaboración entre paleontólogos y especialistas en informática y biomecánica.
+- Desarrollo de software especializado para la paleontología.
+- Aumentar la disponibilidad de modelos 3D de fósiles.
+- Desarrollar técnicas de análisis biomecánico más precisas y eficientes.
+
+---
+
+# Gracias por su atención
+
+¿Qué tipo de análisis crees que estaría interesante hacer con modelos 3D de fósiles?
 
 ---
