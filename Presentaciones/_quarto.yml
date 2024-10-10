@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs  # Ensure the output is directed to the docs directory
 
 website:
   title: "Presentaciones del Museo Virtual Nacional"
