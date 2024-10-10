@@ -1,0 +1,33 @@
+.reveal .slides::after {
+  content: '';
+  position: fixed;
+  width: 300px; /* Adjust width as needed for the logo */
+  height: 300px; /* Adjust height as needed for the logo */
+  bottom: 0px; /* Position the logo slightly above the bottom edge */
+  right: 0px; /* Position the logo slightly to the left of the right edge */
+  background-size: contain; /* Ensure the logo image fits within the container */
+  pointer-events: none; /* Ensure the logo does not interfere with slide interactions */
+}
+.shapes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.shape {
+  width: 200px;
+  height: 200px;
+  background-color: #4CAF50;
+}
+
+.shape1 {
+  border-radius: 10px; /* Slightly rounded corners */
+}
+
+.shape2 {
+  border-radius: 20px; /* More rounded corners */
+}
+
+.shape3 {
+  border-radius: 30px; /* Fully rounded corners */
+}

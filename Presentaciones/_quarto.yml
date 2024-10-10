@@ -1,0 +1,11 @@
+project:
+  type: website
+
+website:
+  title: "Presentaciones del Museo Virtual Nacional"
+  navbar:
+    left:
+      - text: "Home"
+        href: Home.qmd
+      - text: "Paleontólogos sin Fósiles"
+        href: paleo_sin_fosiles.qmd
