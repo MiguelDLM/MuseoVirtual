@@ -67,7 +67,7 @@ La creación de lo modelos 3D para estudios paleontológicos se basa en tres té
 
 ---
 
-# 1. Morfometría Geométrica: Estudio de la morfología de los fósiles 
+# 1. Morfometría Geométrica: Estudio de la forma de los fósiles 
 
 ::: {.fragment fragment-index=1}
 ¿Cómo describir la forma de esta figura?
