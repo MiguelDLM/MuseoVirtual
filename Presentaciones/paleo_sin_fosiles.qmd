@@ -1,5 +1,5 @@
 ---
-title: "Paleontólogos sin Fósiles: Técnicas de Paleontología Virtual"
+title: "Paleontología Virtual: Herramientas para el Estudio de la Vida en el Pasado"
 author: "E. Miguel Díaz de León Muñóz"
 date: today
 format: 
