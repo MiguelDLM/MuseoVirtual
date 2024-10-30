@@ -10,12 +10,38 @@ format:
         slideNumber: true
         width: 1920
         height: 1080
-        css: styles.css
+        css: styles_paleovirtual.css
         logo: logo.png
         incremental: true
         controls: true
         progress: true
+        chalkboard: true
 ---
+# ¿Por qué estudiar fósiles?
+
+- ¿Cuál es la importancia de estudiar fósiles?
+- ¿Qué aplicación tiene en la vida cotidiana los estudios de fósiles?
+
+<!-- .slide: data-chalcboard="true" -->
+
+# ¿Cuál es recurso más importante para un ser vivo?
+
+- ¿Cuál es el recurso sin el cuál ningún ser vivo podría sobrevivir?
+- ¿Qué causa la extinción de las especies?
+
+# La importancia de la comida 
+
+<div style="text-align: center; font-size: 24px;">
+  <p>A todo se acostumbra uno, menos a no comer</p>
+  <img src="images/abuelita.jpg" alt="A todo se acostumbra uno, menos a no comer">
+</div>
+
+# La importancia de la comida
+
+- La comida es el recurso más importante para cualquier ser vivo. Las especies pueden adaptarse a diferentes condiciones, pero si no tienen comida, no pueden sobrevivir.
+
+- <!-- .element: class="fragment" style="text-align: center;" -->
+  ![](images/leon-hambriento.jpg){style="display: block; margin-left: auto; margin-right: auto;"}
 
 # Introducción a la Paleontología Virtual
 

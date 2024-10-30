@@ -31,3 +31,10 @@
 .shape3 {
   border-radius: 30px; /* Fully rounded corners */
 }
+
+h1.title {
+  background-image: url(https://quarto.org/quarto.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
+}
