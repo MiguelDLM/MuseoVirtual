@@ -1,0 +1,26 @@
+---
+title: "MUFIS: Muscle Fiber Simulator"
+author: "E. Miguel Díaz de León Muñóz"
+date: 21/02/2025
+format: 
+    revealjs:  
+        theme: white
+        transition: slide
+        center: true  
+        slideNumber: true
+        width: 1920
+        height: 1080
+        css: styles_paleovirtual.css
+        logo: logo.png
+        incremental: true
+        controls: true
+        progress: true
+        chalkboard: true
+---
+
+# Introduction
+
+-Biomechanical techniques and tools used to study the feeding behavior of extinct animals:
+    -Finite Element Analysis (FEA)
+    -Multibody Dynamics Analysis (MDA)
+    -Dry skull method

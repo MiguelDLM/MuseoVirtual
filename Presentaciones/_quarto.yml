@@ -10,3 +10,5 @@ website:
         href: Home.qmd
       - text: "Paleontólogos sin Fósiles"
         href: paleo_sin_fosiles.qmd
+      - text: "MUFIS (Muscle Fiber Simulator)"
+        href: MUFIS_en.qmd
