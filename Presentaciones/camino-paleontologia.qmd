@@ -1,0 +1,124 @@
+---
+title: "Camino a la Paleontología"
+subtitle: "Todo lo que me hubiera gustado saber antes de decidir ser paleontólogo"
+author: "E. Miguel Díaz de León Muñóz"
+date: today
+format: 
+    revealjs:  
+        theme: white
+        transition: slide
+        center: true  
+        slideNumber: true
+        width: 1920
+        height: 1080
+        css: 
+          - styles_paleovirtual.css
+          - timeline.css
+        include-after-body: timeline.html
+        logo: logo.png
+        incremental: true
+        controls: true
+        progress: true
+        chalkboard: true
+---
+
+# Introducción
+
+## ¿Quién soy?
+- E. Miguel Díaz de León Muñóz
+- Licenciatura en Biología por la Universidad de Guadalajara (2010-2015)
+- Maestría en Ciencias de la Tierra por la Universidad Nacional Autónoma de México (2017-2019)
+- Doctorado (en curso) en Geociencias por la Universidad de Tübingen, Alemania (2023-presente)
+
+## Licencia en Biología (UDG)
+
+- Carrera en Biología General
+- Enfoque en vertebrados durante las ultimas etapas
+- Prácticas profesionales en la Universidad del Mar (2015)
+
+::: columns
+::: column
+![Paleomóvil 2015](images/paleomovil.jpg){.fragment data-fragment-index="11" fig-alt="Paleomóvil 2015" fig-cap="Paleomóvil 2015" width="100%" style="border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.18); max-width:900px;"}
+:::
+::: column
+
+![Prácticas profesionales](images/practicas.jpg){.fragment data-fragment-index="12" fig-alt="Prácticas profesionales" fig-cap="Prácticas profesionales" width="100%" style="border-radius:8px; box-shadow:0 6px 12px rgba(0,0,0,0.12); max-width:900px; margin-top:0.75rem;"}
+:::
+:::
+
+## El fósil misterioso
+
+- ¿Qué es esto?
+
+![Fósil desconocido](images/fosil-unknown.png){.fragment data-fragment-index="10" fig-alt="Fósil desconocido" fig-cap="Fósil desconocido" fig-align="center" width="70%" style="border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.18); margin:0 auto; display:block;"}
+
+## Misterio resuelto
+
+- Metacarpal de un proboscideo 
+
+![Metacarpal disponible en UMORF](images/umorf.png){.fragment data-fragment-index="13" fig-alt="Metacarpal disponible en UMORF" fig-cap="Metacarpal disponible en UMORF" fig-align="center" width="80%" style="border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.18); max-width:1200px; display:block; margin:0 auto;"}
+
+## Regreso a casa
+
+- Tesis de licenciatura: "Manual de Fotogrametría en Paleontología: Cómo crear modelos 3D de fósiles"
+
+![Portada de la tesis](images/tesis-portada.png){.fragment data-fragment-index="14" fig-alt="Portada de la tesis" fig-cap="Portada de la tesis" width="60%" style="border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.18); max-width:900px; display:block; margin:0 auto;"}
+
+# Museo Virtual Nacional
+
+- Nacimiento del Museo Virtual Nacional (2015)
+- Proyecto de divulgación científica y educación en paleontología
+
+![Museo Virtual Nacional](images/museo-virtual.png){.fragment data-fragment-index="15" fig-alt="Museo Virtual Nacional" fig-cap="Museo Virtual Nacional" width="80%" style="border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.18); max-width:1200px; display:block; margin:0 auto;"}
+
+# Preparándose para el siguiente paso
+
+- Curso propedeútico para maestría en ciencias de la tierra (2016)
+
+![Morelia 2017](images/morelia-2017.jpg){.fragment data-fragment-index="17" fig-alt="Morelia 2017" fig-cap="Morelia 2017" width="80%" style="border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.18); max-width:1200px; display:block; margin:0 auto;"}
+
+# Maestría en Ciencias de la Tierra (UNAM)
+
+- Enfoque en paleontología de vertebrados
+- Becario del Consejo Nacional de Ciencia y Tecnología (CONACYT)
+
+# Las vueltas que da la vida
+
+::: columns
+::: column
+<div style="position:relative; max-width:960px; margin:0 auto;">
+  ![Post en facebook 2010](images/post-2.png){fig-alt="Post en facebook 2010" fig-cap="Post en facebook 2010" width="100%" style="border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.18); display:block;"}
+
+  <!-- Portada se superpone al post cuando aparece (fragment posterior) -->
+  ![Portada de la tesis de maestría](images/tesis-maestria.png){.fragment data-fragment-index="1" fig-alt="Portada de la tesis de maestría" fig-cap="Portada de la tesis de maestría" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.22); z-index:2; display:block; width:auto; height:auto; max-height:80vh;"}
+</div>
+
+:::
+::: column
+
+ - Tesis de maestría: "CLASIFICACIÓN TAXONÓMICA DE ELEMENTOS POSTCRANEALES DE MAMÍFEROS (ÓRDENES CARNIVORA, ARTIODACTYLA Y PERISSODACTYLA) DEL OLIGOCENO TEMPRANO DE OAXACA Y SUS IMPLICACIONES PALEOBIOLÓGICAS"
+
+:::
+:::
+
+# Cuando el mundo se hace pequeño
+
+- Visita a colección científica del Museo Americano de Historia Natural (2018)
+
+::: column
+
+![AMNH 2018](images/amnh.jpg){.fragment data-fragment-index="18" fig-alt="AMNH 2018" fig-cap="AMNH 2018" width="80%" style="border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.18); max-width:1200px; display:block; margin:0 auto;"}
+
+:::
+::: column
+![Anficiónido](images/amphicyonidae.jpg){.fragment data-fragment-index="19" fig-alt="Amphicyonidae" fig-cap="Amphicyonidae" width="80%" style="border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.18); max-width:1200px; display:block; margin:0 auto;"}
+
+:::
+
+# Doctorado en Geociencias (Universidad de Tübingen)
+
+- Enfoque en técnicas de análisis de datos en paleontología y paleontología virtual
+- Becario del Servicio Alemán de Intercambio Académico (DAAD)
+- Becario de la ecretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI)
+
+ 
