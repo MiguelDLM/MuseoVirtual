@@ -83,3 +83,46 @@
   .timeline-bars { padding-left: 120px; }
   .timeline-label { width: 110px; flex:0 0 110px; font-size: 0.95rem; }
 }
+
+.img-shadow {
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.img-centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure column content is centered if this class is added */
+.column.center-content {
+  text-align: center;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-overlap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* Global overflow prevention for Revealjs images */
+.reveal section img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+}

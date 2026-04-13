@@ -1,0 +1,197 @@
+/*-- scss:defaults --*/
+
+// ─── Fuentes ──────────────────────────────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Fira+Code:wght@300;400&display=swap');
+
+$font-family-sans-serif: 'Source Sans 3', 'Segoe UI', Helvetica, Arial, sans-serif;
+$font-family-monospace:  'Fira Code', 'Courier New', monospace;
+$presentation-font-size-root: 38px;
+
+// ─── Paleta ───────────────────────────────────────────────────────────────
+//
+//   Carbón profundo  #1E2B3A   → fondos de sección, encabezados
+//   Ámbar dorado     #C4820A   → acento (borde h2, tablas, formas)
+//   Azul pizarra     #2A7D8C   → links
+//   Texto casi negro #1A1F27   → body text — máximo contraste
+//   Fondo cálido     #FDFCF9   → warm white (menos agresivo que #fff puro)
+//   Código           #F2EFE8   → código/bloques
+
+$body-bg:                 #FDFCF9;
+$body-color:              #1A1F27;
+$link-color:              #2A7D8C;
+$selection-bg:            #FDE9B0;
+
+$headings-color:          #1E2B3A;
+$headings-font-weight:    600;
+
+$code-block-bg:           #F2EFE8;
+$code-block-border-color: #E8E3D8;
+$code-block-font-size:    0.58em;
+
+
+/*-- scss:rules --*/
+
+// ─── Variables locales (usadas en las reglas) ─────────────────────────────
+$carbon:  #1E2B3A;
+$amber:   #C4820A;
+$slate:   #2A7D8C;
+
+
+// ─── Imágenes: contención global ─────────────────────────────────────────
+.reveal section img {
+  max-width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+}
+
+
+// ─── Encabezados ──────────────────────────────────────────────────────────
+.reveal h1 {
+  font-size: 1.9em;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.reveal h2 {
+  font-size: 1.4em;
+  border-bottom: 2px solid $amber;
+  padding-bottom: 0.18em;
+  margin-bottom: 0.65em;
+}
+
+.reveal h3 {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: $slate;
+}
+
+
+// ─── Listas ───────────────────────────────────────────────────────────────
+.reveal ul,
+.reveal ol {
+  font-size: 0.9em;
+  line-height: 1.65;
+}
+
+
+// ─── Tablas ───────────────────────────────────────────────────────────────
+.reveal table {
+  font-size: 0.62em;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reveal table thead th {
+  background-color: $carbon;
+  color: #ffffff;
+  padding: 0.5em 0.8em;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.reveal table tbody tr:nth-child(even) td {
+  background-color: #F5F1E8;
+}
+
+.reveal table tbody td {
+  padding: 0.4em 0.8em;
+  vertical-align: middle;
+  border-bottom: 1px solid #E4DFD3;
+}
+
+
+// ─── Links ────────────────────────────────────────────────────────────────
+.reveal a {
+  color: $slate;
+  text-decoration: none;
+  border-bottom: 1px solid transparentize($slate, 0.6);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.reveal a:hover {
+  color: $amber;
+  border-color: $amber;
+}
+
+
+// ─── Columnas ─────────────────────────────────────────────────────────────
+.reveal .columns {
+  align-items: center;
+  gap: 1.5rem;
+}
+
+
+// ─── Código ───────────────────────────────────────────────────────────────
+.reveal pre {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.reveal pre code {
+  max-height: 55vh;
+  overflow: auto;
+}
+
+
+// ─── Formas geométricas (morfometría) ────────────────────────────────────
+.shapes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.shape {
+  width: clamp(100px, 12vw, 200px);
+  height: clamp(100px, 12vw, 200px);
+  background-color: $amber;
+  opacity: 0.85;
+}
+
+.shape1 { border-radius: 10px; }
+.shape2 { border-radius: 20px; }
+.shape3 { border-radius: 30px; }
+
+
+// ─── Clases de utilidad para imágenes ────────────────────────────────────
+.img-shadow {
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.img-centered {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.img-overlap {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 8px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+
+// ─── Centrado vertical por clase ──────────────────────────────────────────
+.v-center-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+
+
+// ─── Callouts (notas, advertencias) ──────────────────────────────────────
+.reveal .callout {
+  font-size: 0.82em;
+}

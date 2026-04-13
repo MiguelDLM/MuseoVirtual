@@ -1,3 +1,12 @@
+# Quarto and Reveal.js
 _extensions/
-paleo_sin_fosiles_files/
+*_files/
+.quarto/
 
+# Python virtual environment
+**/venv/
+**/.venv/
+__pycache__/
+
+# Large documents
+*.pdf

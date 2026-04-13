@@ -1,0 +1,131 @@
+---
+title: "Paleontología Virtual"
+subtitle: "Curso-taller de técnicas digitales aplicadas a la paleontología"
+author: "E. Miguel Díaz de León Muñóz"
+date: today
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    transition: slide
+    center-title-slide: true
+    slide-number: true
+    width: 1920
+    height: 1080
+    logo: ../images/logo.png
+    footer: "E. Miguel Díaz de León Muñóz · Museo Virtual Nacional"
+    menu: true
+    incremental: true
+    controls: true
+    progress: true
+    chalkboard: true
+lang: es
+bibliography: "Curso Paleo-Virtual.bib"
+---
+
+# Bienvenidos al curso-taller de **Paleontología Virtual**{background-color="#1E2B3A"}
+
+# Un poco sobre mí {background-color="#1E2B3A"}
+
+- Licenciado en Biología por la Universidad de Guadalajara
+- Maestría en Ciencias de la Tierra por la Universidad Nacional Autónoma de México
+- Doctorado en Paleontología por la Universidad de Tübingen, Alemania (en curso)
+
+# Trayectoria profesional {background-color="#1E2B3A"}
+
+- Tesis de licenciatura: "Manual de fotogrametría en paleontología"
+- Tesis de maestría: "Clasificación taxonómica de elementos postcraneales de mamíferos (Orden Carnívora, Perissodactyla y Artiodactyla) del Oligoceno Temprano de Oaxaca y sus implicaciones palobiológicas"
+- Tesis de doctorado: "Feeding behavior of Bear wolfs (Amphicyonidae): a biomechanical and macroevolutionary approach"
+
+## Congresos y publicaciones
+
+- Participación en el 2°, 3° y 5° Congreso Virtual de Paleontología
+- Participación en la reunión anual de la Palaeontological Association (2024)
+- Publicación de artículo(s) científicos en revistas internacionales
+
+## Cursos y talleres atendidos
+
+- Digital Methods in Palaeontology - Lapworth Museum, University of Birmingham (2024)
+- Geometric Morphometrics in R - University of Copenhagen (2024)
+
+## Productos digitales
+
+- Manual de fotogrametría en paleontología (disponible en línea)
+- Museo Virtual Nacional (plataforma digital de divulgación paleontológica)
+- BFEX (Extensión de Blender para construcción de Análisis de Elementos Finitos)
+- ¿Dónde está mi fósil? (aplicación multiplataforma para divulgación e investigación paleontológica)
+
+## Contacto y más detalles
+
+- **Directorio:** [museovirtualnacional.com/directorio](https://museovirtualnacional.com/directorio/)
+- **Correo:** migueldlm1307@gmail.com
+
+```{=html}
+<iframe src="https://museovirtualnacional.com/directorio/" width="100%" height="80%" style="border: 2px solid #2A7D8C; border-radius: 8px; margin-top: 20px;"></iframe>
+```
+
+# Sobre el taller {background-color="#1E2B3A"}
+
+## Objetivo General
+
+Proporcionar una introducción a las técnicas y tecnologías digitales para la creación, análisis e interpretación de modelos 3D en la investigación paleontológica.
+
+### Objetivos Específicos
+
+- Conocer métodos de obtención (Fotogrametría, Escaneo Láser, CT).
+- Procesar y optimizar modelos 3D.
+- Aplicar reconstrucción digital y retro-deformación.
+- Conocer las alternativas de software libre para su uso en Paleontología.
+- Aplicar análisis biomecánicos y morfométricos.
+
+## Temario: Semana 1
+
+| Día | Temas Principales | Horas (S/A) |
+|:---:|:---|:---:|
+| **Lunes** | **Día 1: Introducción y Fundamentos**<br>Definición de Paleontología Virtual, bases de datos (MorphoSource, Sketchfab) y tipos de modelos 3D. | 3h (S) |
+| **Miércoles** | **Día 2: Adquisición I (Fotogrametría)**<br>Principios de fotogrametría y flujo de trabajo en RealityScan. | 3h (S) / 3h (A) |
+| **Viernes** | **Día 3: Adquisición II (Sensores y CT)**<br>Escaneo láser y procesamiento de tomografías (3D Slicer). | 3h (S) / 3h (A) |
+
+*(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono*
+
+## Temario: Semana 2
+
+| Día | Temas Principales | Horas (S/A) |
+|:---:|:---|:---:|
+| **Lunes** | **Día 4: Optimización y Escultura Digital**<br>Limpieza de mallas, reparación y reducción de polígonos en Blender. | 3h (S) |
+| **Miércoles** | **Día 5: Reconstrucción Muscular**<br>Modelado de músculos y estimación de biomasa (MyoGenerator). | 3h (S) / 3h (A) |
+| **Viernes** | **Día 6: Análisis Biomecánico (FEA)**<br>Simulación de esfuerzos y deformaciones (BFEX y Fossils). | 3h (S) / 3h (A) |
+
+*(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono*
+
+## Temario: Semana 3
+
+| Día | Temas Principales | Horas (S/A) |
+|:---:|:---|:---:|
+| **Lunes** | **Día 7: Morfometría y Cierre del Curso**<br>Análisis de fuerzas de mordida y Morfometría Geométrica. | 3h (S) |
+
+*(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono*
+
+# Requisitos de Cómputo {background-color="#1E2B3A"}
+
+| Componente | Mínimos (Básico) | Recomendado (Estable) | Profesional |
+|:---|:---:|:---:|:---:|
+| **CPU** | 4 núcleos (2.0 GHz) | 6–8 núcleos (2.5–3.0 GHz) | 8–16+ núcleos (≥3.0 GHz) |
+| **RAM** | 8 GB | 16–32 GB | 64–128 GB |
+| **GPU** | 2 GB VRAM | 4–6 GB VRAM | 8–16 GB VRAM (NVIDIA CUDA) |
+| **Alm.** | SSD SATA / HDD | SSD SATA / NVMe ≥500 GB | NVMe ≥1 TB |
+
+# Software {background-color="#1E2B3A"}
+
+- Blender
+- RealityScan
+- 3D Slicer
+- Fossils
+- BFEX
+- MyoGeneratorRemix
+
+# Requisitos de aprobación {background-color="#1E2B3A"}
+
+- Asistencia mínima del 80% al total de sesiones.
+- Cumplimiento de las actividades asignadas en plataforma y/o por el docente.
+- Para obtener la constancia de aprobación, la calificación final mínima deberá ser de 6.0, sin redondeo, y se deberá cumplir con el porcentaje de asistencia establecido.
+- Las grabaciones de clase no son obligatorias.

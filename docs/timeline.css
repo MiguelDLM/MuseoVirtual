@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 60px;
   background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 0) 100%);
   z-index: 1000;
   display: flex;
@@ -95,18 +95,9 @@
   transform: scale(1.3);
 }
 
+/* Hide textual labels to avoid clutter; color progression is shown via dot states */
 .custom-timeline-label {
-  position: absolute;
-  top: 35px;
-  font-size: 13px;
-  color: #64748b;
-  text-align: center;
-  white-space: nowrap;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  font-weight: 500;
-  opacity: 0.8;
-  pointer-events: none; /* Prevent label from interfering with click on milestone container */
-  transform: translateY(0);
+  display: none !important;
 }
 
 .custom-timeline-milestone:hover .custom-timeline-label {
@@ -129,5 +120,5 @@
 
 /* Make space for the timeline at the bottom of the slides */
 .reveal .slides {
-  margin-bottom: 50px !important;
+  margin-bottom: 30px !important;
 }

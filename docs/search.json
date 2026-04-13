@@ -1,24 +1,360 @@
 [
   {
+    "objectID": "curso-paleo-virtual/home.html#congresos-y-publicaciones",
+    "href": "curso-paleo-virtual/home.html#congresos-y-publicaciones",
+    "title": "Paleontología Virtual",
+    "section": "Congresos y publicaciones",
+    "text": "Congresos y publicaciones\n\nParticipación en el 2°, 3° y 5° Congreso Virtual de Paleontología\nParticipación en la reunión anual de la Palaeontological Association (2024)\nPublicación de artículo(s) científicos en revistas internacionales"
+  },
+  {
+    "objectID": "curso-paleo-virtual/home.html#cursos-y-talleres-atendidos",
+    "href": "curso-paleo-virtual/home.html#cursos-y-talleres-atendidos",
+    "title": "Paleontología Virtual",
+    "section": "Cursos y talleres atendidos",
+    "text": "Cursos y talleres atendidos\n\nDigital Methods in Palaeontology - Lapworth Museum, University of Birmingham (2024)\nGeometric Morphometrics in R - University of Copenhagen (2024)"
+  },
+  {
+    "objectID": "curso-paleo-virtual/home.html#productos-digitales",
+    "href": "curso-paleo-virtual/home.html#productos-digitales",
+    "title": "Paleontología Virtual",
+    "section": "Productos digitales",
+    "text": "Productos digitales\n\nManual de fotogrametría en paleontología (disponible en línea)\nMuseo Virtual Nacional (plataforma digital de divulgación paleontológica)\nBFEX (Extensión de Blender para construcción de Análisis de Elementos Finitos)\n¿Dónde está mi fósil? (aplicación multiplataforma para divulgación e investigación paleontológica)"
+  },
+  {
+    "objectID": "curso-paleo-virtual/home.html#contacto-y-más-detalles",
+    "href": "curso-paleo-virtual/home.html#contacto-y-más-detalles",
+    "title": "Paleontología Virtual",
+    "section": "Contacto y más detalles",
+    "text": "Contacto y más detalles\n\nDirectorio: museovirtualnacional.com/directorio\nCorreo: migueldlm1307@gmail.com"
+  },
+  {
+    "objectID": "curso-paleo-virtual/home.html#objetivo-general",
+    "href": "curso-paleo-virtual/home.html#objetivo-general",
+    "title": "Paleontología Virtual",
+    "section": "Objetivo General",
+    "text": "Objetivo General\nProporcionar una introducción a las técnicas y tecnologías digitales para la creación, análisis e interpretación de modelos 3D en la investigación paleontológica.\nObjetivos Específicos\n\nConocer métodos de obtención (Fotogrametría, Escaneo Láser, CT).\nProcesar y optimizar modelos 3D.\nAplicar reconstrucción digital y retro-deformación.\nConocer las alternativas de software libre para su uso en Paleontología.\nAplicar análisis biomecánicos y morfométricos."
+  },
+  {
+    "objectID": "curso-paleo-virtual/home.html#temario-semana-1",
+    "href": "curso-paleo-virtual/home.html#temario-semana-1",
+    "title": "Paleontología Virtual",
+    "section": "Temario: Semana 1",
+    "text": "Temario: Semana 1\n\n\n\n\n\n\n\n\nDía\nTemas Principales\nHoras (S/A)\n\n\n\n\nLunes\nDía 1: Introducción y FundamentosDefinición de Paleontología Virtual, bases de datos (MorphoSource, Sketchfab) y tipos de modelos 3D.\n3h (S)\n\n\nMiércoles\nDía 2: Adquisición I (Fotogrametría)Principios de fotogrametría y flujo de trabajo en RealityScan.\n3h (S) / 3h (A)\n\n\nViernes\nDía 3: Adquisición II (Sensores y CT)Escaneo láser y procesamiento de tomografías (3D Slicer).\n3h (S) / 3h (A)\n\n\n\n(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono"
+  },
+  {
+    "objectID": "curso-paleo-virtual/home.html#temario-semana-2",
+    "href": "curso-paleo-virtual/home.html#temario-semana-2",
+    "title": "Paleontología Virtual",
+    "section": "Temario: Semana 2",
+    "text": "Temario: Semana 2\n\n\n\n\n\n\n\n\nDía\nTemas Principales\nHoras (S/A)\n\n\n\n\nLunes\nDía 4: Optimización y Escultura DigitalLimpieza de mallas, reparación y reducción de polígonos en Blender.\n3h (S)\n\n\nMiércoles\nDía 5: Reconstrucción MuscularModelado de músculos y estimación de biomasa (MyoGenerator).\n3h (S) / 3h (A)\n\n\nViernes\nDía 6: Análisis Biomecánico (FEA)Simulación de esfuerzos y deformaciones (BFEX y Fossils).\n3h (S) / 3h (A)\n\n\n\n(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono"
+  },
+  {
+    "objectID": "curso-paleo-virtual/home.html#temario-semana-3",
+    "href": "curso-paleo-virtual/home.html#temario-semana-3",
+    "title": "Paleontología Virtual",
+    "section": "Temario: Semana 3",
+    "text": "Temario: Semana 3\n\n\n\n\n\n\n\n\nDía\nTemas Principales\nHoras (S/A)\n\n\n\n\nLunes\nDía 7: Morfometría y Cierre del CursoAnálisis de fuerzas de mordida y Morfometría Geométrica.\n3h (S)\n\n\n\n(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#los-fósiles-son-únicos-e-irremplazables",
+    "href": "curso-paleo-virtual/01-introduccion.html#los-fósiles-son-únicos-e-irremplazables",
+    "title": "Paleontología Virtual",
+    "section": "Los fósiles son únicos e irremplazables",
+    "text": "Los fósiles son únicos e irremplazables\n\nUnicidad: No existe un respaldo físico; cada fósil es irrepetible.\nVulnerabilidad: La manipulación y el estudio físico pueden causar daños irreversibles.\nInaccesibilidad: Barreras geográficas y costos de transporte limitan la investigación.\nRiesgo catastrófico: Guerras, desastres e incendios han destruido especímenes para siempre."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#caso-1-el-incendio-del-museo-nacional-de-brasil-2018",
+    "href": "curso-paleo-virtual/01-introduccion.html#caso-1-el-incendio-del-museo-nacional-de-brasil-2018",
+    "title": "Paleontología Virtual",
+    "section": "Caso 1: El incendio del Museo Nacional de Brasil (2018)",
+    "text": "Caso 1: El incendio del Museo Nacional de Brasil (2018)\n\n\n\n\n\nFachada del Museo Nacional en llamas, 2 de septiembre de 2018.\n\n\n\n\nMás de 20 millones de especímenes destruidos: fósiles, insectos, esqueletos, grabaciones etnográficas.\nEntre ellos, Luzia: uno de los seres humanos más antiguos conocidos de América\nLa mayoría de las colecciones paleontológicas no tenían registro digital.\nPérdida científica incalculable e irreversible."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#caso-1-la-digitalización-de-maxakalisaurus-topai",
+    "href": "curso-paleo-virtual/01-introduccion.html#caso-1-la-digitalización-de-maxakalisaurus-topai",
+    "title": "Paleontología Virtual",
+    "section": "Caso 1: La digitalización de Maxakalisaurus topai",
+    "text": "Caso 1: La digitalización de Maxakalisaurus topai\n\n\n\n\n\nReconstrucción de Maxakalisaurus topai, titanosaurio del Cretácico de Brasil.\n\n\n\n\nTitanosaurio del Cretácico de Brasil, alojado en el Museo Nacional.\nFue digitalizado después del incendio gracias a que existían moldes y réplicas físicas"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#caso-2-spinosaurus-aegyptiacus-y-la-segunda-guerra-mundial",
+    "href": "curso-paleo-virtual/01-introduccion.html#caso-2-spinosaurus-aegyptiacus-y-la-segunda-guerra-mundial",
+    "title": "Paleontología Virtual",
+    "section": "Caso 2: Spinosaurus aegyptiacus y la Segunda Guerra Mundial",
+    "text": "Caso 2: Spinosaurus aegyptiacus y la Segunda Guerra Mundial\n\n\n\nErnst Stromer describió Spinosaurus en 1915 a partir de material colectado en Egipto.\nLos especímenes tipo se conservaban en el Museo Estatal de Historia Natural de Baviera, Munich.\nEn abril de 1944, los bombardeos aliados destruyeron el museo.\nLos únicos fósiles originales de Spinosaurus desaparecieron para siempre (Ibrahim et al. 2014).\nDurante décadas fue imposible re-estudiar el espécimen — hasta que nuevos fósiles aparecieron en 2008.\n\n\n\n\n\nDibujos del Spinosaurus aegyptiacus de Ernst Stromer por Dr. Erhardt"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#preguntas-clave",
+    "href": "curso-paleo-virtual/01-introduccion.html#preguntas-clave",
+    "title": "Paleontología Virtual",
+    "section": "Preguntas clave",
+    "text": "Preguntas clave\n\n¿Cómo estudiarlos sin destruirlos?\n¿Cómo hacer que un fósil en Alemania pueda ser estudiado desde México?\n¿Y si el fósil se pierde o destruye?\n¿Cómo preservar su información para futuras generaciones?"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#la-paleontología-virtual-resuelve-el-problema-del-acceso-y-la-preservación",
+    "href": "curso-paleo-virtual/01-introduccion.html#la-paleontología-virtual-resuelve-el-problema-del-acceso-y-la-preservación",
+    "title": "Paleontología Virtual",
+    "section": "La paleontología virtual resuelve el problema del acceso y la preservación",
+    "text": "La paleontología virtual resuelve el problema del acceso y la preservación\nLa paleontología virtual es el estudio de los fósiles a través de representaciones digitales interactivas. Emplea tecnologías computacionales y de imagen de vanguardia para obtener información nueva sin necesidad de manipular el espécimen físico (Sutton, Rahman, y Garwood 2014).\n\n\n\n\nPaleontología Virtual"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#virtual-computacional-dos-enfoques-complementarios",
+    "href": "curso-paleo-virtual/01-introduccion.html#virtual-computacional-dos-enfoques-complementarios",
+    "title": "Paleontología Virtual",
+    "section": "Virtual ≠ Computacional: dos enfoques complementarios",
+    "text": "Virtual ≠ Computacional: dos enfoques complementarios\n\n\nPaleontología Virtual\n\nEnfoque: Captura y reconstrucción\nObjetivo: Obtener el “fósil digital”\nHerramientas: CT, escaneo láser, fotogrametría\nResultado: Modelo 3D fiel al espécimen (Sutton, Rahman, y Garwood 2014)\n\n\nPaleontología Computacional\n\nEnfoque: Modelado matemático y simulación\nObjetivo: Analizar e interpretar\nHerramientas: Software de análisis estadístico, biomecánico y morfométrico\nResultado: Hipótesis cuantificadas (Elewa 2011)\n\n\n\n\nEl modelo 3D es el puente entre ambas disciplinas."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#mapeando-el-territorio-digital",
+    "href": "curso-paleo-virtual/01-introduccion.html#mapeando-el-territorio-digital",
+    "title": "Paleontología Virtual",
+    "section": "Mapeando el Territorio Digital",
+    "text": "Mapeando el Territorio Digital\n\n\n  \n  \n  Paleontología\n  Computacional\n  \n  \n  \n  Paleontología\n  Virtual\n\n  \n  \n  \n  \n  \n  Algoritmos estadísticos\n  \n  \n  \n  \n  \n  Paleoinformática\n\n  \n  \n  \n  \n  Bases de datos\n  (ej. Sepkoski)\n\n  \n  \n  \n  \n  \n  Visualización 3D\n\n  \n  \n  \n  \n  Interacción espacial\n\n  \n  \n  \n  \n  Escaneo y Tomografía\n\n\n\nToda la paleontología virtual es computacional, pero no viceversa. Mientras la computacional maneja números y bases de datos a gran escala, la virtual se enfoca en la representación e interacción geométrica 3D del fósil."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#tres-tecnologías-producen-los-modelos-3d",
+    "href": "curso-paleo-virtual/01-introduccion.html#tres-tecnologías-producen-los-modelos-3d",
+    "title": "Paleontología Virtual",
+    "section": "Tres tecnologías producen los modelos 3D",
+    "text": "Tres tecnologías producen los modelos 3D\n\n\nEscaneo láser\nDispositivos de luz estructurada o láser capturan la geometría superficial del fósil con alta precisión.\n\n\nFotogrametría\nFotografías desde múltiples ángulos son procesadas por software para reconstruir la forma en 3D.\n\n\nTomografía computarizada (CT)\nRayos-X en secciones transversales permiten visualizar el interior del fósil sin destruirlo.\n\n\n\nLos Días 2 y 3 cubriremos el flujo de trabajo completo de cada técnica."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#cada-técnica-tiene-su-dominio-de-aplicación",
+    "href": "curso-paleo-virtual/01-introduccion.html#cada-técnica-tiene-su-dominio-de-aplicación",
+    "title": "Paleontología Virtual",
+    "section": "Cada técnica tiene su dominio de aplicación",
+    "text": "Cada técnica tiene su dominio de aplicación\n\n\n\n\nEscaneo láser\nFotogrametría\nTomografía CT\n\n\n\n\nSuperficie externa\n✓\n✓\n✓\n\n\nEstructura interna\n—\n—\n✓\n\n\nCosto\nMedio\nBajo\nAlto\n\n\nPortabilidad\nMedia\nAlta\nBaja\n\n\nResolución\nAlta\nMedia-Alta\nMuy alta"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#todo-modelo-3d-es-una-malla-definida-por-elementos-geométricos",
+    "href": "curso-paleo-virtual/01-introduccion.html#todo-modelo-3d-es-una-malla-definida-por-elementos-geométricos",
+    "title": "Paleontología Virtual",
+    "section": "Todo modelo 3D es una malla definida por elementos geométricos",
+    "text": "Todo modelo 3D es una malla definida por elementos geométricos\n\n\nLos elementos de una malla\n\n\n\nConcepto\nTambién llamado en…\n\n\n\n\nVértice\nNode (FEA/VTK), point (PCL, VTK)\n\n\nArista\nEdge, bond, half-edge (Blender)\n\n\nCara\nFace, polygon, facet, triangle\n\n\nCelda\nCell, element (FEA), voxel (CT)\n\n\nNormal\nFace normal, vertex normal\n\n\nUV\nTexture coordinate, texcoord\n\n\n\n\nTipos de malla\n\nSuperficie (surface mesh): solo caras externas — STL, OBJ, PLY\nVolumétrica (volumetric mesh): incluye el interior — VTK, MSH, XDMF\nNube de puntos (point cloud): solo vértices, sin conectividad — XYZ, LAS, E57\n\n\n\nBlender usa vértices, aristas y caras. VTK habla de points, cells y connectivity array. Son lo mismo con distinto nombre."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#los-cuatro-formatos-más-usados-en-paleontología-digital",
+    "href": "curso-paleo-virtual/01-introduccion.html#los-cuatro-formatos-más-usados-en-paleontología-digital",
+    "title": "Paleontología Virtual",
+    "section": "Los cuatro formatos más usados en paleontología digital",
+    "text": "Los cuatro formatos más usados en paleontología digital\n\n\n\n\n\n\n\n\n\nFormato\nTipo\nVentajas\nDesventajas\n\n\n\n\nSTL\nSuperficie\nUniversal, simple, 3D printing\nSin color, sin textura, sin escala\n\n\nOBJ\nSuperficie\nColor, UV, materiales (MTL), amplio soporte\nTexto plano, pesado, multiples archivos\n\n\nPLY\nSuperficie\nColor por vértice, binario o texto, ligero\nSoporte de textura limitado\n\n\nVTK\nVolumétrico\nFEA, CFD, datos escalares/vectoriales por celda\nPoco soporte en software de modelado"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#stl-y-obj-portabilidad-máxima",
+    "href": "curso-paleo-virtual/01-introduccion.html#stl-y-obj-portabilidad-máxima",
+    "title": "Paleontología Virtual",
+    "section": "STL y OBJ: portabilidad máxima",
+    "text": "STL y OBJ: portabilidad máxima\n\n\nSTL — Stereolithography\n\nInventado en 1987 para impresión 3D.\nSolo triángulos: cada cara tiene 3 vértices y una normal.\nASCII (legible) o binario (6× más compacto).\nNingún software lo rechaza.\nÚsalo cuando: exportas para imprimir o para compatibilidad máxima.\nEvítalo cuando: necesitas color o textura.\n\n\nOBJ — Wavefront Object\n\nEstándar de facto para intercambio con textura.\nAcompañado de un archivo .mtl (materiales) y archivos de imagen.\nSoporta polígonos n-lados (no solo triángulos).\nÚsalo cuando: necesitas color, UV o exportar a Sketchfab/MorphoSource.\nEvítalo cuando: el archivo supera ~500 MB (texto puro, muy lento)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#ply-y-vtk-ciencia-y-análisis",
+    "href": "curso-paleo-virtual/01-introduccion.html#ply-y-vtk-ciencia-y-análisis",
+    "title": "Paleontología Virtual",
+    "section": "PLY y VTK: ciencia y análisis",
+    "text": "PLY y VTK: ciencia y análisis\n\n\nPLY — Polygon File Format\n\nCreado en Stanford (1994) para escaneo 3D científico.\nSoporta propiedades arbitrarias por vértice: color RGBA, intensidad, curvatura, coordenadas CT.\nModo binario compacto y rápido de leer.\nÚsalo cuando: el escáner exporta PLY con color o datos adicionales.\nEvítalo cuando: necesitas textura UV mapeada.\n\n\nVTK — Visualization Toolkit\n\nFormato de Kitware, diseñado para simulación científica.\nAlmacena mallas volumétricas + datos por celda o nodo: tensión, temperatura, presión.\nDos variantes: .vtk (legacy, texto/binario) y .vtu (XML, comprimible).\nÚsalo cuando: haces FEA, CFD o exportas resultados de simulación.\nEvítalo cuando: solo necesitas geometría para visualización."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#herramientas-para-convertir-entre-formatos",
+    "href": "curso-paleo-virtual/01-introduccion.html#herramientas-para-convertir-entre-formatos",
+    "title": "Paleontología Virtual",
+    "section": "Herramientas para convertir entre formatos",
+    "text": "Herramientas para convertir entre formatos\n\n\nGUI (sin código)\n\nMeshLab — abre y exporta casi todo; filtros de calidad\nBlender — importa STL/OBJ/PLY/FBX; exporta con textura\nParaView — especializado en VTK y datos científicos\n3D Slicer — CT → STL/OBJ/VTK (Día 3)\n\n\nPython (por lotes)\n\nmeshio — 40+ formatos; conserva datos científicos por celda\ntrimesh — enfocado en mallas de superficie; más robusto con PLY\nopen3d — nube de puntos y mallas; GPU-accelerated\npyvista — envuelve VTK; gráficas científicas integradas\n\n\nLínea de comandos\n\nassimp (sudo apt install assimp-utils) — convierte 40+ formatos en una línea\nmeshio-convert — CLI incluido con meshio\nctmconv — compresión OpenCTM"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#convertir-una-malla-con-python-cuatro-líneas",
+    "href": "curso-paleo-virtual/01-introduccion.html#convertir-una-malla-con-python-cuatro-líneas",
+    "title": "Paleontología Virtual",
+    "section": "Convertir una malla con Python: cuatro líneas",
+    "text": "Convertir una malla con Python: cuatro líneas\nimport meshio\n\n# Leer cualquier formato soportado\nmesh = meshio.read(\"especimen.ply\")\n\n# Escribir en otro formato — meshio detecta el formato por la extensión\nmeshio.write(\"especimen.stl\", mesh)\nmeshio.write(\"especimen.obj\", mesh)\nmeshio.write(\"especimen.vtk\", mesh)\n\n# Con trimesh: más robusto para mallas de superficie con color\nimport trimesh\n\nmesh = trimesh.load(\"especimen.ply\", process=False)\nmesh.export(\"especimen.obj\")   # conserva color por vértice si el formato lo admite\n\n\nEl script convert_mesh.py incluido en el curso automatiza esto para uno o varios archivos desde la terminal."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#flujo-de-trabajo-convertir-archivos-con-el-script-del-curso",
+    "href": "curso-paleo-virtual/01-introduccion.html#flujo-de-trabajo-convertir-archivos-con-el-script-del-curso",
+    "title": "Paleontología Virtual",
+    "section": "Flujo de trabajo: convertir archivos con el script del curso",
+    "text": "Flujo de trabajo: convertir archivos con el script del curso\n# 1. Crear el entorno virtual (solo la primera vez)\npython3 -m venv venv\nsource venv/bin/activate          # Linux/Mac\n# venv\\Scripts\\activate           # Windows\n\n# 2. Instalar dependencias\npip install meshio trimesh\n\n# 3. Convertir un archivo\npython convert_mesh.py especimen.ply -f obj\n\n# 4. Convertir varios archivos a la vez\npython convert_mesh.py *.ply -f stl\n\n# 5. Ver todos los formatos disponibles\npython convert_mesh.py --list-formats\n\n\n¿Por qué un entorno virtual? Evita conflictos entre versiones de librerías de distintos proyectos. meshio y trimesh se instalan solo dentro de ese entorno y no afectan el resto del sistema."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#morphosource",
+    "href": "curso-paleo-virtual/01-introduccion.html#morphosource",
+    "title": "Paleontología Virtual",
+    "section": "MorphoSource",
+    "text": "MorphoSource\n\n\n\nRepositorio científico en morfología 3D.\nDecenas de miles de especímenes escaneados.\nContiene datos de CT, escaneo láser y fotogrametría.\nPermite acceso a archivos originales (STL, PLY, OBJ).\nFacilita la citación académica de conjuntos de datos.\n\nmorphosource.org"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#sketchfab",
+    "href": "curso-paleo-virtual/01-introduccion.html#sketchfab",
+    "title": "Paleontología Virtual",
+    "section": "Sketchfab",
+    "text": "Sketchfab\n\n\n\nPlataforma líder de visualización 3D en la web.\nAmpliamente usada por museos y colecciones científicas.\nPermite la visualización interactiva sin necesidad de software especializado.\nSus modelos son embebibles en páginas web.\n\nsketchfab.com"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#umorf-university-of-michigan",
+    "href": "curso-paleo-virtual/01-introduccion.html#umorf-university-of-michigan",
+    "title": "Paleontología Virtual",
+    "section": "UMORF (University of Michigan)",
+    "text": "UMORF (University of Michigan)\n\n\n\nRepositorio del Museo de Paleontología de la Universidad de Michigan.\nExtenso catálogo de fósiles de vertebrados, invertebrados y modelos 3D interactivos.\nOrientado fuertemente a la educación y divulgación abierta en ciencias biológicas.\n\numorf.ummp.lsa.umich.edu"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#digimorph",
+    "href": "curso-paleo-virtual/01-introduccion.html#digimorph",
+    "title": "Paleontología Virtual",
+    "section": "DigiMorph",
+    "text": "DigiMorph\n\n\n\nPionero en tomografía de alta resolución de vertebrados e invertebrados, operado por UT Austin.\nIncluye animaciones, secciones anatómicas y modelos de superficie.\nColección extensa construida tras décadas de investigaciones morfológicas.\n\ndigimorph.org"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#phenome10k",
+    "href": "curso-paleo-virtual/01-introduccion.html#phenome10k",
+    "title": "Paleontología Virtual",
+    "section": "Phenome10K",
+    "text": "Phenome10K\n\n\n\nBiblioteca digital gratuita de microCT y escaneos de superficie.\nContenido: Especies actuales y fósiles (cráneos, esqueletos y tejidos blandos).\nAcceso: Visualización libre; requiere cuenta gratuita para descargar archivos STL.\nOrigen: Creado por la Dra. Anjali Goswami y mantenido por el Natural History Museum de Londres.\n\nphenome10k.org\n\n\n\n\nEn la sesión práctica descargaremos y exploraremos especímenes de estos repositorios."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#los-modelos-3d-abren-cuatro-grandes-líneas-de-aplicación",
+    "href": "curso-paleo-virtual/01-introduccion.html#los-modelos-3d-abren-cuatro-grandes-líneas-de-aplicación",
+    "title": "Paleontología Virtual",
+    "section": "Los modelos 3D abren cuatro grandes líneas de aplicación",
+    "text": "Los modelos 3D abren cuatro grandes líneas de aplicación\n\n\n1. Preservación del patrimonio\nEl modelo digital existe aunque el fósil sea dañado, perdido o destruido. Permite compartir sin riesgo de deterioro.\n2. Difusión del conocimiento\nMuseos virtuales, exhibiciones interactivas y materiales educativos accesibles desde cualquier lugar.\n\n3. Reconstrucción de organismos extintos\nRestaurar morfología perdida, reconstruir tejidos blandos y generar hipótesis sobre apariencia en vida.\n4. Análisis cuantitativo (lo que veremos en los Días 5–7)\nMorfometría, biomecánica y dinámica: estudiar forma y función sin tocar el fósil."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#el-modelo-3d-es-el-punto-de-partida-de-cuatro-grandes-técnicas-analíticas",
+    "href": "curso-paleo-virtual/01-introduccion.html#el-modelo-3d-es-el-punto-de-partida-de-cuatro-grandes-técnicas-analíticas",
+    "title": "Paleontología Virtual",
+    "section": "El modelo 3D es el punto de partida de cuatro grandes técnicas analíticas",
+    "text": "El modelo 3D es el punto de partida de cuatro grandes técnicas analíticas\nPara biólogos y paleontólogos, la digitalización no es el fin sino el inicio del análisis:\n\n\nMorfometría Geométrica — cuantificar y comparar formas estadísticamente (Día 7)\n\n\n\n\nAnálisis de Elementos Finitos (FEA) — simular fuerzas, tensiones y deformaciones (Día 6)\n\n\n\n\nDinámica Multicuerpo (MDA) — simular movimientos articulares y musculares (Días 5–6)\n\n\n\n\nDinámica de Fluidos (CFD) — estudiar locomoción en medios acuáticos o aéreos"
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#un-flujo-de-trabajo-integrador-conecta-digitalización-y-análisis",
+    "href": "curso-paleo-virtual/01-introduccion.html#un-flujo-de-trabajo-integrador-conecta-digitalización-y-análisis",
+    "title": "Paleontología Virtual",
+    "section": "Un flujo de trabajo integrador conecta digitalización y análisis",
+    "text": "Un flujo de trabajo integrador conecta digitalización y análisis\nEspécimen físico\n     │\n     ▼\nDigitalización 3D ──────────── Días 2 y 3\n(CT / Láser / Fotogrametría)\n     │\n     ▼\nOptimización del modelo ─────── Día 4\n(limpieza de malla, retopología)\n     │\n     ▼\nReconstrucción muscular ──────── Día 5\n     │\n     ▼\nAnálisis biomecánico / FEA ───── Día 6\n     │\n     ▼\nMorfometría Geométrica ──────── Día 7\n\nEstas áreas no están aisladas. Forman un ecosistema digital donde cada paso alimenta al siguiente y permite probar hipótesis de forma rigurosa y reproducible."
+  },
+  {
+    "objectID": "curso-paleo-virtual/01-introduccion.html#la-paleontología-virtual-resuelve-limitaciones-fundamentales-del-trabajo-con-fósiles",
+    "href": "curso-paleo-virtual/01-introduccion.html#la-paleontología-virtual-resuelve-limitaciones-fundamentales-del-trabajo-con-fósiles",
+    "title": "Paleontología Virtual",
+    "section": "La paleontología virtual resuelve limitaciones fundamentales del trabajo con fósiles",
+    "text": "La paleontología virtual resuelve limitaciones fundamentales del trabajo con fósiles\n\nLos fósiles son únicos e irremplazables — la digitalización permite estudiarlos sin riesgo\nTres tecnologías producen modelos 3D: escaneo láser, fotogrametría y CT — cada una con su dominio\nRepositorios como MorphoSource y Sketchfab hacen accesibles miles de especímenes digitales\nEl modelo 3D es el inicio, no el fin: habilita morfometría, biomecánica y simulación\nLa paleontología virtual es interdisciplinaria: combina paleontología, informática, ingeniería y biología"
+  },
+  {
+    "objectID": "curso-paleo-virtual/propuesta_paleo_virtual.html",
+    "href": "curso-paleo-virtual/propuesta_paleo_virtual.html",
+    "title": "Propuesta de Curso: Paleontología Virtual",
+    "section": "",
+    "text": "Documento de propuesta para cursos o talleres de Educación Continua y a Distancia.\n\n\n\nTítulo de la actividad: Paleontología Virtual\nResponsable Académico: M. En C. Erick Miguel Díaz de León Muñoz\nTipo de actividad: Taller\nModalidad: Virtual\nFecha(s): Dependerá de la disponibilidad de espacios\nHorario: Lunes, Miércoles y Viernes, 6:00 pm - 9:00 pm\nTotal de horas: 30 horas (21 síncronas + 9 horas de práctica en casa)\nCosto sugerido: $350 MXN (gestión/organización)\n\n\n\n\n\nLa paleontología virtual utiliza técnicas digitales y computacionales para estudiar la vida del pasado. El uso de modelos 3D permite trabajar con grupos taxonómicos de todo el mundo sin necesidad de traslados físicos, eliminando barreras económicas para investigadores, especialmente en países en desarrollo.\nAl impartir este curso en la ENES Mérida, se busca: - Fortalecer la colaboración académica. - Fomentar habilidades digitales en la región. - Complementar la oferta educativa en Ciencias de la Tierra y Biología.\n\n[!NOTE] Mérida es un sitio estratégico debido al impacto del asteroide en el Cretácico-Paleógeno, lo que hace de este curso una oportunidad clave para el interés en la evolución y extinción.\n\n\n\n\n\n\n\nProporcionar una introducción a las técnicas y tecnologías digitales para la creación, análisis e interpretación de modelos 3D en la investigación paleontológica.\n\n\n\n\nConocer métodos de obtención (Fotogrametría, Escaneo Láser, CT).\nProcesar y optimizar modelos 3D.\nAplicar reconstrucción digital y retro-deformación.\nManejar software de código abierto.\nAplicar análisis biomecánicos y morfométricos.\n\n\n\n\n\n\n\n\n\nEstudiantes (Licenciatura/Posgrado) en Ciencias de la Tierra, Biología, Arqueología.\nProfesionales (Curadores, Divulgadores, Técnicos).\n\n\n\n\nExplicación técnica seguida de ejercicios prácticos supervisados o trabajos para el día siguiente. Se entrega lectura complementaria previa a cada sesión.\n\n\n\n\n\n\n\n\nRequisito\nDescripción\n\n\n\n\nIngreso\nAlumno/Egresado de carreras afines.\n\n\nPermanencia\nAsistencia y entrega de ejercicios.\n\n\nInfraestructura\nSala de cómputo con internet estable.\n\n\nAprobación\n80% asistencia y cumplimiento de actividades.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComponente\nMínimos (Básico)\nRecomendado (Estable)\nProfesional\n\n\n\n\nCPU\n4 núcleos (2.0 GHz)\n6–8 núcleos (2.5–3.0 GHz)\n8–16+ núcleos (≥3.0 GHz)\n\n\nRAM\n8 GB\n16–32 GB\n64–128 GB\n\n\nGPU\n2 GB VRAM\n4–6 GB VRAM\n8–16 GB VRAM (NVIDIA CUDA)\n\n\nAlm.\nSSD SATA / HDD\nSSD SATA / NVMe ≥500 GB\nNVMe ≥1 TB\n\n\nSO\nWin10 / Linux / macOS\nWin10/11 / Linux mod.\nWin11 / Linux opt.\n\n\n\nEvaluación: - Entrega de ejercicios: 50% - Participación: 50%\n\n\n\n\n\n\n\n\nCunningham, J. A., et al. (2014). A virtual world of paleontology. Trends. Ecol. Evol.\nChatar, N., et al. (2023). ‘Fossils’: A new protocol for biomechanical loading. Methods Ecol. Evol.\nDíaz de León-Muñoz, E. M., et al. (2025). BFEX: Finite Element Analysis With Blender. Ecol. Evol.\nLautenschlager, S. (2015). Estimating cranial musculoskeletal constraints. R. Soc. Open Sci.\nHerbst, E. C., et al. (2022). A toolbox for retrodeformation in Blender. R. Soc. Open Sci.\n\n\n\n\n\nPandolfi, L., et al. (2020). Evolving Virtual and Computational Paleontology. Front. Earth Sci.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSemana\nDía\nTemas Principales\nHoras (S/A)\n\n\n\n\nSemana 1\nLunes\nDía 1: Introducción y FundamentosDefinición de Paleontología Virtual, bases de datos (MorphoSource, Sketchfab) y tipos de modelos 3D.\n3h (S)\n\n\n\nMiércoles\nDía 2: Adquisición I (Fotogrametría)Principios de fotogrametría y flujo de trabajo en Agisoft Metashape.\n3h (S) / 3h (A)\n\n\n\nViernes\nDía 3: Adquisición II (Sensores y CT)Escaneo láser y procesamiento de tomografías (3D Slicer).\n3h (S) / 3h (A)\n\n\nSemana 2\nLunes\nDía 4: Optimización y Escultura DigitalLimpieza de mallas, reparación y reducción de polígonos en Blender.\n3h (S)\n\n\n\nMiércoles\nDía 5: Reconstrucción MuscularModelado de músculos y estimación de biomasa (MyoGenerator).\n3h (S) / 3h (A)\n\n\n\nViernes\nDía 6: Análisis Biomecánico (FEA)Simulación de esfuerzos y deformaciones (BFEX y Fossils).\n3h (S) / 3h (A)\n\n\nSemana 3\nLunes\nDía 7: Morfometría y Cierre del CursoAnálisis de fuerzas de mordida y Morfometría Geométrica.\n3h (S)\n\n\n\n(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono\n\n\n\n\nM. En C. E. Miguel Díaz de León Muñoz Egresado de la licenciatura en Biología (UdeG) y Maestro en Ciencias de la Tierra (UNAM). Candidato a Doctor en Geociencias por la Universidad de Tübingen, Alemania.\nEspecialista en modelos 3D para investigación y divulgación. Director del proyecto Museo Virtual Nacional, con 10 años promoviendo técnicas digitales accesibles para la comunidad científica."
+  },
+  {
+    "objectID": "curso-paleo-virtual/propuesta_paleo_virtual.html#información-general",
+    "href": "curso-paleo-virtual/propuesta_paleo_virtual.html#información-general",
+    "title": "Propuesta de Curso: Paleontología Virtual",
+    "section": "",
+    "text": "Título de la actividad: Paleontología Virtual\nResponsable Académico: M. En C. Erick Miguel Díaz de León Muñoz\nTipo de actividad: Taller\nModalidad: Virtual\nFecha(s): Dependerá de la disponibilidad de espacios\nHorario: Lunes, Miércoles y Viernes, 6:00 pm - 9:00 pm\nTotal de horas: 30 horas (21 síncronas + 9 horas de práctica en casa)\nCosto sugerido: $350 MXN (gestión/organización)"
+  },
+  {
+    "objectID": "curso-paleo-virtual/propuesta_paleo_virtual.html#justificación-de-la-actividad",
+    "href": "curso-paleo-virtual/propuesta_paleo_virtual.html#justificación-de-la-actividad",
+    "title": "Propuesta de Curso: Paleontología Virtual",
+    "section": "",
+    "text": "La paleontología virtual utiliza técnicas digitales y computacionales para estudiar la vida del pasado. El uso de modelos 3D permite trabajar con grupos taxonómicos de todo el mundo sin necesidad de traslados físicos, eliminando barreras económicas para investigadores, especialmente en países en desarrollo.\nAl impartir este curso en la ENES Mérida, se busca: - Fortalecer la colaboración académica. - Fomentar habilidades digitales en la región. - Complementar la oferta educativa en Ciencias de la Tierra y Biología.\n\n[!NOTE] Mérida es un sitio estratégico debido al impacto del asteroide en el Cretácico-Paleógeno, lo que hace de este curso una oportunidad clave para el interés en la evolución y extinción."
+  },
+  {
+    "objectID": "curso-paleo-virtual/propuesta_paleo_virtual.html#objetivos",
+    "href": "curso-paleo-virtual/propuesta_paleo_virtual.html#objetivos",
+    "title": "Propuesta de Curso: Paleontología Virtual",
+    "section": "",
+    "text": "Proporcionar una introducción a las técnicas y tecnologías digitales para la creación, análisis e interpretación de modelos 3D en la investigación paleontológica.\n\n\n\n\nConocer métodos de obtención (Fotogrametría, Escaneo Láser, CT).\nProcesar y optimizar modelos 3D.\nAplicar reconstrucción digital y retro-deformación.\nManejar software de código abierto.\nAplicar análisis biomecánicos y morfométricos."
+  },
+  {
+    "objectID": "curso-paleo-virtual/propuesta_paleo_virtual.html#perfil-y-metodología",
+    "href": "curso-paleo-virtual/propuesta_paleo_virtual.html#perfil-y-metodología",
+    "title": "Propuesta de Curso: Paleontología Virtual",
+    "section": "",
+    "text": "Estudiantes (Licenciatura/Posgrado) en Ciencias de la Tierra, Biología, Arqueología.\nProfesionales (Curadores, Divulgadores, Técnicos).\n\n\n\n\nExplicación técnica seguida de ejercicios prácticos supervisados o trabajos para el día siguiente. Se entrega lectura complementaria previa a cada sesión."
+  },
+  {
+    "objectID": "curso-paleo-virtual/propuesta_paleo_virtual.html#requisitos-y-evaluación",
+    "href": "curso-paleo-virtual/propuesta_paleo_virtual.html#requisitos-y-evaluación",
+    "title": "Propuesta de Curso: Paleontología Virtual",
+    "section": "",
+    "text": "Requisito\nDescripción\n\n\n\n\nIngreso\nAlumno/Egresado de carreras afines.\n\n\nPermanencia\nAsistencia y entrega de ejercicios.\n\n\nInfraestructura\nSala de cómputo con internet estable.\n\n\nAprobación\n80% asistencia y cumplimiento de actividades.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComponente\nMínimos (Básico)\nRecomendado (Estable)\nProfesional\n\n\n\n\nCPU\n4 núcleos (2.0 GHz)\n6–8 núcleos (2.5–3.0 GHz)\n8–16+ núcleos (≥3.0 GHz)\n\n\nRAM\n8 GB\n16–32 GB\n64–128 GB\n\n\nGPU\n2 GB VRAM\n4–6 GB VRAM\n8–16 GB VRAM (NVIDIA CUDA)\n\n\nAlm.\nSSD SATA / HDD\nSSD SATA / NVMe ≥500 GB\nNVMe ≥1 TB\n\n\nSO\nWin10 / Linux / macOS\nWin10/11 / Linux mod.\nWin11 / Linux opt.\n\n\n\nEvaluación: - Entrega de ejercicios: 50% - Participación: 50%"
+  },
+  {
+    "objectID": "curso-paleo-virtual/propuesta_paleo_virtual.html#bibliografía",
+    "href": "curso-paleo-virtual/propuesta_paleo_virtual.html#bibliografía",
+    "title": "Propuesta de Curso: Paleontología Virtual",
+    "section": "",
+    "text": "Cunningham, J. A., et al. (2014). A virtual world of paleontology. Trends. Ecol. Evol.\nChatar, N., et al. (2023). ‘Fossils’: A new protocol for biomechanical loading. Methods Ecol. Evol.\nDíaz de León-Muñoz, E. M., et al. (2025). BFEX: Finite Element Analysis With Blender. Ecol. Evol.\nLautenschlager, S. (2015). Estimating cranial musculoskeletal constraints. R. Soc. Open Sci.\nHerbst, E. C., et al. (2022). A toolbox for retrodeformation in Blender. R. Soc. Open Sci.\n\n\n\n\n\nPandolfi, L., et al. (2020). Evolving Virtual and Computational Paleontology. Front. Earth Sci."
+  },
+  {
+    "objectID": "curso-paleo-virtual/propuesta_paleo_virtual.html#programación-de-sesiones",
+    "href": "curso-paleo-virtual/propuesta_paleo_virtual.html#programación-de-sesiones",
+    "title": "Propuesta de Curso: Paleontología Virtual",
+    "section": "",
+    "text": "Semana\nDía\nTemas Principales\nHoras (S/A)\n\n\n\n\nSemana 1\nLunes\nDía 1: Introducción y FundamentosDefinición de Paleontología Virtual, bases de datos (MorphoSource, Sketchfab) y tipos de modelos 3D.\n3h (S)\n\n\n\nMiércoles\nDía 2: Adquisición I (Fotogrametría)Principios de fotogrametría y flujo de trabajo en Agisoft Metashape.\n3h (S) / 3h (A)\n\n\n\nViernes\nDía 3: Adquisición II (Sensores y CT)Escaneo láser y procesamiento de tomografías (3D Slicer).\n3h (S) / 3h (A)\n\n\nSemana 2\nLunes\nDía 4: Optimización y Escultura DigitalLimpieza de mallas, reparación y reducción de polígonos en Blender.\n3h (S)\n\n\n\nMiércoles\nDía 5: Reconstrucción MuscularModelado de músculos y estimación de biomasa (MyoGenerator).\n3h (S) / 3h (A)\n\n\n\nViernes\nDía 6: Análisis Biomecánico (FEA)Simulación de esfuerzos y deformaciones (BFEX y Fossils).\n3h (S) / 3h (A)\n\n\nSemana 3\nLunes\nDía 7: Morfometría y Cierre del CursoAnálisis de fuerzas de mordida y Morfometría Geométrica.\n3h (S)\n\n\n\n(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono"
+  },
+  {
+    "objectID": "curso-paleo-virtual/propuesta_paleo_virtual.html#sobre-el-instructor",
+    "href": "curso-paleo-virtual/propuesta_paleo_virtual.html#sobre-el-instructor",
+    "title": "Propuesta de Curso: Paleontología Virtual",
+    "section": "",
+    "text": "M. En C. E. Miguel Díaz de León Muñoz Egresado de la licenciatura en Biología (UdeG) y Maestro en Ciencias de la Tierra (UNAM). Candidato a Doctor en Geociencias por la Universidad de Tübingen, Alemania.\nEspecialista en modelos 3D para investigación y divulgación. Director del proyecto Museo Virtual Nacional, con 10 años promoviendo técnicas digitales accesibles para la comunidad científica."
+  },
+  {
+    "objectID": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html",
+    "href": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html",
+    "title": "Guía de escaneo 3D con Kinect v1 + rtabmap",
+    "section": "",
+    "text": "Doble clic en el icono del escritorio RTAB-Map Kinect Scanner, o desde terminal:\npython3 ~/Desktop/rtabmap-kinect-launcher.py\n\n\n\n\n\n\n\n\n\n\n\n\nParámetro\nValor\nPor qué\n\n\n\n\nKp/MaxDepth\n3.5m\nKinect v1 es ruidoso más allá de 3.5m\n\n\nKp/MinDepth\n0.5m\nZona ciega del Kinect\n\n\nKp/MaxFeatures\n1000\nMás features = mejor tracking\n\n\nKp/DetectorStrategy\n6 (GFTT/BRIEF)\nMás estable que ORB para Kinect\n\n\nKp/GridRows/Cols\n4x4\nFeatures distribuidas uniformemente\n\n\nOdomF2M/MaxSize\n3000\nMapa local más grande = menos deriva\n\n\nOdomF2M/BundleAdjustment\n1 (g2o)\nOptimización geométrica de poses\n\n\nRGBD/LinearUpdate\n0.01m\nCaptura casi cada frame\n\n\nRGBD/AngularUpdate\n0.01rad\nIdem para rotación\n\n\nGrid/CellSize\n0.01m (1cm)\nMáxima resolución\n\n\n\n\n\n\n\n\n\n\nIlumina bien el objeto (sin luz solar directa que sature el IR)\nEl objeto debe tener textura visible (evitar superficies blancas lisas)\nMantén el Kinect entre 0.5m y 2m del objeto\nUsa el control de motor para ajustar la inclinación antes de empezar\n\n\n\n\n\nPulsa Start (▶) y espera a ver puntos verdes sobre la imagen (features)\nMueve el Kinect muy lentamente (~5 cm/segundo)\nSolapa cada posición con la anterior (mínimo 50% de overlap)\nHaz círculos completos alrededor del objeto\nSi aparece pantalla roja (odometría perdida): para, vuelve a una zona ya escaneada\n\n\n\n\n\n✅ Barra de odometría en verde = tracking correcto\n✅ Números altos en “Inliers” (&gt;50 = excelente)\n⚠️ Barra amarilla = tracking inestable, ve más despacio\n❌ Pantalla roja = tracking perdido, reposiciona\n\n\n\n\n\n\n\n\n\nEdit → Optimize graph (o Ctrl+G) — optimiza el mapa completo\nFile → Export 3D clouds con estos ajustes:\nFiltrado de la nube:\n\nVoxel size: 0.005 (5mm, máximo detalle)\nNoise filter radius: 0.05, min neighbors: 5\n\nReconstrucción de superficie:\n\nMétodo: Poisson (mejor para objetos cerrados)\nDepth: 8 (más detalle, más lento)\nó Greedy Triangulation si Poisson falla\n\nTextura:\n\nActivar “Generate texture” para modelo con color\n\nExporta en .obj (con textura) o .ply (nube de puntos)\n\n\n\n\nFilters → Cleaning → Remove Isolated pieces\nFilters → Smoothing → Laplacian Smooth (2-3 iteraciones)\nFilters → Reconstruction → Screened Poisson (si no lo hiciste en rtabmap)\n\n\n\n\n\n\n\n\n\n\n\n\n\nProblema\nCausa\nSolución\n\n\n\n\nTracking perdido constantemente\nSuperficie sin textura\nPoner objetos con textura en la escena\n\n\nNube muy dispersa/ruidosa\nMovimiento demasiado rápido\nVe más despacio, más overlap\n\n\nMalla con agujeros\nZonas no escaneadas\nHaz otra pasada enfocando esas zonas\n\n\nfromImageEmpty=1 en logs\nRGB no recibe datos\nReconecta el Kinect\n\n\nMotor no responde en launcher\nrtabmap tiene el Kinect ocupado\nCierra rtabmap, ajusta motor, reinicia"
+  },
+  {
+    "objectID": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#lanzar-el-scanner",
+    "href": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#lanzar-el-scanner",
+    "title": "Guía de escaneo 3D con Kinect v1 + rtabmap",
+    "section": "",
+    "text": "Doble clic en el icono del escritorio RTAB-Map Kinect Scanner, o desde terminal:\npython3 ~/Desktop/rtabmap-kinect-launcher.py"
+  },
+  {
+    "objectID": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#parámetros-optimizados-ya-aplicados-en-el-launcher",
+    "href": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#parámetros-optimizados-ya-aplicados-en-el-launcher",
+    "title": "Guía de escaneo 3D con Kinect v1 + rtabmap",
+    "section": "",
+    "text": "Parámetro\nValor\nPor qué\n\n\n\n\nKp/MaxDepth\n3.5m\nKinect v1 es ruidoso más allá de 3.5m\n\n\nKp/MinDepth\n0.5m\nZona ciega del Kinect\n\n\nKp/MaxFeatures\n1000\nMás features = mejor tracking\n\n\nKp/DetectorStrategy\n6 (GFTT/BRIEF)\nMás estable que ORB para Kinect\n\n\nKp/GridRows/Cols\n4x4\nFeatures distribuidas uniformemente\n\n\nOdomF2M/MaxSize\n3000\nMapa local más grande = menos deriva\n\n\nOdomF2M/BundleAdjustment\n1 (g2o)\nOptimización geométrica de poses\n\n\nRGBD/LinearUpdate\n0.01m\nCaptura casi cada frame\n\n\nRGBD/AngularUpdate\n0.01rad\nIdem para rotación\n\n\nGrid/CellSize\n0.01m (1cm)\nMáxima resolución"
+  },
+  {
+    "objectID": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#técnica-de-escaneo",
+    "href": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#técnica-de-escaneo",
+    "title": "Guía de escaneo 3D con Kinect v1 + rtabmap",
+    "section": "",
+    "text": "Ilumina bien el objeto (sin luz solar directa que sature el IR)\nEl objeto debe tener textura visible (evitar superficies blancas lisas)\nMantén el Kinect entre 0.5m y 2m del objeto\nUsa el control de motor para ajustar la inclinación antes de empezar\n\n\n\n\n\nPulsa Start (▶) y espera a ver puntos verdes sobre la imagen (features)\nMueve el Kinect muy lentamente (~5 cm/segundo)\nSolapa cada posición con la anterior (mínimo 50% de overlap)\nHaz círculos completos alrededor del objeto\nSi aparece pantalla roja (odometría perdida): para, vuelve a una zona ya escaneada\n\n\n\n\n\n✅ Barra de odometría en verde = tracking correcto\n✅ Números altos en “Inliers” (&gt;50 = excelente)\n⚠️ Barra amarilla = tracking inestable, ve más despacio\n❌ Pantalla roja = tracking perdido, reposiciona"
+  },
+  {
+    "objectID": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#exportar-el-modelo-3d",
+    "href": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#exportar-el-modelo-3d",
+    "title": "Guía de escaneo 3D con Kinect v1 + rtabmap",
+    "section": "",
+    "text": "Edit → Optimize graph (o Ctrl+G) — optimiza el mapa completo\nFile → Export 3D clouds con estos ajustes:\nFiltrado de la nube:\n\nVoxel size: 0.005 (5mm, máximo detalle)\nNoise filter radius: 0.05, min neighbors: 5\n\nReconstrucción de superficie:\n\nMétodo: Poisson (mejor para objetos cerrados)\nDepth: 8 (más detalle, más lento)\nó Greedy Triangulation si Poisson falla\n\nTextura:\n\nActivar “Generate texture” para modelo con color\n\nExporta en .obj (con textura) o .ply (nube de puntos)\n\n\n\n\nFilters → Cleaning → Remove Isolated pieces\nFilters → Smoothing → Laplacian Smooth (2-3 iteraciones)\nFilters → Reconstruction → Screened Poisson (si no lo hiciste en rtabmap)"
+  },
+  {
+    "objectID": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#solución-de-problemas",
+    "href": "curso-paleo-virtual/RTABMAP-GUIA-ESCANEO.html#solución-de-problemas",
+    "title": "Guía de escaneo 3D con Kinect v1 + rtabmap",
+    "section": "",
+    "text": "Problema\nCausa\nSolución\n\n\n\n\nTracking perdido constantemente\nSuperficie sin textura\nPoner objetos con textura en la escena\n\n\nNube muy dispersa/ruidosa\nMovimiento demasiado rápido\nVe más despacio, más overlap\n\n\nMalla con agujeros\nZonas no escaneadas\nHaz otra pasada enfocando esas zonas\n\n\nfromImageEmpty=1 en logs\nRGB no recibe datos\nReconecta el Kinect\n\n\nMotor no responde en launcher\nrtabmap tiene el Kinect ocupado\nCierra rtabmap, ajusta motor, reinicia"
+  },
+  {
     "objectID": "Home.html",
     "href": "Home.html",
     "title": "Presentaciones del Museo Virtual Nacional",
     "section": "",
-    "text": "En esta página encontrarás las presentaciones utilizadas en las conferencias y talleres del Museo Virtual Nacional. El sitio se irá actualizando con nuevas presentaciones y contenido conforme se vayan realizando nuevas presentaciones. Si te interesa que realicemos una presentación en tu institución, no dudes en contactarnos a través de nuestro correo electrónico: contacto@museovirtualnacional.com\n\n\n\nPaleontólogos sin Fósiles: Técnicas de Paleontología Virtual\n\nMantente atento para más actualizaciones y nuevas presentaciones."
+    "text": "En esta página encontrarás las presentaciones utilizadas en las conferencias y talleres del Museo Virtual Nacional. El sitio se irá actualizando con nuevas presentaciones y contenido conforme se vayan realizando nuevas presentaciones. Si te interesa que realicemos una presentación en tu institución, no dudes en contactarnos a través de nuestro correo electrónico: contacto@museovirtualnacional.com\n\n\n\nPaleontólogos sin Fósiles: Técnicas de Paleontología Virtual\nCurso: Paleontología Virtual (Presentación del Curso)\nCurso: Paleontología Virtual (Día 1: Introducción)\n\nMantente atento para más actualizaciones y nuevas presentaciones."
   },
   {
     "objectID": "Home.html#presentaciones-disponibles",
     "href": "Home.html#presentaciones-disponibles",
     "title": "Presentaciones del Museo Virtual Nacional",
     "section": "",
-    "text": "Paleontólogos sin Fósiles: Técnicas de Paleontología Virtual\n\nMantente atento para más actualizaciones y nuevas presentaciones."
-  },
-  {
-    "objectID": "quarto.html#what-is-quarto",
-    "href": "quarto.html#what-is-quarto",
-    "title": "Quarto",
-    "section": "What is Quarto?",
-    "text": "What is Quarto?\nQuarto is an open-source scientific and technical publishing system that allows you to create, manage, and publish content in a variety of formats, including HTML, PDF, EPUB, and more."
+    "text": "Paleontólogos sin Fósiles: Técnicas de Paleontología Virtual\nCurso: Paleontología Virtual (Presentación del Curso)\nCurso: Paleontología Virtual (Día 1: Introducción)\n\nMantente atento para más actualizaciones y nuevas presentaciones."
   },
   {
     "objectID": "camino-paleontologia.html#quién-soy",
@@ -28,46 +364,18 @@
     "text": "¿Quién soy?\n\nE. Miguel Díaz de León Muñóz\nLicenciatura en Biología por la Universidad de Guadalajara (2010-2015)\nMaestría en Ciencias de la Tierra por la Universidad Nacional Autónoma de México (2017-2019)\nDoctorado (en curso) en Geociencias por la Universidad de Tübingen, Alemania (2023-presente)"
   },
   {
-    "objectID": "camino-paleontologia.html#línea-del-tiempo",
-    "href": "camino-paleontologia.html#línea-del-tiempo",
-    "title": "Camino a la Paleontología",
-    "section": "Línea del tiempo",
-    "text": "Línea del tiempo\nA continuación un resumen gráfico de los hitos principales de mi formación. Puedes avanzar explicando cada barra.\n\n    \n        2010\n        2012\n        2014\n        2016\n        2018\n        2020\n        2022\n        2024\n        2026\n    \n    \n        \n            Licenciatura\n            2010–2015\n        \n        \n            Maestría\n            2017–2019\n        \n        \n            Doctorado\n            2023–presente"
-  },
-  {
     "objectID": "camino-paleontologia.html#licencia-en-biología-udg",
     "href": "camino-paleontologia.html#licencia-en-biología-udg",
     "title": "Camino a la Paleontología",
     "section": "Licencia en Biología (UDG)",
-    "text": "Licencia en Biología (UDG)\n\nCarrera en Biología General\nEnfoque en vertebrados durante las ultimas etapas\nPrácticas profesionales en la Universidad del Mar (2015)\n\n\n\n\n\n\n\nPaleomóvil 2015\n\n\n\n\n\n\n\n\nPrácticas profesionales"
+    "text": "Licencia en Biología (UDG)\n\nCarrera en Biología General\nEnfoque en vertebrados durante las ultimas etapas\n\n\n\n\n\nUDG"
   },
   {
-    "objectID": "camino-paleontologia.html#maestría-en-ciencias-de-la-tierra-unam",
-    "href": "camino-paleontologia.html#maestría-en-ciencias-de-la-tierra-unam",
+    "objectID": "camino-paleontologia.html#practicas-profesionales-en-la-universidad-del-mar",
+    "href": "camino-paleontologia.html#practicas-profesionales-en-la-universidad-del-mar",
     "title": "Camino a la Paleontología",
-    "section": "Maestría en Ciencias de la Tierra (UNAM)",
-    "text": "Maestría en Ciencias de la Tierra (UNAM)\n\nEnfoque en paleontología de vertebrados\nBecario del Consejo Nacional de Ciencia y Tecnología (CONACYT)"
-  },
-  {
-    "objectID": "camino-paleontologia.html#doctorado-en-geociencias-universidad-de-tübingen",
-    "href": "camino-paleontologia.html#doctorado-en-geociencias-universidad-de-tübingen",
-    "title": "Camino a la Paleontología",
-    "section": "Doctorado en Geociencias (Universidad de Tübingen)",
-    "text": "Doctorado en Geociencias (Universidad de Tübingen)\n\nEnfoque en técnicas de análisis de datos en paleontología y paleontología virtual\nBecario del Servicio Alemán de Intercambio Académico (DAAD)\nBecario de la ecretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI)"
-  },
-  {
-    "objectID": "camino-paleontologia.html#titulación",
-    "href": "camino-paleontologia.html#titulación",
-    "title": "Camino a la Paleontología",
-    "section": "Titulación",
-    "text": "Titulación\n\nTesis de licenciatura: “Manual de Fotogrametría en Paleontología: Cómo crear modelos 3D de fósiles”"
-  },
-  {
-    "objectID": "camino-paleontologia.html#regreso-a-casa",
-    "href": "camino-paleontologia.html#regreso-a-casa",
-    "title": "Camino a la Paleontología",
-    "section": "Regreso a casa",
-    "text": "Regreso a casa\n\nTesis de licenciatura: “Manual de Fotogrametría en Paleontología: Cómo crear modelos 3D de fósiles”\n\n\n\n\n\nPortada de la tesis"
+    "section": "Practicas profesionales en la Universidad del Mar",
+    "text": "Practicas profesionales en la Universidad del Mar\n\n\n\n\n\n\nPaleomóvil 2015\n\n\n\n\n\n\n\n\nPrácticas profesionales"
   },
   {
     "objectID": "camino-paleontologia.html#el-fósil-misterioso",
@@ -77,17 +385,17 @@
     "text": "El fósil misterioso\n\n¿Qué es esto?\n\n\n\n\n\nFósil desconocido"
   },
   {
-    "objectID": "camino-paleontologia.html#imágenes",
-    "href": "camino-paleontologia.html#imágenes",
-    "title": "Camino a la Paleontología",
-    "section": "Imágenes",
-    "text": "Imágenes\n\n\n\n\n\nFósil desconocido\n\n\n\n\n\n\nPaleomóvil 2015\n\n\n\n\n\nPrácticas profesionales"
-  },
-  {
     "objectID": "camino-paleontologia.html#misterio-resuelto",
     "href": "camino-paleontologia.html#misterio-resuelto",
     "title": "Camino a la Paleontología",
     "section": "Misterio resuelto",
     "text": "Misterio resuelto\n\nMetacarpal de un proboscideo\n\n\n\n\n\nMetacarpal disponible en UMORF"
+  },
+  {
+    "objectID": "camino-paleontologia.html#regreso-a-casa",
+    "href": "camino-paleontologia.html#regreso-a-casa",
+    "title": "Camino a la Paleontología",
+    "section": "Regreso a casa",
+    "text": "Regreso a casa\n\n\n\nTesis de licenciatura: “Manual de Fotogrametría en Paleontología: Cómo crear modelos 3D de fósiles”\n\n\n\n\n\n\nPortada de la tesis"
   }
 ]

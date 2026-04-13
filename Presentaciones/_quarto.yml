@@ -12,3 +12,9 @@ website:
         href: paleo_sin_fosiles.qmd
       - text: "MUFIS (Muscle Fiber Simulator)"
         href: MUFIS_en.qmd
+      - text: "Curso: Paleontología Virtual"
+        menu:
+          - text: "Presentación del Curso"
+            href: curso-paleo-virtual/home.qmd
+          - text: "Día 1 — Introducción y Fundamentos"
+            href: curso-paleo-virtual/01-introduccion.qmd
