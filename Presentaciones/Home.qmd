@@ -13,7 +13,7 @@ En esta página encontrarás las presentaciones utilizadas en las conferencias y
 ## Presentaciones Disponibles
 
 - [Paleontólogos sin Fósiles: Técnicas de Paleontología Virtual](paleo_sin_fosiles.qmd)
-- [Curso: Paleontología Virtual (Presentación del Curso)](curso-paleo-virtual/home.qmd)
-- [Curso: Paleontología Virtual (Día 1: Introducción)](curso-paleo-virtual/01-introduccion.qmd)
+- **[Curso: Paleontología Virtual](curso-paleo-virtual/home.qmd)**
+  - [Día 1: Introducción y Fundamentos](curso-paleo-virtual/01-introduccion.qmd)
 
 Mantente atento para más actualizaciones y nuevas presentaciones.
