@@ -6,34 +6,71 @@ Convierte archivos de malla entre los formatos más usados en paleontología:
 Motor principal: [trimesh](https://trimsh.org) + [meshio](https://github.com/nschloe/meshio).
 Si trimesh falla (común con PLY multi-textura), el script intenta meshio automáticamente.
 
+## Estructura de archivos
+
+```text
+scripts/
+├── convert_mesh.py       # Conversor de modelos 3D (STL, OBJ, PLY, VTK)
+├── README.md             # Guía de uso y configuración
+└── venv/                 # Entorno virtual de Python (creado localmente)
+├── malla_1.stl # Ejemplo de archivo de entrada
+├── malla_2.obj # Ejemplo de archivo de entrada
+├── malla_3.ply # Ejemplo de archivo de entrada
+└── malla_4.vtk # Ejemplo de archivo de entrada
+```
+
 ---
 
 ## Instalación rápida
 
+### 0. Instala python
+
+Puedes descargar python desde [python.org](https://www.python.org/downloads/) o ejecutar uno de los siguientes comandos en una terminal (consola). En windows puedes usar el buscador de windows para encontrar "consola" o "powershell".
+
+![Ejemplo de consola donde ingresarás el comando](./images/consola.png)
+
+```bash
+# Linux / macOS
+sudo apt install python3
+
+# Windows (PowerShell)
+winget install Python.Python.3.10
+```
+
+
 ### 1. Crear el entorno virtual
 
-Un entorno virtual aísla las librerías de este proyecto del resto del sistema.
+Dirígete a la carpeta donde se encuentra el script y donde colocarás los archivos que quieras convertir y abre una terminal. 
+
+![Cómo abrir una terminal en la carpeta actual de windows](./images/open-terminal.jpg)
+Haz click en la barra de direcciones de windows y escribe "cmd" y presiona enter.
+
+La terminal que se abrirá deberá mostrar exactamente la ruta en la que estás. Asegúrate de que la ruta corresponda a la carpeta donde se encuentra el script y donde colocarás los archivos que quieras convertir.
+
+![Ejemplo de terminal con la ruta correcta](./images/consola-en-carpeta.png)
+
+Ahora procederemos a crear un entorno virtual para python. Un entorno virtual aísla las librerías de este proyecto del resto del sistema.
 Esto evita conflictos de versiones con otros proyectos de Python.
 
 ```bash
 # Dentro de la carpeta scripts/
-python3 -m venv venv
+python3 -m venv mi_entorno
 ```
 
-Se crea una carpeta `venv/` con su propio Python y pip.
-**Solo necesitas hacer esto una vez.**
+Se crea una carpeta `mi_entorno/` con su propio Python y pip.
+**Solo necesitas hacer esto una vez, pero dicho entorno sólo funcionará si está activo**
 
 ### 2. Activar el entorno
 
 ```bash
 # Linux / macOS
-source venv/bin/activate
+source mi_entorno/bin/activate
 
 # Windows (PowerShell)
-venv\Scripts\Activate.ps1
+mi_entorno\Scripts\Activate.ps1
 
 # Windows (cmd)
-venv\Scripts\activate.bat
+mi_entorno\Scripts\activate.bat
 ```
 
 El prompt cambia a `(venv) $` para indicar que está activo.
@@ -54,9 +91,9 @@ pip install meshio trimesh
 ### Convertir un archivo
 
 ```bash
-python convert_mesh.py fosil.ply -f obj
-python convert_mesh.py escaneo.stl -f ply
-python convert_mesh.py modelo.obj -f vtk
+python convert_mesh.py fosil.ply -f obj # Convierte el archivo fosil.ply a obj
+python convert_mesh.py escaneo.stl -f ply # Convierte el archivo escaneo.stl a ply
+python convert_mesh.py modelo.obj -f vtk # Convierte el archivo modelo.obj a vtk
 ```
 
 El archivo de salida se guarda en el mismo directorio con la nueva extensión.
