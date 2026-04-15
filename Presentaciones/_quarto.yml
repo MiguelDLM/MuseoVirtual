@@ -3,18 +3,30 @@ project:
   output-dir: ../docs  # Ensure the output is directed to the docs directory at the root level
 
 website:
-  title: "Presentaciones del Museo Virtual Nacional"
+  title: "Museo Virtual Nacional"
   navbar:
+    logo: images/logo.png
+    logo-alt: "Museo Virtual Nacional"
+    background: "#1E2B3A"
+    foreground: "white"
     left:
-      - text: "Home"
+      - text: "Inicio"
         href: Home.qmd
-      - text: "Paleontólogos sin Fósiles"
-        href: paleo_sin_fosiles.qmd
-      - text: "MUFIS (Muscle Fiber Simulator)"
-        href: MUFIS_en.qmd
+      - text: "Charlas"
+        menu:
+          - text: "Paleontólogos sin Fósiles"
+            href: paleo_sin_fosiles.qmd
+          - text: "Camino a la Paleontología"
+            href: camino-paleontologia.qmd
       - text: "Curso: Paleontología Virtual"
         menu:
           - text: "Presentación del Curso"
             href: curso-paleo-virtual/home.qmd
           - text: "Día 1 — Introducción y Fundamentos"
             href: curso-paleo-virtual/01-introduccion.qmd
+          - text: "Día 2 — Adquisición I: Fotogrametría"
+            href: curso-paleo-virtual/02-adquisicion-1-fotogrametria.qmd
+
+format:
+  html:
+    theme: [cosmo, site-theme.scss]

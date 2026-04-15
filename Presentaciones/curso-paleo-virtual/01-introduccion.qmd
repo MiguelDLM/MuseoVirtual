@@ -384,6 +384,31 @@ python convert_mesh.py --list-formats
 
 # Repositorios y Bases de Datos {background-color="#1E2B3A"}
 
+## GB3D Type Fossils Online
+
+::: {.columns}
+::: {.column width="40%"}
+- Repositorio de fósiles tipo británicos.
+- Modelos 3D de alta calidad.
+- Permite acceso a archivos originales (STL, PLY, OBJ).
+- Facilita la citación académica de conjuntos de datos.
+
+[gb3df.nhm.ac.uk](https://gb3df.nhm.ac.uk)
+:::
+:::{.column width="60%"}
+```{=html}
+<div style="position:relative; width:100%; height:600px; border-radius:10px; overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.4); cursor:pointer;" onclick="window.open('https://www.gb3df.nhm.ac.uk','_blank')">
+  <img src="../images/gb3df_preview.png" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;" alt="GB3DF homepage" />
+  <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(15,25,40,0.92) 0%, rgba(15,25,40,0.15) 55%, transparent 100%);">
+    <div style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); text-align:center;">
+      <a href="https://www.gb3df.nhm.ac.uk" target="_blank" style="display:inline-block; background:#C4820A; color:#fff; font-family:sans-serif; font-size:1em; font-weight:bold; padding:10px 28px; border-radius:6px; text-decoration:none; letter-spacing:0.04em; box-shadow:0 2px 10px rgba(0,0,0,0.5);">🔗 Abrir GB3DF</a>
+    </div>
+  </div>
+</div>
+```
+:::
+:::
+
 ## MorphoSource
 
 ::: {.columns}

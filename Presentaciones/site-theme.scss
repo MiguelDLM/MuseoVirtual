@@ -1,0 +1,74 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+$body-bg: #f0f2f5;
+$body-color: #2c3e50;
+$link-color: #2A7D8C;
+
+/*-- scss:rules --*/
+
+/* Remove default Quarto content padding so hero spans full width */
+#quarto-content > * {
+  padding-top: 0 !important;
+}
+
+.quarto-title-block {
+  display: none;
+}
+
+/* Navbar refinements */
+.navbar {
+  padding: 10px 24px !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      height: 36px !important;
+      width: auto !important;
+    }
+  }
+
+  .nav-link {
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    padding: 6px 14px !important;
+    border-radius: 6px;
+    transition: background 0.15s;
+
+    &:hover {
+      background: rgba(255,255,255,0.12) !important;
+    }
+  }
+
+  .dropdown-menu {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+    padding: 8px;
+    min-width: 260px;
+
+    .dropdown-item {
+      border-radius: 7px;
+      font-size: 0.87rem;
+      padding: 9px 14px;
+      color: #1E2B3A;
+      font-weight: 500;
+      transition: background 0.12s;
+
+      &:hover {
+        background: #f0f7f9;
+        color: #2A7D8C;
+      }
+    }
+  }
+}
