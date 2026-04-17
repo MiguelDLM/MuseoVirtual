@@ -45,7 +45,7 @@ Una vez que tengas Python, sigue estos pasos para preparar la herramienta:
 
 ---
 
-## 3. Cómo Usar el Script (Día a día)
+## 3. Cómo Usar el Script 
 
 Cuando ya tienes todo instalado, procesar tus fotos es muy sencillo:
 

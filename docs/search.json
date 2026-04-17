@@ -649,5 +649,257 @@
     "title": "Camino a la Paleontología",
     "section": "Regreso a casa",
     "text": "Regreso a casa\n\n\n\nTesis de licenciatura: “Manual de Fotogrametría en Paleontología: Cómo crear modelos 3D de fósiles”\n\n\n\n\n\n\nPortada de la tesis"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#por-qué-importa-el-hardware",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#por-qué-importa-el-hardware",
+    "title": "Paleontología Virtual",
+    "section": "¿Por qué importa el Hardware?",
+    "text": "¿Por qué importa el Hardware?\nEl procesamiento de nubes de puntos y modelos 3D requiere un tipo de cálculo masivo y paralelo.\n\n\n\n\n\n\nLa Analogía del Procesamiento\n\n\n\nCPU (Un PhD en Matemáticas): Puede resolver ecuaciones extremadamente complejas paso a paso, pero lo hace de uno en uno o en grupos muy pequeños (núcleos).\nGPU (Mil niños de primaria): Cada uno solo sabe hacer sumas básicas, pero hay miles de ellos (CUDA Cores) trabajando al mismo tiempo. Para resolver miles de pequeñas operaciones de luz o geometría, los “niños” terminan mucho antes que el PhD."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#la-importancia-de-los-cuda-cores",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#la-importancia-de-los-cuda-cores",
+    "title": "Paleontología Virtual",
+    "section": "La importancia de los CUDA Cores",
+    "text": "La importancia de los CUDA Cores\nPara software como VisualSFM, RealityCapture o Skanect, la tarjeta de video (NVIDIA) es el verdadero motor.\n\nParalelismo: Las tarjetas NVIDIA usan núcleos CUDA para calcular el emparejamiento de fotos o la profundidad de los píxeles simultáneamente.\nImpacto: Un proceso que en CPU tarda 10 horas, en una GPU potente puede tardar 20 minutos.\nRecomendación: Mínimo 4GB de VRAM y arquitectura moderna (GTX 1650 en adelante)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#en-qué-consiste-el-escaneo-superficial",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#en-qué-consiste-el-escaneo-superficial",
+    "title": "Paleontología Virtual",
+    "section": "¿En qué consiste el escaneo superficial?",
+    "text": "¿En qué consiste el escaneo superficial?\nA diferencia de la fotogrametría (que usa luz pasiva), el escaneo de superficie suele emplear luz activa para capturar la geometría de un objeto sin necesidad de contacto físico.\n\nLuz Estructurada: Proyecta un patrón de luz y mide su deformación sobre la superficie.\nTriangulación Láser: Emplea un rayo láser para determinar distancias mediante geometría.\nResultado Directo: Se obtiene una nube de puntos con escala métrica real inmediata."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#pros-contras-y-costos",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#pros-contras-y-costos",
+    "title": "Paleontología Virtual",
+    "section": "Pros, Contras y Costos",
+    "text": "Pros, Contras y Costos\n\n\nVentajas y Desventajas\n\n✅ Escala Real: No requiere reescalado manual.\n✅ Velocidad: Captura millones de puntos en segundos.\n❌ Costo: Los equipos profesionales ($5k - $50k USD) son prohibitivos.\n❌ Problemas ópticos: Superficies brillantes o negras confunden al sensor.\n\n\nRangos de Costo (USD)\n\nBajo Costo: $150 - $600 (Kinect, Intel RealSense).\nGama Media: $5,000 - $15,000 (EinScan).\nGama Alta: $30,000 - $100,000+ (Artec, Creaform)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#caso-práctico-kinect-rtab-map",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#caso-práctico-kinect-rtab-map",
+    "title": "Paleontología Virtual",
+    "section": "Caso Práctico: Kinect + RTAB-Map",
+    "text": "Caso Práctico: Kinect + RTAB-Map\nEl Microsoft Kinect es una herramienta de bajo costo ideal para especímenes medianos y grandes.\n\n\nMetodología de Escaneo\n\nPreparación: Iluminación indirecta (evitar sol).\nDistancia: Mantener el sensor entre 0.5m y 2m.\nMovimiento: Moverse muy lento (~5 cm/s).\nOverlap: Solapar cada pasada un 50%.\nCorrección: Si pierdes el tracking (rojo), vuelve a una zona conocida.\n\n\n\nSoftware: RTAB-Map (SLAM)"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#post-proceso-de-nube-a-malla",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#post-proceso-de-nube-a-malla",
+    "title": "Paleontología Virtual",
+    "section": "Post-proceso: De Nube a Malla",
+    "text": "Post-proceso: De Nube a Malla\nUna vez capturada la nube en RTAB-Map, debemos cerrarla para que sea un fósil digital “estanco” (watertight).\n\nOptimize Graph: Corrige errores de trayectoria.\nExport 3D Cloud:\n\nUsar método Poisson (Depth 8-10).\nAplicar filtro de Voxelizado (0.005m).\n\nLimpieza en MeshLab:\n\nRemove Isolated pieces para quitar “ruido” flotante.\nLaplacian Smooth para suavizar la superficie."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#cuándo-usar-fotogrametría-vs-escaneo",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#cuándo-usar-fotogrametría-vs-escaneo",
+    "title": "Paleontología Virtual",
+    "section": "¿Cuándo usar Fotogrametría vs Escaneo?",
+    "text": "¿Cuándo usar Fotogrametría vs Escaneo?\nSi el objeto es pequeño (&lt; 5cm) o tiene texturas increíbles, la fotogrametría suele superar al escaneo de bajo costo.\n\n\nMetodología UMORF\nBasada en el estándar de la Universidad de Michigan para digitalización de alta fidelidad.\n\n\nProtocolo\n\nFondo Contrastante: Uso de cubos de acrílico o soportes mínimos.\nIluminación Difusa: Caja de luz para evitar sombras duras.\nMúltiples Ángulos: Giros de 15° en 3 niveles de altura.\n\n\n\n   \n\n\n\nVisualSFM (Open Source)\nEl flujo en Windows/Linux: - SfM: Genera la nube dispersa (posición de cámaras). - CMVS/PMVS: Densifica la nube (millones de puntos). - Nvidia CUDA: Crucial para que este software sea usable."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#qué-es-la-tomografía-ct-scan",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#qué-es-la-tomografía-ct-scan",
+    "title": "Paleontología Virtual",
+    "section": "¿Qué es la Tomografía (CT Scan)?",
+    "text": "¿Qué es la Tomografía (CT Scan)?\nEs el “estándar de oro” para anatomía interna. Utiliza Rayos-X para reconstruir “rebanadas” del objeto.\n\nVóxel: Un píxel con volumen.\nDICOM: El formato universal de estas imágenes.\nMicro-CT: Capaz de ver estructuras celulares en fósiles pequeños."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#procesamiento-con-3d-slicer",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#procesamiento-con-3d-slicer",
+    "title": "Paleontología Virtual",
+    "section": "Procesamiento con 3D Slicer",
+    "text": "Procesamiento con 3D Slicer\nPara “extraer” el fósil de la roca digital, usamos segmentación.\n\n\nHerramientas Clave\n\nThresholding (Umbralización): Selecciona píxeles por su densidad (gris).\nScissors: Recorta manualmente partes de la matriz.\nIsland: Elimina pequeños fragmentos sueltos automáticamente.\n\n\n\nInterfaz de segmentación en 3D Slicer"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#pros-contras-y-costos-ct",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#pros-contras-y-costos-ct",
+    "title": "Paleontología Virtual",
+    "section": "Pros, Contras y Costos: CT",
+    "text": "Pros, Contras y Costos: CT\n\n✅ Anatomía Interna: Puedes ver el cerebro de un dinosaurio dentro de su cráneo.\n✅ No invasivo: No daña el fósil.\n❌ Costo: Acceso limitado. Un Micro-CT cuesta +$250k USD.\n❌ Densidad: Si el fósil y la roca tienen densidades similares, no se pueden separar."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#el-problema-de-la-escala",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#el-problema-de-la-escala",
+    "title": "Paleontología Virtual",
+    "section": "El Problema de la Escala",
+    "text": "El Problema de la Escala\nCasi todos los modelos de fotogrametría (VisualSFM, Colmap, etc.) carecen de escala real.\n\n¡Cuidado!\nUn fósil de 10cm puede aparecer como un gigante de 10 metros en el software si no se escala manualmente.\n\nLa Solución: 1. Medir el objeto real con un vernier. 2. Usar el Addon Measure and Scale en Blender. 3. Introducir la medida real para ajustar el modelo."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#enlaces-de-utilidad",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#enlaces-de-utilidad",
+    "title": "Paleontología Virtual",
+    "section": "Enlaces de Utilidad",
+    "text": "Enlaces de Utilidad\nRecursos gratuitos para empezar hoy mismo:\n\nFotogrametría: VisualSFM | MeshLab\nEscaneo: RTAB-Map | Skanect\nSegmentación CT: 3D Slicer\nEscalamiento: Blender Addon: Measure and Scale\nModelos: MorphoSource | Sketchfab"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#conclusiones-del-día-3",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#conclusiones-del-día-3",
+    "title": "Paleontología Virtual",
+    "section": "Conclusiones del Día 3",
+    "text": "Conclusiones del Día 3\n\n\nEscaneo Láser\n\nMide la geometría directamente — escala real incluida\nIdeal para superficies externas medianas o grandes\nEl Kinect democratiza el acceso (~$50 USD de segunda mano)\nLimitado por superficies oscuras/brillantes y ausencia de interior\n\n\nTomografía Computarizada\n\nÚnica tecnología que revela el interior del fósil sin dañarlo\nResultados en formato DICOM con escala real embebida\n3D Slicer es la herramienta estándar gratuita para segmentación\nEl acceso se puede gestionar a través de repositorios abiertos"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#qué-es-el-escaneo-de-superficie",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#qué-es-el-escaneo-de-superficie",
+    "title": "Paleontología Virtual",
+    "section": "¿Qué es el Escaneo de Superficie?",
+    "text": "¿Qué es el Escaneo de Superficie?\nEl escaneo 3D de superficie usa luz activa (láser o luz estructurada) para medir la geometría de un objeto de forma precisa y sin contacto físico.\n\n\nA diferencia de la fotogrametría —que infiere la forma a partir de fotos—, el escáner mide directamente la posición 3D de cada punto.\n\nLa escala real queda registrada automáticamente\nNo requiere cámaras convencionales\nEl resultado es una nube de puntos o una malla directa"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#tipos-de-tecnología-de-escaneo",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#tipos-de-tecnología-de-escaneo",
+    "title": "Paleontología Virtual",
+    "section": "Tipos de Tecnología de Escaneo",
+    "text": "Tipos de Tecnología de Escaneo\n\n\nTriangulación Láser\n\nProyecta un haz de luz puntual o lineal\nMide la posición del reflejo con una cámara lateral\nMuy alta precisión (décimas de milímetro)\nRango corto: ideal para especímenes pequeños\n💰 Costo: $2,000 – $50,000 USD\n\n\nLuz Estructurada\n\nProyecta un patrón de franjas sobre el objeto\n​Mide la deformación del patrón para calcular profundidad\nVelocidad muy alta, captura completa en segundos\nSensible a la luz ambiental intensa\n💰 Costo: $5,000 – $30,000 USD"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#tipos-de-tecnología-de-escaneo-cont.",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#tipos-de-tecnología-de-escaneo-cont.",
+    "title": "Paleontología Virtual",
+    "section": "Tipos de Tecnología de Escaneo (cont.)",
+    "text": "Tipos de Tecnología de Escaneo (cont.)\n\n\nTime of Flight (ToF)\n\nEmite un pulso de luz y mide el tiempo de retorno\nIdeal para objetos y espacios grandes (hasta cientos de metros)\nMenor resolución que la triangulación\nUsado en LiDAR terrestre y escáneres de arquitectura\n💰 Costo: $10,000 – $100,000+ USD\n\n\nFotogrametría vs. Escaneo\n\n\n\nAspecto\nFotogrametría\nEscaneo Láser\n\n\n\n\nEscala real\n❌ No\n✅ Sí\n\n\nTextura\n✅ Alta\n⚠️ Depende\n\n\nCosto\n✅ Bajo\n❌ Alto\n\n\nVelocidad\nMedio\nRápido\n\n\nSuperficies oscuras\n✅ OK\n❌ Problema"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#limitaciones-del-escaneo-láser",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#limitaciones-del-escaneo-láser",
+    "title": "Paleontología Virtual",
+    "section": "Limitaciones del Escaneo Láser",
+    "text": "Limitaciones del Escaneo Láser\n\n\nLimitaciones Físicas\n\nOclusión: No captura lo que no “ve” — los huecos internos son invisibles\nSuperficies problemáticas: Las negras, brillantes o translúcidas absorben o reflejan mal el láser\nSolo exterior: Incapaz de ver el interior de un fósil dentro de roca\nMovimiento: Cualquier movimiento durante el escaneo genera artefactos\n\n\nLimitaciones Prácticas\n\nDependencia de hardware: Si el sensor falla, no hay captura alternativa\nCondiciones ambientales: La luz solar directa satura los sensores de luz estructurada y ToF\nTamaño del objeto: Cada tecnología tiene un rango óptimo — un escáner de mano no es bueno para microfósiles\nCurva de aprendizaje: Software y parámetros técnicos requieren certificación o entrenamiento"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#rangos-de-costo",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#rangos-de-costo",
+    "title": "Paleontología Virtual",
+    "section": "Rangos de Costo",
+    "text": "Rangos de Costo\n\n\n💚 Bajo Costo\n$150 – $800 USD\n\nMicrosoft Kinect (discontinuado)\nIntel RealSense D435\nCreality Raptor\n\nIdeal para práctica académica. Precisión limitada (±1–5 mm).\n\n🟡 Gama Media\n$2,000 – $15,000 USD\n\nShining3D EinScan SP/HX\nPeel 3D\nRevopoint RANGE\n\nPrecisión buena (±0.1 mm). Usados en paleontología de campo.\n\n🔴 Gama Alta / Metrología\n$30,000 – $200,000+ USD\n\nArtec Eva / Leo\nCreaform HandySCAN\nFARO Focus\n\nPrecisión de museo (±0.01 mm). Estándar en colecciones de referencia internacional."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#software-para-escaneo-láser",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#software-para-escaneo-láser",
+    "title": "Paleontología Virtual",
+    "section": "Software para Escaneo Láser",
+    "text": "Software para Escaneo Láser\n\n\nPropietario (incluido con hardware)\n\nArtec Studio — Flujo completo para escáneres Artec\nEinScan Software — Para gama Shining3D\nPeel Software — Para escáneres Peel\n\n\nOpen Source / Gratuito\n\nMeshLab — Post-proceso universal de mallas\nCloudCompare — Análisis y comparación de nubes de puntos\nRTAB-Map — SLAM + reconstrucción (ideal con Kinect)\nOpen3D — Librería Python para procesamiento avanzado\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\nPara un entorno académico de bajo costo, la combinación Kinect + RTAB-Map + MeshLab ofrece resultados medianamente buenos para objetos grandes."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#qué-es-el-kinect",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#qué-es-el-kinect",
+    "title": "Paleontología Virtual",
+    "section": "¿Qué es el Kinect?",
+    "text": "¿Qué es el Kinect?\nEl Microsoft Kinect nació en 2010 como accesorio de juego para Xbox 360, pero se convirtió en la puerta de entrada más accesible al escaneo 3D estructurado.\n\n\nComponentes internos\n\nCámara RGB — Captura color (640×480 px en Kinect v1)\nProyector IR — Emite un patrón de puntos infrarrojos invisible al ojo humano\nCámara IR — Lee la deformación del patrón para calcular profundidad\nMotor de inclinación — Ajusta el ángulo verticalmente (solo Kinect v1)\nArray de micrófonos — No útil para escaneo, pero parte del hardware"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#características-y-especificaciones",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#características-y-especificaciones",
+    "title": "Paleontología Virtual",
+    "section": "Características y Especificaciones",
+    "text": "Características y Especificaciones\n\n\nKinect v1 (Xbox 360)\n\n\n\nEspecificación\nValor\n\n\n\n\nResolución profundidad\n640 × 480 px\n\n\nRango de trabajo\n0.5m – 3.5m\n\n\nFPS\n30 fps\n\n\nCampo de visión\n57° H × 43° V\n\n\nInterfaz\nUSB 2.0*\n\n\nPrecio de segunda mano\n~$100–$500 MXN\n\n\n\n\nKinect v2 (Xbox One)\n\n\n\nEspecificación\nValor\n\n\n\n\nResolución profundidad\n512 × 424 px\n\n\nTecnología\nTime of Flight\n\n\nRango de trabajo\n0.5m – 4.5m\n\n\nFPS\n30 fps\n\n\nCampo de visión\n70° H × 60° V\n\n\nInterfaz\nUSB 3.0*"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#limitaciones-del-kinect-para-paleontología",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#limitaciones-del-kinect-para-paleontología",
+    "title": "Paleontología Virtual",
+    "section": "Limitaciones del Kinect para Paleontología",
+    "text": "Limitaciones del Kinect para Paleontología\n\nResolución espacial: Los fósiles pequeños (&lt; 20 cm) quedan con muy poco detalle — el Kinect fue diseñado para capturar personas enteras\nRuido a distancia: Más allá de 2.0m la nube de puntos se vuelve ruidosa e imprecisa\nLuz solar directa: El proyector IR queda saturado por la luz del sol — solo funciona en interiores o sombra\nSuperficies sin textura: El patrón IR no ancla bien en superficies blancas lisas o monocromáticas\nHardware descontinuado: Microsoft dejó de fabricar el Kinect en 2017, solo disponible de segunda mano o con adaptadores\nRequiere adaptador: El Kinect para Xbox necesita un kit de adaptador para conectarlo a PC vía USB"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#software-rtab-map",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#software-rtab-map",
+    "title": "Paleontología Virtual",
+    "section": "Software: RTAB-Map",
+    "text": "Software: RTAB-Map\nRTAB-Map (Real-Time Appearance-Based Mapping) es el software de referencia para usar el Kinect como escáner 3D.\n\n\n¿Qué hace?\n\nImplementa SLAM (Simultaneous Localization And Mapping)\nRegistra cada fotograma de profundidad con el anterior\nConstruye un mapa 3D en tiempo real\nDetecta cuando ya “conoce” una zona (cierre de bucle)\nGenera una malla 3D reconstruida al finalizar\n\nDisponible en\n\nWindows, Linux, macOS\nGratuito y open source\n\n\nFlujo básico en RTAB-Map\nAbrir RTAB-Map\n    ↓\nSeleccionar: Kinect (libfreenect)\n    ↓\n[Start] — mueve lentamente el sensor\n    ↓\n[Stop] — cuando estés satisfecho\n    ↓\nEdit → Optimize Graph  (corrige deriva)\n    ↓\nFile → Export 3D Clouds\n    ↓\nExportar .OBJ o .PLY con textura"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#técnica-de-escaneo-con-kinect",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#técnica-de-escaneo-con-kinect",
+    "title": "Paleontología Virtual",
+    "section": "Técnica de Escaneo con Kinect",
+    "text": "Técnica de Escaneo con Kinect\n\n\nAntes de empezar\n\nIluminar el espécimen con luz difusa, nunca luz solar directa\nEl objeto debe tener textura visible — poner referencias visuales si es necesario (papel de puntos)\nMantener el Kinect entre 0.5m y 2m del objeto\nAjustar la inclinación del motor antes de empezar\n\nDurante el escaneo\n\nPulsar Start (▶) — esperar puntos verdes (features)\nMover muy lento (~5 cm/segundo)\nSolapar cada posición (mínimo 50% overlap)\nHacer círculos completos alrededor del objeto\nSi aparece rojo (tracking perdido): ⚠️ volver a zona conocida\n\n\nSeñales de calidad\n\n\n\nIndicador\nSignificado\n\n\n\n\n🟢 Barra verde\nTracking correcto\n\n\nInliers &gt; 50\nExcelente\n\n\n🟡 Barra amarilla\nIr más despacio\n\n\n🔴 Pantalla roja\nTracking perdido\n\n\n\nParámetros clave (pre-configurados)\n\n\n\nParámetro\nValor\nPor qué\n\n\n\n\nMaxDepth\n3.5m\nEvita ruido de fondo\n\n\nMinDepth\n0.5m\nZona ciega del Kinect\n\n\nMaxFeatures\n1000\nMejor tracking\n\n\nBundle Adjustment\nON\nCorrige geometría"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#post-proceso-de-nube-de-puntos-a-malla-3d",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#post-proceso-de-nube-de-puntos-a-malla-3d",
+    "title": "Paleontología Virtual",
+    "section": "Post-proceso: De Nube de Puntos a Malla 3D",
+    "text": "Post-proceso: De Nube de Puntos a Malla 3D\nUna vez capturada la nube en RTAB-Map, necesitamos convertirla en una malla cerrada (watertight) apta para análisis.\n\n\nEn RTAB-Map\n\nEdit → Optimize Graph — corrige errores de trayectoria acumulados\nFile → Export 3D Clouds con estos ajustes:\n\nFiltrado: Voxel size 0.005 (5mm máximo detalle)\nMétodo: Poisson (Depth 8–10)\nActivar “Generate texture” para color\n\nExportar en .obj (con textura) o .ply (nube pura)\n\n\nLimpieza final en MeshLab\n1. Filters → Cleaning →\n      Remove Isolated pieces\n\n2. Filters → Smoothing →\n      Laplacian Smooth (2–3 iter.)\n\n3. Filters → Reconstruction →\n      Screened Poisson Surface\n      (si la malla tiene agujeros)\n\n4. File → Export Mesh As →\n      .OBJ / .STL / .PLY"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#qué-es-la-tomografía-computarizada",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#qué-es-la-tomografía-computarizada",
+    "title": "Paleontología Virtual",
+    "section": "¿Qué es la Tomografía Computarizada?",
+    "text": "¿Qué es la Tomografía Computarizada?\nLa Tomografía Computarizada (CT, del inglés Computed Tomography) es el estándar de oro en paleontología virtual para el estudio de estructuras internas.\n\n\nA diferencia del escaneo superficial, la CT usa Rayos X que atraviesan el objeto, revelando su interior sin dañarlo.\n\nDetectores registran cuánta radiación absorbió cada punto del material\nUna computadora reconstruye rebanadas (secciones transversales) del objeto\nEl resultado es un volumen 3D completo, interior y exterior\nSe puede “ver dentro” del fósil sin extraerlo de la roca"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#cómo-funciona-el-ct",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#cómo-funciona-el-ct",
+    "title": "Paleontología Virtual",
+    "section": "¿Cómo funciona el CT?",
+    "text": "¿Cómo funciona el CT?\n\n\nEl principio físico\n\nUna fuente de Rayos X gira alrededor del objeto\nEn cada ángulo, los detectores miden la atenuación de la radiación\nEl algoritmo de retroproyección filtrada reconstruye secciones 2D\nLas secciones se apilan en un volumen 3D (stack de imágenes)\n\nEl concepto de Vóxel\nUn vóxel (volumetric pixel) es el equivalente 3D del píxel. Cada vóxel guarda un valor de densidad en escala de grises llamado Unidades Hounsfield (HU):\n\n\n\nMaterial\nHU aproximados\n\n\n\n\nAire\n-1000\n\n\nGrasa\n-100 a -50\n\n\nAgua\n0\n\n\nHueso cortical\n+400 a +1900\n\n\n\n\nArchivos DICOM\n\nDICOM es el formato estándar médico\nCada “rebanada” es una imagen DICOM\nUna serie típica tiene 400 – 2,000 imágenes\nCada imagen incluye metadatos: resolución, orientación, escala real\nVentaja crucial: la escala real está embebida en el archivo\n\n\n\n\n\n\n\nNota\n\n\nUn CT clínico tiene rebanadas de ~0.5mm. Un Micro-CT puede llegar a 1–10 micrómetros — capaz de ver células individuales."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#tipos-de-tomografía",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#tipos-de-tomografía",
+    "title": "Paleontología Virtual",
+    "section": "Tipos de Tomografía",
+    "text": "Tipos de Tomografía\n\n\nCT Clínico (Médico)\n\nDiseñado para el cuerpo humano\nResolución: ~0.5 mm por vóxel\nIdeal para: vertebrados grandes, cráneos, fémures\nAcceso: Convenios con hospitales o clínicas\nCosto: Variable; a veces disponible con convenio universitario\n\nVentaja: Amplia disponibilidad geográfica\n\nCT Industrial\n\nDiseñado para materiales y piezas de manufactura\nResolución: 0.05 – 0.5 mm por vóxel\nMayor rango de densidades detectables (metales)\nIdeal para: fósiles grandes, matrices de roca dura\nCosto: $200 – $1,000 USD por sesión\n\nVentaja: Soporta objetos muy densos\n\nMicro-CT\n\nDiseñado para especímenes pequeños (&lt; 10 cm)\nResolución: 1 – 50 micrómetros por vóxel\nEquipo de laboratorio especializado\nIdeal para: microfósiles, dientes, vértebras pequeñas\nCosto equipo: $200,000 – $1,000,000+ USD\nCosto uso: $100 – $500 USD/hora\n\nVentaja: Detalle sin igual"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#limitaciones-de-la-tomografía",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#limitaciones-de-la-tomografía",
+    "title": "Paleontología Virtual",
+    "section": "Limitaciones de la Tomografía",
+    "text": "Limitaciones de la Tomografía\n\n\nLimitaciones Técnicas\n\nContraste de densidad: Si el hueso y la roca circundante tienen densidades similares, el software no puede separarlos (artefacto de “partial volume”)\nMetales: Generan artefactos de haz endurecido (beam hardening) — zonas negras o blancas falsas\nTamaño vs. resolución: A mayor espécimen, menor resolución posible\nTiempo de escaneo: Un Micro-CT puede tardar 4–12 horas por muestra\n\n\nLimitaciones Prácticas\n\nCosto prohibitivo: El acceso a Micro-CT requiere laboratorio especializado\nNula portabilidad: Los equipos pesan varias toneladas\nTransporte del espécimen: Requiere permisos y condiciones especiales de seguridad para fósiles frágiles\nFormato propietario: Aunque DICOM es estándar, cada fabricante añade campos que no siempre son compatibles\nRadiación: El uso repetido en el mismo espécimen puede alterar materiales orgánicos residuales"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#acceso-a-la-tomografía-cómo-llegar-sin-laboratorio-propio",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#acceso-a-la-tomografía-cómo-llegar-sin-laboratorio-propio",
+    "title": "Paleontología Virtual",
+    "section": "Acceso a la Tomografía: ¿Cómo llegar sin laboratorio propio?",
+    "text": "Acceso a la Tomografía: ¿Cómo llegar sin laboratorio propio?\n\n\nVías de acceso reales\n\nHospitales públicos: Algunos permiten escaneos en horarios valle con justificación de investigación\nUniversidades: Muchas cuentan con Micro-CT en departamentos de biología o materiales\nServicios externos: Empresas especializadas (efecto “core facility”) venden tiempo de uso\nDatos existentes: MorphoSource y Phenome10K distribuyen datos DICOM de fósiles ya escaneados\n\n\nRepositorios de datos CT abiertos\n\n\n\nRecurso\nContenido\n\n\n\n\nMorphoSource\nFósiles y anatomía comparada\n\n\nPhenome10K\nCT de 10k+ especímenes\n\n\nDigiMorph\nVisualizaciones interactivas\n\n\n\n\n\n\n\n\n\nTip\n\n\nPara este curso usaremos datos de MorphoSource — gratuitos y de alta calidad."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#panorama-de-software-para-ct",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#panorama-de-software-para-ct",
+    "title": "Paleontología Virtual",
+    "section": "Panorama de Software para CT",
+    "text": "Panorama de Software para CT\nEl primer paso al recibir datos DICOM es convertir el volumen en una malla 3D utilizable. Esto se llama segmentación.\n\n\nSoftware Comercial\n\n\n\nSoftware\nUso típico\nCosto\n\n\n\n\nAvizo\nPaleontología/medicina\n~$10,000/año\n\n\nMIMICS\nBiomedicina\n~$15,000/año\n\n\nVGStudio MAX\nIndustrial\n~$8,000/año\n\n\nDragonfly\nCiencias de materiales\n~$5,000/año\n\n\n\nPotentes pero fuera del alcance académico general.\n\nSoftware Gratuito / Open Source\n\n\n\nSoftware\nVentaja\n\n\n\n\n3D Slicer\nMás completo, activo, extensiones\n\n\nITK-SNAP\nSencillo, ideal para empezar\n\n\nFiji (ImageJ)\nAnálisis de imágenes 2D/3D\n\n\nParaView\nVisualización científica avanzada\n\n\nSeg3D\nSegmentación científica CIBC\n\n\n\n\n\n\n\n\n\nNota\n\n\nPara este curso usaremos 3D Slicer — es gratuito, multiplataforma y es el estándar de facto en investigación."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#ejemplo-práctico-3d-slicer",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#ejemplo-práctico-3d-slicer",
+    "title": "Paleontología Virtual",
+    "section": "Ejemplo Práctico: 3D Slicer",
+    "text": "Ejemplo Práctico: 3D Slicer\n3D Slicer es una plataforma open source de código libre para visualización médica e investigación. Desarrollada activamente desde 1998 (Brigham and Women’s Hospital / MIT).\n\n\n¿Qué puede hacer?\n\nCargar series DICOM completas (cientos de imágenes)\nVisualizar el volumen en los tres planos (axial, coronal, sagital) y en 3D\nSegmentar estructuras por densidad, color o dibujado manual\nGenerar modelos 3D de superficies (mallas)\nExportar a STL, OBJ, PLY para análisis o impresión 3D\nMedir distancias, ángulos y volúmenes directamente en el volumen\n\n\nExtensiones relevantes\n\nSegmentEditorExtra — herramientas avanzadas de segmentación\nSlicerMorph — morfometría geométrica 3D\nEndocast — extracción de endocraneos digitales\nBoneTexture — análisis de microestructura ósea\n\n\n\n\n\n\n\nTip\n\n\nSlicerMorph fue desarrollado específicamente para paleontología y biología evolutiva."
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#flujo-de-trabajo-en-3d-slicer",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#flujo-de-trabajo-en-3d-slicer",
+    "title": "Paleontología Virtual",
+    "section": "Flujo de Trabajo en 3D Slicer",
+    "text": "Flujo de Trabajo en 3D Slicer\n\n\nPaso 1: Cargar datos\nMenú → File → Add DICOM Data\n    → Import DICOM files\n    → Seleccionar carpeta con imágenes\n    → Load\nPaso 2: Explorar el volumen\n\nVista axial, coronal y sagital simultáneas\nAjustar Window/Level para ver mejor los huesos\nUsar scroll para navegar entre rebanadas\n\n\nPaso 3: Segmentar\nMódulo → Segment Editor\n    → Add (+) — crear nuevo segmento\n    → Threshold — definir rango de HU del hueso\n    → Islands → Keep largest island\n    → Scissors → recortar artefactos\n    → Smoothing → suavizar el resultado\nPaso 4: Exportar el modelo 3D\nMódulo → Segmentations\n    → Export/Import Models and Tables\n    → Output: Models\n    → Formato: OBJ / STL"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#la-técnica-de-umbralización-thresholding",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#la-técnica-de-umbralización-thresholding",
+    "title": "Paleontología Virtual",
+    "section": "La Técnica de Umbralización (Thresholding)",
+    "text": "La Técnica de Umbralización (Thresholding)\nEl principio fundamental de la segmentación digital de fósiles es el umbral de densidad:\n\n\n¿Cómo funciona?\n\nCada vóxel tiene un valor de densidad (HU)\nDefinimos un umbral mínimo y máximo — por ejemplo: 400 a 1900 HU para hueso cortical\nEl software colorea todos los vóxeles dentro de ese rango\nEl resultado es la selección visual del hueso separado de la roca\n\nEl Problema del Contraste\nSi el fósil tiene densidad similar a la matriz rocosa, los umbrales se superponen y es necesario segmentar manualmente con las herramientas de pincel (Paint) o tijeras (Scissors).\n\nHerramientas de Segment Editor\n\n\n\nHerramienta\nUso\n\n\n\n\nThreshold\nSelección automática por HU\n\n\nPaint\nPincel manual en 2D/3D\n\n\nErase\nBorrar partes de la selección\n\n\nDraw\nContorno manual en una rebanada\n\n\nScissors\nRecortar una región entera\n\n\nGrow from Seeds\nRelleno automático desde semillas\n\n\nIslands\nEliminar fragmentos sueltos\n\n\nSmoothing\nSuavizar la superficie final"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#el-problema-de-la-escala-en-fotogrametría",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#el-problema-de-la-escala-en-fotogrametría",
+    "title": "Paleontología Virtual",
+    "section": "El Problema de la Escala en Fotogrametría",
+    "text": "El Problema de la Escala en Fotogrametría\n\n\n\n\n\n\n⚠️ Los modelos de fotogrametría NO tienen escala real\n\n\nA diferencia del CT (donde la escala está en los metadatos DICOM) o el escaneo de luz estructurada, los modelos generados con VisualSFM, Colmap o Meshroom carecen de unidades métricas reales. Un fósil de 10 cm puede aparecer en el software con cualquier tamaño arbitrario.\n\n\n\nLa solución: Usar el addon de Blender Measure and Scale\n\nMedir la dimensión real del espécimen (con vernier/calibrador)\nAbrir el modelo en Blender con el addon activado\nMarcar dos puntos conocidos en el modelo\nIntroducir la distancia real → Blender reescala todo el modelo\n\n🔗 extensions.blender.org/add-ons/measure-and-scale/"
+  },
+  {
+    "objectID": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#herramientas-y-recursos",
+    "href": "curso-paleo-virtual/03-adquisicion-2-escaneo-y-ct.html#herramientas-y-recursos",
+    "title": "Paleontología Virtual",
+    "section": "Herramientas y Recursos",
+    "text": "Herramientas y Recursos\n\n\n🔧 Software (Gratuito)\n\nRTAB-Map — Escaneo con Kinect\nMeshLab — Post-proceso de mallas\nCloudCompare — Análisis de nubes de puntos\n3D Slicer — Segmentación CT\nBlender — Edición y reescalado\n\n📐 Addon de Blender\n\nMeasure and Scale — Escalado de modelos fotogramétricos\n\n\n🌐 Repositorios de Modelos 3D\n\nMorphoSource — CT y fotogrametría de especímenes\nSketchfab — Visualización interactiva\nPhenome10K — CT de 10,000+ especímenes\nDigiMorph — Biblioteca CT con visualización"
   }
 ]
