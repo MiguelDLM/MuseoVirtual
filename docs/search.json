@@ -1013,5 +1013,12 @@
     "title": "Paleontología Virtual",
     "section": "Caso de Estudio 3: Análisis de Elementos Finitos (BFEX)",
     "text": "Caso de Estudio 3: Análisis de Elementos Finitos (BFEX)\nPaper: BFEX: A Toolbox for Finite Element Analysis With Fossils and Blender (Díaz de León-Muñoz, Boman, y Ferreira 2025).\n\n\nDe Blender a la Ingeniería (FEA)\n\nConcepto: Add-on puente que conecta el entorno de diseño creativo con el software de cálculo científico (Fossils).\nInterfaz Gráfica: Permite delimitar visualmente escenarios biomecánicos (músculos, puntos focales, magnitudes de carga).\nEscalabilidad: Define las propiedades del material (Módulo de Young, Poisson) sin necesidad de programar scripts complejos.\nEficiencia: Agiliza el flujo de trabajo de simulación de estrés y deformación ósea en especímenes fósiles."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#enlaces-de-utilidad-y-herramientas",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#enlaces-de-utilidad-y-herramientas",
+    "title": "Paleontología Virtual",
+    "section": "Enlaces de Utilidad y Herramientas",
+    "text": "Enlaces de Utilidad y Herramientas\nSoftware del curso:\n\nBlender (Edición de mallas)\nBlender Measure and Scale (Add-on de escalado real)\nBFEX: Blender Finite Elements eXporter (Add-on para análisis de elementos finitos)\nMyoGenerator (Add-on original para reconstrucción muscular)\nMyoGeneratorRemix (Add-on mejorado para reconstrucción muscular)\nMeasure and Scale (Add-on para escalado)"
   }
 ]

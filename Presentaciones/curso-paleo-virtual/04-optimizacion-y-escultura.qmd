@@ -290,6 +290,24 @@ Blender se ha convertido en el eje central del flujo de trabajo de la paleontolo
 **Práctica guiada:** Importación de un hueso escaneado en clase usando Blender, reducción poligonal, y aplicación de pinceles para eliminar ruido derivado del CT.
 :::
 
+---
+
+## Enlaces de Utilidad y Herramientas
+
+### Software del curso:
+
+- [Blender](https://www.blender.org/) (Edición de mallas)
+
+- [Blender Measure and Scale](https://extensions.blender.org/add-ons/measure-and-scale/) (Add-on de escalado real)
+
+- [BFEX: Blender Finite Elements eXporter](https://github.com/MiguelDLM/BFEX) (Add-on para análisis de elementos finitos)
+
+- [MyoGenerator](https://github.com/evaherbst/MyoGenerator) (Add-on original para reconstrucción muscular)
+
+- [MyoGeneratorRemix](https://github.com/MiguelDLM/MyoGeneratorRemix) (Add-on mejorado para reconstrucción muscular)
+
+- [Measure and Scale](https://github.com/MiguelDLM/Measure-and-Scale) (Add-on para escalado)
+
 # Artículos de interés
 
 :::{#refs}
