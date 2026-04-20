@@ -901,5 +901,117 @@
     "title": "Paleontología Virtual",
     "section": "Herramientas y Recursos",
     "text": "Herramientas y Recursos\n\n\n🔧 Software (Gratuito)\n\nRTAB-Map — Escaneo con Kinect\nMeshLab — Post-proceso de mallas\nCloudCompare — Análisis de nubes de puntos\n3D Slicer — Segmentación CT\nBlender — Edición y reescalado\n\n📐 Addon de Blender\n\nMeasure and Scale — Escalado de modelos fotogramétricos\n\n\n🌐 Repositorios de Modelos 3D\n\nMorphoSource — CT y fotogrametría de especímenes\nSketchfab — Visualización interactiva\nPhenome10K — CT de 10,000+ especímenes\nDigiMorph — Biblioteca CT con visualización"
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#qué-es-blender",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#qué-es-blender",
+    "title": "Paleontología Virtual",
+    "section": "¿Qué es Blender?",
+    "text": "¿Qué es Blender?\nBlender es una suite de creación 3D de código abierto, gratuita y multiplataforma, mantenida por The Blender Foundation.\n\n\nLanzado bajo una licencia GNU (General Public License), cubre la totalidad del pipeline 3D.\n\nModelado y escultura: Creación y modificación de mallas detalladas\nAnimación y rigging: Simulación de movimiento mediante “huesos”\nRenderizado: Trazado de rayos avanzado\nEdición y composición: Postproducción incorporada"
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#propiedades-y-ventajas",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#propiedades-y-ventajas",
+    "title": "Paleontología Virtual",
+    "section": "Propiedades y Ventajas",
+    "text": "Propiedades y Ventajas\n\n\nVentajas principales\n\nAlternativa a software comercial: A pesar de ser gratuita, sus capacidades rivalizan con programas costosos de alta gama como Maya o 3ds Max (Garwood y Dunlop 2014).\nVersatilidad de formatos: Permite importar y exportar desde .OBJ, .STL, .PLY hasta formatos industriales.\nRenderizado realista (Raytracing): Simula el comportamiento físico de la luz para imágenes y videos de calidad para publicación.\nComunidad global: Actualizaciones gratuitas y continuas con un vasto ecosistema de tutoriales.\n\n\nLimitaciones a considerar\n\nCurva de aprendizaje: Interfaz gráfica compleja para nuevos usuarios frente a software más específico. El artículo proporciona una guía paso a paso (material suplementario) para mitigar esta dificultad (Garwood y Dunlop 2014).\nRendimiento con mallas crudas: Mallas enormes (como las obtenidas directamente de un CT scan o fotogrametría densa sin limpiar) pueden ralentizar considerablemente la aplicación.\nNo es software analítico: Permite simulación física y visual, pero no es un paquete para análisis biomecánico."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#uso-de-extensiones-add-ons-y-python",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#uso-de-extensiones-add-ons-y-python",
+    "title": "Paleontología Virtual",
+    "section": "Uso de Extensiones (Add-ons) y Python",
+    "text": "Uso de Extensiones (Add-ons) y Python\nBlender se destaca por su gran capacidad de personalización y automatización.\n\n\nIntegración con Python\n\nEl núcleo de Blender incorpora una consola interactiva de Python 3.\nTodo lo que se hace gráficamente en Blender se puede ejecutar mediante scripts programados (import bpy).\nAutomatiza el procesamiento por lotes (ej. reescalar, simplificar e iluminar cientos de mallas a la vez).\nFacilita la interoperabilidad al usar bibliotecas científicas de Python en conjunto con el entorno visual.\n\n\nExtensiones (Add-ons)\n\nEl uso de extensiones expande nativamente las funciones de Blender.\nEjemplo en Paleontología: Add-ons como Measure and Scale ayudan a dar dimensiones métricas a fotogrametría suelta.\nAdd-ons de impresión 3D (3D Print Toolbox) detectan rápidamente voladizos o mallas no cerradas (“non-manifold”)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#optimización-de-modelos-escaneados",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#optimización-de-modelos-escaneados",
+    "title": "Paleontología Virtual",
+    "section": "Optimización de Modelos Escaneados",
+    "text": "Optimización de Modelos Escaneados\nLas mallas resultantes de Fotogrametría o CT suelen contener errores, ruido estadístico y millones de polígonos innecesarios.\n\n\nProblemas comunes\n\nGeometría defectuosa: Polígonos superpuestos, normales invertidas, bordes abiertos.\nSobre-densidad (Exceso de polígonos): Partes planas que tienen miles de vértices sin aportar detalle al relieve.\nArtefactos “flotantes”: Restos de la matriz, roca, o puntos perdidos en escaneos láser.\n\n\nFlujo de optimización\n\nImportación y escalado\nSelección y limpieza manual: Borrar partes flotantes.\nReparación topológica: Unir vértices y recalcular normales (Shift + N).\nReducción de Polígonos (Decimation): Simplificar donde sea posible."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#reducción-de-polígonos-decimate",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#reducción-de-polígonos-decimate",
+    "title": "Paleontología Virtual",
+    "section": "Reducción de Polígonos (Decimate)",
+    "text": "Reducción de Polígonos (Decimate)\nEl modificador Decimate en Blender nos permite reducir drásticamente el peso de un Fósil “crudo” sin perder su morfología aparente.\n\n\nMétodos de Reducción\n\nColapso (Collapse): Fusiona vértices progresivamente según un ratio. Mantiene la forma general y las áreas con bordes duros.\nDesubdividir (Un-Subdivide): Intenta simplificar topologías de mallas con un patrón base de grilla regular.\nPlanar: Elimina vértices en superficies planas definiendo un ángulo límite, excelente para preservar bordes cortantes de dientes o garras.\n\n\n\n\n\n\n\nTip\n\n\nUn modelo de 5 millones de caras puede reducirse a 300,000 caras sin perder detalle visual, agilizando su carga en plataformas web como Sketchfab.\n\n\n\n\nAntes y Después\n  (Representación de una reducción poligonal)"
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#herramientas-de-escultura-en-blender",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#herramientas-de-escultura-en-blender",
+    "title": "Paleontología Virtual",
+    "section": "Herramientas de Escultura en Blender",
+    "text": "Herramientas de Escultura en Blender\nEl modo Sculpt de Blender permite interactuar con mallas 3D como si fueran arcilla digital.\n\n\nPinceles clave en Paleo\n\nSmooth: Esencial para borrar los escalones de las rebanadas en modelos exportados desde software de CT.\nGrab / Elastic Deform: Para retrodeformación manual o reposicionamiento.\nFlatten / Scrape: Para eliminar excrecencias de sedimentos virtuales unidos al hueso reconstruido.\nClay Strips: Usado a menudo para recrear volumen en partes perdidas de un espécimen o simular tejidos musculares.\n\n\nDyntopo (Topología Dinámica)\n\nMientras se esculpe, triangula automáticamente y añade polígonos sólo bajo el trazo del pincel.\nIdeal para esculpir restauraciones desde cero o fusionar fracturas virtuales de modo orgánico."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#casos-de-uso-y-aplicaciones-directas",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#casos-de-uso-y-aplicaciones-directas",
+    "title": "Paleontología Virtual",
+    "section": "Casos de Uso y Aplicaciones Directas",
+    "text": "Casos de Uso y Aplicaciones Directas\nBlender se ha convertido en el eje central del flujo de trabajo de la paleontología virtual, ya sea como paso final o como base principal para simulaciones biomecánicas.\nÁreas de uso documentado\n\nReposicionamiento y Restauración: Reposicionamiento manual de elementos desarticulados (ej. re-articulación craneal) o remallado de elementos problemáticos.\nPre-procesamiento Biomecánico: Delimitación de músculos. Creación de regiones musculares en huesos para simulaciones de Elementos Finitos (FEA) (Díaz de León-Muñoz, Boman, y Ferreira 2025).\nAnimaciones Científicas: Difusión visual (videos, animaciones), reconstrucción de movimientos (Garwood y Dunlop 2014)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-práctico-animación-del-trigonotárbiro",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-práctico-animación-del-trigonotárbiro",
+    "title": "Paleontología Virtual",
+    "section": "Caso Práctico: Animación del Trigonotárbiro",
+    "text": "Caso Práctico: Animación del Trigonotárbiro\nPaper: The Walking Dead: Blender as a Tool for Paleontologists with a Case Study on Extinct Arachnids (Garwood y Dunlop 2014).\n\n\nEl Desafío\n\nEntender y recrear el paso (gait) y morfología de las extremidades de Palaeocharinus, un arácnido devónico del Rhynie Chert (Escocia) excepcionalmente preservado en 3D.\n\nEl Flujo Analítico\n\nModelado Idealizado: Creación de una reconstrucción idealizada basada en articulaciones reportadas.\nRe-modelado (Box modeling): Adaptar la malla cruda usando geometría optimizada de un fósil pariente (Anthracomartus hindi).\n\n\nAnimación y Morfología\n\nComparación Biológica: Se comparó el paso con arácnidos actuales (arañas cursoriales) para producir una representación precisa del movimiento.\nCinemática Inversa (IK): Permitió simular cómo se flexionaban y apoyaban las patas respecto del suelo.\nConclusión Funcional: Los trigonotárbidos tenían una locomoción comparable a arañas modernas, pero carecían de innovaciones vistas en linajes más derivados (Garwood y Dunlop 2014)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#conclusiones-del-día-4",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#conclusiones-del-día-4",
+    "title": "Paleontología Virtual",
+    "section": "Conclusiones del Día 4",
+    "text": "Conclusiones del Día 4\n\n\nOptimización\n\nNunca asumamos que la malla “bruta” del escáner o fotogrametría está lista para usar.\nDebemos limpiar flotantes, reparar topología, y aplicar Decimate inteligentemente para un equilibrio entre detalle y optimización.\n\n\nPotencia de Blender\n\nSu integración con Python y el sistema Add-on automatizan tareas titánicas en las colecciones.\nEl uso de Rigging y constraints aporta herramientas biomecánicas reales, más allá de lo meramente estético, como se demostró en reconstrucciones analíticas.\n\n\n\n\n\n\n\n\nSiguiente Paso\n\n\nPráctica guiada: Importación de un hueso escaneado en clase usando Blender, reducción poligonal, y aplicación de pinceles para eliminar ruido derivado del CT."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#references",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#references",
+    "title": "Paleontología Virtual",
+    "section": "",
+    "text": "Díaz de León-Muñoz, E. Miguel, Romain Boman, y Gabriel S. Ferreira. 2025. «BFEX: A Toolbox for Finite Element Analysis With Fossils and Blender». Ecology and Evolution 15 (3): e71093. https://doi.org/10.1002/ece3.71093.\n\n\nGarwood, Russell, y Jason Dunlop. 2014. «The Walking Dead: Blender as a Tool for Paleontologists with a Case Study on Extinct Arachnids». Journal of Paleontology 88 (4): 735-46. https://doi.org/10.1666/13-088.\n\n\nHerbst, Eva C., Luke E. Meade, Stephan Lautenschlager, Niccolo Fioritti, y Torsten M. Scheyer. 2022. «A Toolbox for the Retrodeformation and Muscle Reconstruction of Fossil Specimens in Blender». Royal Society Open Science 9 (8): 1-18. https://doi.org/10.1098/rsos.220519.\n\n\nLautenschlager, Stephan. 2015. «Estimating Cranial Musculoskeletal Constraints in Theropod Dinosaurs». Royal Society Open Science 2 (11). https://doi.org/10.1098/rsos.150495."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#modelado-biomecánico-y-funcional",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#modelado-biomecánico-y-funcional",
+    "title": "Paleontología Virtual",
+    "section": "Modelado Biomecánico y Funcional",
+    "text": "Modelado Biomecánico y Funcional\nBlender permite no solo recuperar anatomía, sino poner a prueba hipótesis sobre las funciones biológicas en especies extintas.\n\n\nApertura Mandibular (Maximum Gape)\n\nEl modelo digital sirvió para estimar los límites de estiramiento de la musculatura craneal en dinosaurios terópodos (Lautenschlager 2015).\nSe modelaron los músculos aductores de la mandíbula como cilindros 3D interactivos, usando los límites fisiológicos del rango de elongación del músculo (130-170%).\nCon estas simulaciones en Blender, se comprobó que los depredadores como T. rex lograban aperturas mayores (hasta 92°) frente a taxones herbívoros afines (aprox. 45°).\n\n\nHerramientas Académicas (Add-ons)\n\nMyoGenerator: Add-on para Blender que automatiza la reconstrucción muscular tridimensional “pintando” sus orígenes, y calcula parámetros de volumen, longitud y centroides necesarios para estimar la fuerza muscular.\nBFEX: Add-on puente (Blender Finite Element eXporter) que simplifica y visualiza la entrada de datos originarios de Blender hacia paquetes de cálculo rígido, delimitando escenarios biomecánicos avanzados sin requerir programación compleja (Díaz de León-Muñoz, Boman, y Ferreira 2025)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-de-estudio-1-locomoción-en-arácnidos-fósiles",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-de-estudio-1-locomoción-en-arácnidos-fósiles",
+    "title": "Paleontología Virtual",
+    "section": "Caso de Estudio 1: Locomoción en Arácnidos Fósiles",
+    "text": "Caso de Estudio 1: Locomoción en Arácnidos Fósiles\nPaper: The Walking Dead: Blender as a Tool for Paleontologists (Garwood y Dunlop 2014).\n\n\nEl Desafío y Flujo\n\nRecrear el paso (gait) de Palaeocharinus (Rhynie Chert, Escocia).\nModelado: Reconstrucción basada en un pariente fósil tridimensional (Anthracomartus hindi).\nAnimación (Rigging): Creación de un esqueleto digital con restricciones anatómicas reales y aplicación de cinemática inversa (IK).\nResultado biomecánico: Demostración de una locomoción muy similar a arañas cursoriales modernas, aunque carente en especies derivadas."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-de-estudio-2-apertura-mandibular-maximum-gape",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-de-estudio-2-apertura-mandibular-maximum-gape",
+    "title": "Paleontología Virtual",
+    "section": "Caso de Estudio 2: Apertura Mandibular (Maximum Gape)",
+    "text": "Caso de Estudio 2: Apertura Mandibular (Maximum Gape)\nPaper: Estimating cranial musculoskeletal constraints in theropod dinosaurs (Lautenschlager 2015).\n\n\nBiomecánica en Terópodos\n\nBlender sirvió como plataforma para estimar los límites funcionales de estiramiento muscular.\nSe modelaron los músculos aductores de la mandíbula craneal como cilindros 3D interactivoevolutivas s.\nValidación biológica: Rango de elongación del músculo restringido entre 130% y 170% de su longitud de reposo.\nResultado: Depredadores como T. rex lograban aperturas funcionales mayores (hasta 80°) frente a taxones herbívoros afines como Erlikosaurus (aprox. 45°)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-de-estudio-3-herramientas-de-modelado-add-ons",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-de-estudio-3-herramientas-de-modelado-add-ons",
+    "title": "Paleontología Virtual",
+    "section": "Caso de Estudio 3: Herramientas de Modelado (Add-ons)",
+    "text": "Caso de Estudio 3: Herramientas de Modelado (Add-ons)\nPaper: BFEX: A Toolbox for Finite Element Analysis With Fossils and Blender (Díaz de León-Muñoz, Boman, y Ferreira 2025).\n\n\nAdd-ons para Paleontología Computacional\n\nMyoGenerator: Automatiza la reconstrucción muscular tridimensional. El usuario “pinta” sus orígenes y el add-on calcula automáticamente el volumen, longitud y sus centroides, métricas necesarias para estimar la fuerza biomecánica.\nBFEX: Add-on puente que simplifica la entrada de datos para ingenieros. Permite delimitar escenarios (cargas musculares, desplazamientos, fuerzas métricas) visualmente en Blender y exportarlos directo hacia análisis avanzados de Elementos Finitos (FEA) sin requerir programación manual."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#herramientas-reconstrucción-muscular-myogenerator",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#herramientas-reconstrucción-muscular-myogenerator",
+    "title": "Paleontología Virtual",
+    "section": "Herramientas: Reconstrucción Muscular (MyoGenerator)",
+    "text": "Herramientas: Reconstrucción Muscular (MyoGenerator)\n\n\nReconstrucción Interactiva en 3D\nPaper: A toolbox for the retrodeformation and muscle reconstruction of fossil specimens in Blender (Herbst et al. 2022)\n\nPropósito: Reconstrucción interactiva de la morfología muscular sobre modelos fósiles.\nFlujo: El usuario “pinta” las áreas de origen e inserción directamente sobre la malla.\nAutomatización: Genera automáticamente volúmenes musculares 3D ajustables.\nMétricas: Calcula automáticamente volumen, longitud y centroides de unión, datos clave para estimar la fuerza muscular absoluta."
+  },
+  {
+    "objectID": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-de-estudio-3-análisis-de-elementos-finitos-bfex",
+    "href": "curso-paleo-virtual/04-optimizacion-y-escultura.html#caso-de-estudio-3-análisis-de-elementos-finitos-bfex",
+    "title": "Paleontología Virtual",
+    "section": "Caso de Estudio 3: Análisis de Elementos Finitos (BFEX)",
+    "text": "Caso de Estudio 3: Análisis de Elementos Finitos (BFEX)\nPaper: BFEX: A Toolbox for Finite Element Analysis With Fossils and Blender (Díaz de León-Muñoz, Boman, y Ferreira 2025).\n\n\nDe Blender a la Ingeniería (FEA)\n\nConcepto: Add-on puente que conecta el entorno de diseño creativo con el software de cálculo científico (Fossils).\nInterfaz Gráfica: Permite delimitar visualmente escenarios biomecánicos (músculos, puntos focales, magnitudes de carga).\nEscalabilidad: Define las propiedades del material (Módulo de Young, Poisson) sin necesidad de programar scripts complejos.\nEficiencia: Agiliza el flujo de trabajo de simulación de estrés y deformación ósea en especímenes fósiles."
   }
 ]
