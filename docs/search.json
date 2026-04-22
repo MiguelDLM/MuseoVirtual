@@ -53,7 +53,7 @@
     "href": "curso-paleo-virtual/home.html#temario-semana-2",
     "title": "Paleontología Virtual",
     "section": "Temario: Semana 2",
-    "text": "Temario: Semana 2\n\n\n\n\n\n\n\n\nDía\nTemas Principales\nHoras (S/A)\n\n\n\n\nLunes\nDía 4: Optimización y Escultura DigitalLimpieza de mallas, reparación y reducción de polígonos en Blender.\n3h (S)\n\n\nMiércoles\nDía 5: Reconstrucción MuscularModelado de músculos y estimación de biomasa (MyoGenerator).\n3h (S) / 3h (A)\n\n\nViernes\nDía 6: Análisis Biomecánico (FEA)Simulación de esfuerzos y deformaciones (BFEX y Fossils).\n3h (S) / 3h (A)\n\n\n\n(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono"
+    "text": "Temario: Semana 2\n\n\n\nDía\nTemas Principales\nHoras (S/A)\n\n\n\n\nLunes\nDía 4: Optimización y Escultura DigitalLimpieza de mallas, reparación y reducción de polígonos en Blender.\n3h (S)\n\n\nMiércoles\nDía 5: Reconstrucción MuscularModelado de músculos y estimación de biomasa (MyoGenerator).\n3h (S) / 3h (A)\n\n\nViernes\nDía 6: Análisis Biomecánico (FEA)Simulación de esfuerzos y deformaciones (BFEX y Fossils).\n3h (S) / 3h (A)\n\n\n\n(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono"
   },
   {
     "objectID": "curso-paleo-virtual/home.html#temario-semana-3",
@@ -606,7 +606,7 @@
     "href": "Home.html",
     "title": "Presentaciones del Museo Virtual Nacional",
     "section": "",
-    "text": "Presentaciones del Museo Virtual Nacional\n  \n  \n    Conferencias, talleres y recursos educativos sobre paleontología virtual\n    y técnicas digitales aplicadas al estudio de la vida en el pasado.\n  \n  \n    Ver presentaciones\n    Contacto\n  \n\n\n\n\n  \n    \n  \n\n\n\n\n\n\n\n  \n  \n\n    \n      \n      \n        \n          Charlas y Conferencias\n        \n        \n          Presentaciones de divulgación sobre paleontología y técnicas virtuales\n        \n      \n    \n\n    \n\n      \n      \n        \n          \n            \n            \n            \n              CONFERENCIA\n            \n          \n          \n            \n              Paleontólogos sin Fósiles\n            \n            \n              Técnicas de Paleontología Virtual: herramientas digitales para el estudio\n              de la vida en el pasado sin necesidad de acceder físicamente a los fósiles.\n            \n          \n          \n            \n              Ver presentación →\n            \n          \n        \n      \n\n      \n      \n        \n          \n            \n            \n            \n              CHARLA\n            \n          \n          \n            \n              Camino a la Paleontología\n            \n            \n              Todo lo que me hubiera gustado saber antes de decidir ser paleontólogo:\n              carrera, retos, oportunidades y realidades de la disciplina.\n            \n          \n          \n            \n              Ver presentación →\n            \n          \n        \n      \n\n    \n  \n\n\n  \n  \n\n    \n      \n      \n        \n          Curso: Paleontología Virtual\n        \n        \n          Curso-taller de técnicas digitales aplicadas a la paleontología\n        \n      \n    \n\n    \n      \n\n        \n        \n          \n          \n            CURSO\n          \n        \n\n        \n        \n          \n            \n              \n                Paleontología Virtual\n              \n              \n                Fotogrametría, escaneo 3D, reconstrucción muscular,\n                análisis biomecánicos y morfometría geométrica.\n              \n            \n            \n              Presentación del curso →\n            \n          \n\n          \n          \n            \n              Sesiones\n            \n            \n\n              \n              \n                1\n                \n                  \n                    Día 1: Introducción y Fundamentos\n                  \n                  \n                    Paleontología Virtual, bases de datos y tipos de modelos 3D\n                  \n                \n                →\n              \n\n              \n              \n                2\n                \n                  \n                    Día 2: Adquisición I — Fotogrametría\n                  \n                  \n                    Fotogrametría, SfM, VisualSFM y workflow completo en Linux\n                  \n                \n                →\n              \n\n              \n              \n                3\n                \n                  \n                    Día 3: Adquisición II — Sensores y CT\n                  \n                  \n                    Escaneo láser, Kinect + RTAB-Map y tomografía CT con 3D Slicer\n                  \n                \n                →\n              \n\n              \n              \n                4\n                \n                  \n                    Día 4: Optimización y Escultura Digital\n                  \n                  \n                    Limpieza de mallas, Decimate y escultura en Blender\n                  \n                \n                →\n              \n\n            \n          \n        \n\n      \n    \n  \n\n  \n  \n    \n      \n        ¿Quieres una presentación en tu institución?\n      \n      \n        Contáctanos y coordinamos una conferencia o taller a tu medida.\n      \n    \n    \n      Enviar correo"
+    "text": "Presentaciones del Museo Virtual Nacional\n  \n  \n    Conferencias, talleres y recursos educativos sobre paleontología virtual\n    y técnicas digitales aplicadas al estudio de la vida en el pasado.\n  \n  \n    Ver presentaciones\n    Contacto\n  \n\n\n\n\n  \n    \n  \n\n\n\n\n\n\n\n  \n  \n\n    \n      \n      \n        \n          Charlas y Conferencias\n        \n        \n          Presentaciones de divulgación sobre paleontología y técnicas virtuales\n        \n      \n    \n\n    \n\n      \n      \n        \n          \n            \n            \n            \n              CONFERENCIA\n            \n          \n          \n            \n              Paleontólogos sin Fósiles\n            \n            \n              Técnicas de Paleontología Virtual: herramientas digitales para el estudio\n              de la vida en el pasado sin necesidad de acceder físicamente a los fósiles.\n            \n          \n          \n            \n              Ver presentación →\n            \n          \n        \n      \n\n      \n      \n        \n          \n            \n            \n            \n              CHARLA\n            \n          \n          \n            \n              Camino a la Paleontología\n            \n            \n              Todo lo que me hubiera gustado saber antes de decidir ser paleontólogo:\n              carrera, retos, oportunidades y realidades de la disciplina.\n            \n          \n          \n            \n              Ver presentación →\n            \n          \n        \n      \n\n    \n  \n\n\n  \n  \n\n    \n      \n      \n        \n          Curso: Paleontología Virtual\n        \n        \n          Curso-taller de técnicas digitales aplicadas a la paleontología\n        \n      \n    \n\n    \n      \n\n        \n        \n          \n          \n            CURSO\n          \n        \n\n        \n        \n          \n            \n              \n                Paleontología Virtual\n              \n              \n                Fotogrametría, escaneo 3D, reconstrucción muscular,\n                análisis biomecánicos y morfometría geométrica.\n              \n            \n            \n              Presentación del curso →\n            \n          \n\n          \n          \n            \n              Sesiones\n            \n            \n\n              \n              \n                1\n                \n                  \n                    Día 1: Introducción y Fundamentos\n                  \n                  \n                    Paleontología Virtual, bases de datos y tipos de modelos 3D\n                  \n                \n                →\n              \n\n              \n              \n                2\n                \n                  \n                    Día 2: Adquisición I — Fotogrametría\n                  \n                  \n                    Fotogrametría, SfM, VisualSFM y workflow completo en Linux\n                  \n                \n                →\n              \n\n              \n              \n                3\n                \n                  \n                    Día 3: Adquisición II — Sensores y CT\n                  \n                  \n                    Escaneo láser, Kinect + RTAB-Map y tomografía CT con 3D Slicer\n                  \n                \n                →\n              \n\n              \n              \n                4\n                \n                  \n                    Día 4: Optimización y Escultura Digital\n                  \n                  \n                    Limpieza de mallas, Decimate y escultura en Blender\n                  \n                \n                →\n              \n\n              \n              \n                5\n                \n                  \n                    Día 5: Reconstrucción Muscular y Biomasa\n                  \n                  \n                    Modelado de músculos y estimación de biomasa con MyoGenerator\n                  \n                \n                →\n              \n\n            \n          \n        \n\n      \n    \n  \n\n  \n  \n    \n      \n        ¿Quieres una presentación en tu institución?\n      \n      \n        Contáctanos y coordinamos una conferencia o taller a tu medida.\n      \n    \n    \n      Enviar correo"
   },
   {
     "objectID": "camino-paleontologia.html#quién-soy",
@@ -1020,5 +1020,152 @@
     "title": "Paleontología Virtual",
     "section": "Enlaces de Utilidad y Herramientas",
     "text": "Enlaces de Utilidad y Herramientas\nSoftware del curso:\n\nBlender (Edición de mallas)\nBlender Measure and Scale (Add-on de escalado real)\nBFEX: Blender Finite Elements eXporter (Add-on para análisis de elementos finitos)\nMyoGenerator (Add-on original para reconstrucción muscular)\nMyoGeneratorRemix (Add-on mejorado para reconstrucción muscular)\nMeasure and Scale (Add-on para escalado)"
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#introducción-a-la-reconstrucción-muscular",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#introducción-a-la-reconstrucción-muscular",
+    "title": "Paleontología Virtual",
+    "section": "Introducción a la Reconstrucción Muscular",
+    "text": "Introducción a la Reconstrucción Muscular\n\n\n¿Por qué reconstruir músculos?\n\nLos huesos solo cuentan una parte de la historia.\nLa musculatura define la función biológica:\n\nLocomoción.\nAlimentación (fuerza de mordida).\nPostura.\n\nEs el puente necesario para simulaciones de:\n\nFEA: Para aplicar cargas realistas.\nMultibody Dynamics: Para simular movimiento.\n\n\n\n\n\n\nReconstrucción muscular del anficiónido Magericyon anceps"
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#el-primer-paso-retrodeformación",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#el-primer-paso-retrodeformación",
+    "title": "Paleontología Virtual",
+    "section": "El Primer Paso: Retrodeformación",
+    "text": "El Primer Paso: Retrodeformación\n\n\nRestauración antes del modelado\n\nLos fósiles suelen estar deformados (tafonomía).\nAntes de “poner músculos”, debemos restaurar el hueso a su estado in vivo.\nTécnicas en Blender (Herbst et al. 2022; DeVries et al. 2022):\n\nMirroring: Reflejar partes simétricas.\nArmatures (Rigging): Para re-posicionar fragmentos.\nRemeshing: Crear mallas base limpias y “watertight”.\nSculpt mode: Reparar grietas y erosión superficial.\n\n\n\n\n\n\nProceso de retrodeformación"
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogenerator-filosofía-y-ventajas",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogenerator-filosofía-y-ventajas",
+    "title": "Paleontología Virtual",
+    "section": "MyoGenerator: Filosofía y Ventajas",
+    "text": "MyoGenerator: Filosofía y Ventajas\n\n\nUn enfoque interactivo (Herbst et al. 2022)\n\nTradicional: Segmentación manual de CT (lento, 10-15h).\nMyoGenerator: Modelado interactivo en 3D directo en Blender.\nCompatibilidad: Probado oficialmente en Blender 2.91.0 - 2.93.0.\nVentajas:\n\nReducción drástica del tiempo (2-3h por modelo).\nPrecisión geométrica: los músculos “rodean” el hueso.\nGeneración de mallas basadas en loops para facilitar el ajuste de secciones.\n\n\n\n\n\n\nInterfaz de MyoGenerator"
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#conceptos-biomecánicos-clave",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#conceptos-biomecánicos-clave",
+    "title": "Paleontología Virtual",
+    "section": "Conceptos Biomecánicos Clave",
+    "text": "Conceptos Biomecánicos Clave\nMétricas que extraemos de los modelos:\n\nVolumen Muscular (\\(V_m\\)): Calculado directamente desde la malla 3D.\nPCSA (Physiological Cross-Sectional Area):\n\nEl área transversal que realmente genera fuerza.\nFórmula: \\(PCSA = \\frac{V_m \\cdot \\cos(\\theta)}{L_f}\\)\nSupuesto de Simplicidad: Para modelos en los que no se conoce la arquitectura interna, se asume un músculo de fibras paralelas (\\(\\theta = 0^\\circ\\)) y que la longitud de la fibra es igual a la longitud muscular (\\(L_f = L_m\\)), simplificando a \\(PCSA = \\frac{V_m}{L_m}\\).\n\nLíneas de Acción: La trayectoria del vector de fuerza.\nBrazo de Momento: Eficiencia de la palanca muscular según su inserción."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#flujo-de-trabajo-myogenerator-i",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#flujo-de-trabajo-myogenerator-i",
+    "title": "Paleontología Virtual",
+    "section": "Flujo de Trabajo: MyoGenerator (I)",
+    "text": "Flujo de Trabajo: MyoGenerator (I)\n1. Definición de áreas de anclaje (attachment areas)\n\nEl add-on entra automáticamente en Edit Mode.\nSelección de Caras: Se seleccionan las caras del hueso donde se ancla el músculo.\n\nSe recomienda usar la herramienta Lasso Select.\nEl área debe ser continua (sin huecos).\nAl enviar: MyoGenerator crea:\nUn objeto [Nombre] origin/insertion con las caras duplicadas.\nUn objeto [Nombre] boundary loop con el contorno de la inserción.\nLos organiza bajo un Empty para mantener jerarquía."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#flujo-de-trabajo-myogenerator-ii",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#flujo-de-trabajo-myogenerator-ii",
+    "title": "Paleontología Virtual",
+    "section": "Flujo de Trabajo: MyoGenerator (II)",
+    "text": "Flujo de Trabajo: MyoGenerator (II)\n2. Generación de la Trayectoria\n\nSe crea una NURBS Curve entre los centroides de origen e inserción.\nPerfil (Bevel): El add-on proyecta el loop de origen al plano XY para usarlo como sección transversal.\nAjustes manuales necesarios:\n\nMirroring: A veces es necesario reflejar la sección transversal si la proyección se invirtió.\nTilt: Ajustar la torsión para alinear el perfil con el hueso.\nBevel Extent: Escalar para que el final de la curva coincida con la inserción.\n\nRegla: Se pueden mover los puntos intermedios (5 totales), pero nunca los extremos."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#flujo-de-trabajo-myogenerator-iii",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#flujo-de-trabajo-myogenerator-iii",
+    "title": "Paleontología Virtual",
+    "section": "Flujo de Trabajo: MyoGenerator (III)",
+    "text": "Flujo de Trabajo: MyoGenerator (III)\n3. Finalización\n\nJoin Muscle: El add-on une el volumen de la curva con los loops de origen/inserción, realiza un “bridge” de aristas y cierra los extremos.\nAjuste de Secciones: Al estar basado en edge loops, se puede usar Proportional Editing para ensanchar el vientre muscular.\nManejo de Inserciones Planas:\n\nSi el músculo es muy paralelo al hueso y no se alinea bien, se ensancha el final hasta que interseca el hueso.\nSe aplica un modificador Boolean Difference (manual) para recortar el sobrante contra el hueso.\n\nLimpieza: Eliminar T-junctions y recalcular normales."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#caso-de-estudio-erlikosaurus-andrewsi",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#caso-de-estudio-erlikosaurus-andrewsi",
+    "title": "Paleontología Virtual",
+    "section": "Caso de Estudio: Erlikosaurus andrewsi",
+    "text": "Caso de Estudio: Erlikosaurus andrewsi\n\n\nValidación del método (Herbst et al. 2022; Lautenschlager 2015)\n\nReconstrucción de la musculatura mandibular de este terizinosaurio.\nComparativa:\n\nMyoGenerator vs Segmentación manual de CT.\nMyoGenerator vs Modelos de cilindros (Frustums).\n\nResultado: MyoGenerator produjo volúmenes comparables a la segmentación de CT pero en una fracción del tiempo.\nDemostró mayor realismo que los cilindros simples al considerar la curvatura anatómica.\n\n\n\n\n\nMusculatura de Erlikosaurus"
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#integración-con-el-análisis-biomecánico",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#integración-con-el-análisis-biomecánico",
+    "title": "Paleontología Virtual",
+    "section": "Integración con el Análisis Biomecánico",
+    "text": "Integración con el Análisis Biomecánico\nDel modelo a los datos\n\nExportación CSV: MyoGenerator exporta automáticamente:\n\nÁreas de Origen/Inserción (\\(mm^2\\)).\nCentroides de Origen/Inserción.\nLinear Length: Distancia euclidiana entre centroides.\nMuscle Length: Longitud real de la trayectoria curva.\nVolumen Muscular (\\(mm^3\\)).\n\nUso posterior:\n\nBFEX: Exportar estas regiones a Fossils para análisis FEA (Díaz de León-Muñoz, Boman, y Ferreira 2025).\nOpenSim: Datos de entrada para dinámica multicuerpo."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#estimación-de-biomasa",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#estimación-de-biomasa",
+    "title": "Paleontología Virtual",
+    "section": "Estimación de Biomasa",
+    "text": "Estimación de Biomasa\n\n\nDe los músculos al animal completo\n\nEl volumen muscular nos da el PCSA, y por tanto la fuerza máxima.\nA partir del volumen de los principales grupos musculares y su densidad estimamos la masa muscular.\nContexto: No confundir con la biomasa total del organismo (que usa convex hulls o lofting del esqueleto completo), sino que nos enfocamos en el componente motor del animal."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#próxima-sesión-práctica-guiada",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#próxima-sesión-práctica-guiada",
+    "title": "Paleontología Virtual",
+    "section": "Próxima Sesión: Práctica Guiada",
+    "text": "Próxima Sesión: Práctica Guiada\nEn la siguiente clase:\n\nInstalaremos el add-on MyoGenerator.\nPintaremos orígenes e inserciones en un fémur de Allosaurus.\nGeneraremos el volumen del músculo Caudofemoralis longus.\nExportaremos los datos a CSV para su análisis."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#bibliografía",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#bibliografía",
+    "title": "Paleontología Virtual",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\n\nDeVries, Raina P., Paul C. Sereno, Daniel Vidal, y Stephanie L. Baumgart. 2022. «Reproducible Digital Restoration of Fossils Using Blender». Frontiers in Earth Science 10 (February): 1-13. https://doi.org/10.3389/feart.2022.833379.\n\n\nDíaz de León-Muñoz, E. Miguel, Romain Boman, y Gabriel S. Ferreira. 2025. «BFEX: A Toolbox for Finite Element Analysis With Fossils and Blender». Ecology and Evolution 15 (3): e71093. https://doi.org/10.1002/ece3.71093.\n\n\nHerbst, Eva C., Luke E. Meade, Stephan Lautenschlager, Niccolo Fioritti, y Torsten M. Scheyer. 2022. «A Toolbox for the Retrodeformation and Muscle Reconstruction of Fossil Specimens in Blender». Royal Society Open Science 9 (8): 1-18. https://doi.org/10.1098/rsos.220519.\n\n\nLautenschlager, Stephan. 2015. «Estimating Cranial Musculoskeletal Constraints in Theropod Dinosaurs». Royal Society Open Science 2 (11). https://doi.org/10.1098/rsos.150495.\n\n\nThomason, J. J. 1991. «Cranial Mechanics of the Marsupial Didelphis Virginiana and the Arthropod-like Biting of Some Extinct Groups». Biological Journal of the Linnean Society 43 (2): 141-63. https://doi.org/10.1111/j.1095-8312.1991.tb00588.x.\n\n\nWroe, S., C. McHenry, y J. Thomason. 2005. «Bite Club: Comparative Bite Force in Big Cats Past and Present». Proceedings of the Royal Society B: Biological Sciences 272 (1563): 619-25. https://doi.org/10.1098/rspb.2004.2986."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#prerrequisitos-críticos",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#prerrequisitos-críticos",
+    "title": "Paleontología Virtual",
+    "section": "Prerrequisitos Críticos",
+    "text": "Prerrequisitos Críticos\nAntes de ejecutar el add-on:\n\nLimpieza de Malla: Huesos deben ser “manifold” (sin mallas abiertas) y de alta resolución.\nObjeto Único: Cada hueso debe ser un solo objeto (sin partes desconectadas).\nEscala y Rotación: ¡Fundamental! Aplicar transformaciones en Object Mode (Ctrl+A &gt; All Transforms).\n\n\\(Scale = 1.0\\) | \\(Rotation = 0,0,0\\).\n\nNormales: Asegurar que las normales apunten hacia afuera (Mesh &gt; Normals &gt; Recalculate Outside en Edit Mode).\nColecciones: No renombrar la colección por defecto “Collection”."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#estimación-de-fuerza-y-sensibilidad",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#estimación-de-fuerza-y-sensibilidad",
+    "title": "Paleontología Virtual",
+    "section": "Estimación de Fuerza y Sensibilidad",
+    "text": "Estimación de Fuerza y Sensibilidad\nDel modelo a la fuerza mecánica\n\nCálculo de Fuerza (\\(F_m\\)): Multiplicamos el PCSA por un valor de estrés muscular isométrico.\n\nSe utiliza un valor estándar de 0.3 N/mm² (Thomason 1991; Wroe, McHenry, y Thomason 2005).\n\nAnálisis de Sensibilidad:\n\nAl mantener constantes el ángulo de penación (\\(\\theta\\)) y la relación \\(L_f/L_m\\), podemos aislar e investigar el efecto de:\n\nVolúmenes 3D complejos.\nTrayectorias de longitud curvas vs. rectas.\n\n\nResultado Clave: Variar estos parámetros cambiaría la fuerza absoluta, pero no la diferencia relativa entre los métodos de reconstrucción testeados (Herbst et al. 2022)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogenerator-y-system-evolución-remix",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogenerator-y-system-evolución-remix",
+    "title": "Paleontología Virtual",
+    "section": "MyoGenerator y System Evolución (Remix)",
+    "text": "MyoGenerator y System Evolución (Remix)\n\n\nUn enfoque interactivo y moderno\n\nOriginal (Herbst et al. 2022): Revolucionó el modelado 3D de músculos (reducción de 15h a 2h).\nMyoGeneratorRemix: Una evolución desarrollada para solucionar el abandono del código original y modernizar el flujo de trabajo.\nCompatibilidad: Optimizado para Blender 4.2.0 - 4.4.x (soporte total para versiones modernas).\nVentajas del Remix:\n\nEstabilidad de malla mejorada.\nCálculos biomecánicos autorregenerables.\nIntegración nativa de métricas de fuerza.\n\n\n\n\n\n\nInterfaz de MyoGeneratorRemix"
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogeneratorremix-innovaciones-técnicas",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogeneratorremix-innovaciones-técnicas",
+    "title": "Paleontología Virtual",
+    "section": "MyoGeneratorRemix: Innovaciones Técnicas",
+    "text": "MyoGeneratorRemix: Innovaciones Técnicas\n\n\nEstabilidad y Robustez Geométrica\n\nParallel Transport Frames (Bishop Frames):\n\nSoluciona el problema de “torcedura” (twisting) de las mallas en curvas complejas.\nAsegura que la orientación de la sección transversal sea consistente matemáticamente.\n\nLofting Dinámico:\n\nLa malla se actualiza en tiempo real mientras se edita la curva Bezier o los manejadores.\n\nShaders Procedurales:\n\nGeneración automática de materiales realistas (apariencia de tejido muscular y tendones) mediante Geometry Nodes.\n\n\n\n\n\n\nMenú de MyoGeneratorRemix"
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogeneratorremix-ventajas-biomecánicas",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogeneratorremix-ventajas-biomecánicas",
+    "title": "Paleontología Virtual",
+    "section": "MyoGeneratorRemix: Ventajas Biomecánicas",
+    "text": "MyoGeneratorRemix: Ventajas Biomecánicas\n\n\nPrecisión en la Toma de Datos\n\nAutomatización de Métricas:\n\nExportación de Volumen, Longitud de Fibra real y PCSA en un solo paso.\n\nIntegración de Fuerza (\\(F_m\\)):\n\nAplica automáticamente el valor de estrés isométrico (\\(0.3\\,N/mm^2\\)) en la exportación CSV.\n\nFormatos de Análisis:\n\nCSV optimizado para lectura directa en herramientas de FEA (como BFEX) o Dinámica Multicuerpo."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#prerrequisitos-entorno-remix",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#prerrequisitos-entorno-remix",
+    "title": "Paleontología Virtual",
+    "section": "Prerrequisitos (Entorno Remix)",
+    "text": "Prerrequisitos (Entorno Remix)\nAntes de ejecutar el add-on:\n\nBlender 4.2+: Asegurar que estás en una versión moderna para soporte de Python 3.11+.\nLimpieza de Malla: Huesos deben ser “manifold” y preferiblemente con topología uniforme.\nEscala y Rotación: ¡Crítico! Ctrl+A &gt; All Transforms.\nNormales: Orientadas correctamente hacia fuera.\nColecciones: Mantener una estructura limpia (el add-on creará su propia colección de resultados)."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#práctica-guiada",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#práctica-guiada",
+    "title": "Paleontología Virtual",
+    "section": "Práctica Guiada",
+    "text": "Práctica Guiada\nEn esta sesión:\n\nInstalaremos el add-on MyoGeneratorRemix.\nPintaremos orígenes e inserciones en un cráneo.\nGeneraremos el volumen de los músculos aductores.\nExportaremos los datos biomecánicos a CSV."
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogenerator-y-su-sucesor",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#myogenerator-y-su-sucesor",
+    "title": "Paleontología Virtual",
+    "section": "MyoGenerator y su sucesor",
+    "text": "MyoGenerator y su sucesor\n\n\nUn enfoque interactivo y moderno\n\nOriginal (Herbst et al. 2022): Revolucionó el modelado 3D de músculos (reducción de 15h a 2h).\nMyoGeneratorRemix: Una evolución desarrollada para solucionar el abandono del código original y modernizar el flujo de trabajo.\nCompatibilidad: Optimizado para Blender 4.2.0 - 4.4.x (soporte total para versiones modernas).\nVentajas del Remix:\n\nEstabilidad de malla mejorada.\nCálculos biomecánicos autorregenerables.\nIntegración nativa de métricas de fuerza.\n\n\n\n\n\n\nInterfaz de MyoGeneratorRemix"
+  },
+  {
+    "objectID": "curso-paleo-virtual/05-reconstruccion-muscular.html#enlaces-de-utilidad",
+    "href": "curso-paleo-virtual/05-reconstruccion-muscular.html#enlaces-de-utilidad",
+    "title": "Paleontología Virtual",
+    "section": "Enlaces de utilidad",
+    "text": "Enlaces de utilidad\n\nMyoGeneratorRemix\nMyoGenerator\nBlender"
   }
 ]

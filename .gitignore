@@ -22,3 +22,13 @@ Presentaciones/curso-paleo-virtual/recursos/ejemplo-fotogrametria/
 # Imágenes del manual (ya están en docs/, no se necesitan en Presentaciones/)
 Presentaciones/curso-paleo-virtual/recursos/Manual-v1-2-*
 Presentaciones/curso-paleo-virtual/recursos/umorf/
+# Datos de tomografía (CT) - Ignorar secuencias TIF y mallas grandes, permitir ZIPs
+"Presentaciones/curso-paleo-virtual/recursos/ejemplo CT/**"
+!"Presentaciones/curso-paleo-virtual/recursos/ejemplo CT/"
+!"Presentaciones/curso-paleo-virtual/recursos/ejemplo CT/*.zip"
+
+# Extensiones de datos crudos pesados
+*.tif
+*.tiff
+*.obj
+*.mtl

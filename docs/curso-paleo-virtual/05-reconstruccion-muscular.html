@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
-  <meta name="author" content="E. Miguel Díaz de León Muñóz">
+  <meta name="author" content="E. Miguel Díaz de León Muñoz">
   <meta name="dcterms.date" content="2026-04-22">
   <title>Museo Virtual Nacional – Paleontología Virtual</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,7 +29,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-4cd4bfdb6ffe5068c37e2add6c01b00f.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -129,248 +149,333 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-image="../images/intro_paleo_virtual.png" data-background-opacity="0.3" class="quarto-title-block center">
   <h1 class="title">Paleontología Virtual</h1>
-  <p class="subtitle">Curso-taller de técnicas digitales aplicadas a la paleontología</p>
+  <p class="subtitle">Día 5: Reconstrucción Muscular y Biomasa</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-E. Miguel Díaz de León Muñóz 
+E. Miguel Díaz de León Muñoz 
 </div>
 </div>
 </div>
 
   <p class="date">2026-04-22</p>
 </section>
-<section id="bienvenidos-al-curso-taller-de-paleontología-virtual" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Bienvenidos al curso-taller de <strong>Paleontología Virtual</strong></h1>
-
-</section>
-
-<section id="un-poco-sobre-mí" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Un poco sobre mí</h1>
+<section id="introducción-a-la-reconstrucción-muscular" class="slide level2">
+<h2>Introducción a la Reconstrucción Muscular</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="por-qué-reconstruir-músculos">¿Por qué reconstruir músculos?</h3>
 <ul>
-<li class="fragment">Licenciado en Biología por la Universidad de Guadalajara</li>
-<li class="fragment">Maestría en Ciencias de la Tierra por la Universidad Nacional Autónoma de México</li>
-<li class="fragment">Doctorado en Paleontología por la Universidad de Tübingen, Alemania (en curso)</li>
+<li class="fragment">Los huesos solo cuentan una parte de la historia.</li>
+<li class="fragment">La musculatura define la <strong>función biológica</strong>:
+<ul>
+<li class="fragment">Locomoción.</li>
+<li class="fragment">Alimentación (fuerza de mordida).</li>
+<li class="fragment">Postura.</li>
+</ul></li>
+<li class="fragment">Es el puente necesario para simulaciones de:
+<ul>
+<li class="fragment"><strong>FEA:</strong> Para aplicar cargas realistas.</li>
+<li class="fragment"><strong>Multibody Dynamics:</strong> Para simular movimiento.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/reconstruction.png"></p>
+<figcaption>Reconstrucción muscular del anficiónido <em>Magericyon anceps</em></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="el-primer-paso-retrodeformación" class="slide level2">
+<h2>El Primer Paso: Retrodeformación</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="restauración-antes-del-modelado">Restauración antes del modelado</h3>
+<ul>
+<li class="fragment">Los fósiles suelen estar deformados (tafonomía).</li>
+<li class="fragment">Antes de “poner músculos”, debemos restaurar el hueso a su estado <em>in vivo</em>.</li>
+<li class="fragment"><strong>Técnicas en Blender <span class="citation" data-cites="Herbst2022 DeVries2022">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Herbst et&nbsp;al. 2022</a>; <a href="#/bibliografía" role="doc-biblioref" onclick="">DeVries et&nbsp;al. 2022</a>)</span>:</strong>
+<ul>
+<li class="fragment"><strong>Mirroring:</strong> Reflejar partes simétricas.</li>
+<li class="fragment"><strong>Armatures (Rigging):</strong> Para re-posicionar fragmentos.</li>
+<li class="fragment"><strong>Remeshing:</strong> Crear mallas base limpias y “watertight”.</li>
+<li class="fragment"><strong>Sculpt mode:</strong> Reparar grietas y erosión superficial.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/retrodeformation.png"></p>
+<figcaption>Proceso de retrodeformación</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="myogenerator-y-su-sucesor" class="slide level2">
+<h2>MyoGenerator y su sucesor</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="un-enfoque-interactivo-y-moderno">Un enfoque interactivo y moderno</h3>
+<ul>
+<li class="fragment"><strong>Original <span class="citation" data-cites="Herbst2022">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Herbst et&nbsp;al. 2022</a>)</span>:</strong> Revolucionó el modelado 3D de músculos (reducción de 15h a 2h).</li>
+<li class="fragment"><strong>MyoGeneratorRemix:</strong> Una evolución desarrollada para solucionar el abandono del código original y modernizar el flujo de trabajo.</li>
+<li class="fragment"><strong>Compatibilidad:</strong> Optimizado para <strong>Blender 4.2.0 - 4.4.x</strong> (soporte total para versiones modernas).</li>
+<li class="fragment"><strong>Ventajas del Remix:</strong>
+<ul>
+<li class="fragment">Estabilidad de malla mejorada.</li>
+<li class="fragment">Cálculos biomecánicos autorregenerables.</li>
+<li class="fragment">Integración nativa de métricas de fuerza.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/Myogenerator_UI.png"></p>
+<figcaption>Interfaz de MyoGeneratorRemix</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="myogeneratorremix-innovaciones-técnicas" class="slide level2">
+<h2>MyoGeneratorRemix: Innovaciones Técnicas</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="estabilidad-y-robustez-geométrica">Estabilidad y Robustez Geométrica</h3>
+<ul>
+<li class="fragment"><strong>Parallel Transport Frames (Bishop Frames):</strong>
+<ul>
+<li class="fragment">Soluciona el problema de “torcedura” (<em>twisting</em>) de las mallas en curvas complejas.</li>
+<li class="fragment">Asegura que la orientación de la sección transversal sea consistente matemáticamente.</li>
+</ul></li>
+<li class="fragment"><strong>Lofting Dinámico:</strong>
+<ul>
+<li class="fragment">La malla se actualiza en <strong>tiempo real</strong> mientras se edita la curva Bezier o los manejadores.</li>
+</ul></li>
+<li class="fragment"><strong>Shaders Procedurales:</strong>
+<ul>
+<li class="fragment">Generación automática de materiales realistas (apariencia de tejido muscular y tendones) mediante <em>Geometry Nodes</em>.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/myogenerator-remix-menu.png"></p>
+<figcaption>Menú de MyoGeneratorRemix</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="myogeneratorremix-ventajas-biomecánicas" class="slide level2">
+<h2>MyoGeneratorRemix: Ventajas Biomecánicas</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="precisión-en-la-toma-de-datos">Precisión en la Toma de Datos</h3>
+<ul>
+<li class="fragment"><strong>Automatización de Métricas:</strong>
+<ul>
+<li class="fragment">Exportación de <strong>Volumen</strong>, <strong>Longitud de Fibra real</strong> y <strong>PCSA</strong> en un solo paso.</li>
+</ul></li>
+<li class="fragment"><strong>Integración de Fuerza (<span class="math inline">\(F_m\)</span>):</strong>
+<ul>
+<li class="fragment">Aplica automáticamente el valor de estrés isométrico (<span class="math inline">\(0.3\,N/mm^2\)</span>) en la exportación CSV.</li>
+</ul></li>
+<li class="fragment"><strong>Formatos de Análisis:</strong>
+<ul>
+<li class="fragment">CSV optimizado para lectura directa en herramientas de FEA (como <strong>BFEX</strong>) o Dinámica Multicuerpo.</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="prerrequisitos-entorno-remix" class="slide level2">
+<h2>Prerrequisitos (Entorno Remix)</h2>
+<h3 id="antes-de-ejecutar-el-add-on">Antes de ejecutar el add-on:</h3>
+<ol type="1">
+<li class="fragment"><strong>Blender 4.2+:</strong> Asegurar que estás en una versión moderna para soporte de Python 3.11+.</li>
+<li class="fragment"><strong>Limpieza de Malla:</strong> Huesos deben ser “manifold” y preferiblemente con topología uniforme.</li>
+<li class="fragment"><strong>Escala y Rotación:</strong> ¡Crítico! <code>Ctrl+A</code> &gt; All Transforms.</li>
+<li class="fragment"><strong>Normales:</strong> Orientadas correctamente hacia fuera.</li>
+<li class="fragment"><strong>Colecciones:</strong> Mantener una estructura limpia (el add-on creará su propia colección de resultados).</li>
+</ol>
+</section>
+<section id="conceptos-biomecánicos-clave" class="slide level2">
+<h2>Conceptos Biomecánicos Clave</h2>
+<h3 id="métricas-que-extraemos-de-los-modelos">Métricas que extraemos de los modelos:</h3>
+<ol type="1">
+<li class="fragment"><strong>Volumen Muscular (<span class="math inline">\(V_m\)</span>):</strong> Calculado directamente desde la malla 3D.</li>
+<li class="fragment"><strong>PCSA (Physiological Cross-Sectional Area):</strong>
+<ul>
+<li class="fragment">El área transversal que realmente genera fuerza.</li>
+<li class="fragment"><strong>Fórmula:</strong> <span class="math inline">\(PCSA = \frac{V_m \cdot \cos(\theta)}{L_f}\)</span></li>
+<li class="fragment"><strong>Supuesto de Simplicidad:</strong> Para modelos en los que no se conoce la arquitectura interna, se asume un <strong>músculo de fibras paralelas</strong> (<span class="math inline">\(\theta = 0^\circ\)</span>) y que la <strong>longitud de la fibra es igual a la longitud muscular</strong> (<span class="math inline">\(L_f = L_m\)</span>), simplificando a <span class="math inline">\(PCSA = \frac{V_m}{L_m}\)</span>.</li>
+</ul></li>
+<li class="fragment"><strong>Líneas de Acción:</strong> La trayectoria del vector de fuerza.</li>
+<li class="fragment"><strong>Brazo de Momento:</strong> Eficiencia de la palanca muscular según su inserción.</li>
+</ol>
+</section>
+<section id="estimación-de-fuerza-y-sensibilidad" class="slide level2">
+<h2>Estimación de Fuerza y Sensibilidad</h2>
+<h3 id="del-modelo-a-la-fuerza-mecánica">Del modelo a la fuerza mecánica</h3>
+<ul>
+<li class="fragment"><strong>Cálculo de Fuerza (<span class="math inline">\(F_m\)</span>):</strong> Multiplicamos el PCSA por un valor de <strong>estrés muscular isométrico</strong>.
+<ul>
+<li class="fragment">Se utiliza un valor estándar de <strong>0.3 N/mm²</strong> <span class="citation" data-cites="thomasonCranialMechanicsMarsupial1991 wroeBiteClubComparative2005">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Thomason 1991</a>; <a href="#/bibliografía" role="doc-biblioref" onclick="">Wroe, McHenry, y Thomason 2005</a>)</span>.</li>
+</ul></li>
+<li class="fragment"><strong>Análisis de Sensibilidad:</strong>
+<ul>
+<li class="fragment">Al mantener constantes el ángulo de penación (<span class="math inline">\(\theta\)</span>) y la relación <span class="math inline">\(L_f/L_m\)</span>, podemos aislar e investigar el efecto de:
+<ul>
+<li class="fragment"><strong>Volúmenes 3D</strong> complejos.</li>
+<li class="fragment">Trayectorias de longitud <strong>curvas vs.&nbsp;rectas</strong>.</li>
+</ul></li>
+</ul></li>
+<li class="fragment"><strong>Resultado Clave:</strong> Variar estos parámetros cambiaría la fuerza absoluta, pero <strong>no la diferencia relativa</strong> entre los métodos de reconstrucción testeados <span class="citation" data-cites="Herbst2022">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Herbst et&nbsp;al. 2022</a>)</span>.</li>
 </ul>
 </section>
-
-<section>
-<section id="trayectoria-profesional" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Trayectoria profesional</h1>
+<section id="flujo-de-trabajo-myogenerator-i" class="slide level2">
+<h2>Flujo de Trabajo: MyoGenerator (I)</h2>
+<h3 id="definición-de-áreas-de-anclaje-attachment-areas">1. Definición de áreas de anclaje (attachment areas)</h3>
 <ul>
-<li class="fragment">Tesis de licenciatura: “Manual de fotogrametría en paleontología”</li>
-<li class="fragment">Tesis de maestría: “Clasificación taxonómica de elementos postcraneales de mamíferos (Orden Carnívora, Perissodactyla y Artiodactyla) del Oligoceno Temprano de Oaxaca y sus implicaciones palobiológicas”</li>
-<li class="fragment">Tesis de doctorado: “Feeding behavior of Bear wolfs (Amphicyonidae): a biomechanical and macroevolutionary approach”</li>
+<li class="fragment">El add-on entra automáticamente en <strong>Edit Mode</strong>.</li>
+<li class="fragment"><strong>Selección de Caras:</strong> Se seleccionan las caras del hueso donde se ancla el músculo.
+<ul>
+<li class="fragment">Se recomienda usar la herramienta <strong>Lasso Select</strong>.</li>
+<li class="fragment">El área debe ser continua (sin huecos).</li>
+<li class="fragment"><strong>Al enviar:</strong> MyoGenerator crea:</li>
+<li class="fragment">Un objeto <code>[Nombre] origin/insertion</code> con las caras duplicadas.</li>
+<li class="fragment">Un objeto <code>[Nombre] boundary loop</code> con el contorno de la inserción.</li>
+<li class="fragment">Los organiza bajo un <em>Empty</em> para mantener jerarquía.</li>
+</ul></li>
 </ul>
 </section>
-<section id="congresos-y-publicaciones" class="slide level2">
-<h2>Congresos y publicaciones</h2>
+<section id="flujo-de-trabajo-myogenerator-ii" class="slide level2">
+<h2>Flujo de Trabajo: MyoGenerator (II)</h2>
+<h3 id="generación-de-la-trayectoria">2. Generación de la Trayectoria</h3>
 <ul>
-<li class="fragment">Participación en el 2°, 3° y 5° Congreso Virtual de Paleontología</li>
-<li class="fragment">Participación en la reunión anual de la Palaeontological Association (2024)</li>
-<li class="fragment">Publicación de artículo(s) científicos en revistas internacionales</li>
+<li class="fragment">Se crea una <strong>NURBS Curve</strong> entre los centroides de origen e inserción.</li>
+<li class="fragment"><strong>Perfil (Bevel):</strong> El add-on proyecta el loop de origen al plano XY para usarlo como sección transversal.</li>
+<li class="fragment"><strong>Ajustes manuales necesarios:</strong>
+<ul>
+<li class="fragment"><strong>Mirroring:</strong> A veces es necesario reflejar la sección transversal si la proyección se invirtió.</li>
+<li class="fragment"><strong>Tilt:</strong> Ajustar la torsión para alinear el perfil con el hueso.</li>
+<li class="fragment"><strong>Bevel Extent:</strong> Escalar para que el final de la curva coincida con la inserción.</li>
+</ul></li>
+<li class="fragment"><strong>Regla:</strong> Se pueden mover los puntos intermedios (5 totales), pero <strong>nunca los extremos</strong>.</li>
 </ul>
 </section>
-<section id="cursos-y-talleres-atendidos" class="slide level2">
-<h2>Cursos y talleres atendidos</h2>
+<section id="flujo-de-trabajo-myogenerator-iii" class="slide level2">
+<h2>Flujo de Trabajo: MyoGenerator (III)</h2>
+<h3 id="finalización">3. Finalización</h3>
 <ul>
-<li class="fragment">Digital Methods in Palaeontology - Lapworth Museum, University of Birmingham (2024)</li>
-<li class="fragment">Geometric Morphometrics in R - University of Copenhagen (2024)</li>
+<li class="fragment"><strong>Join Muscle:</strong> El add-on une el volumen de la curva con los loops de origen/inserción, realiza un “bridge” de aristas y cierra los extremos.</li>
+<li class="fragment"><strong>Ajuste de Secciones:</strong> Al estar basado en <em>edge loops</em>, se puede usar <strong>Proportional Editing</strong> para ensanchar el vientre muscular.</li>
+<li class="fragment"><strong>Manejo de Inserciones Planas:</strong>
+<ul>
+<li class="fragment">Si el músculo es muy paralelo al hueso y no se alinea bien, se ensancha el final hasta que interseca el hueso.</li>
+<li class="fragment">Se aplica un modificador <strong>Boolean Difference</strong> (manual) para recortar el sobrante contra el hueso.</li>
+</ul></li>
+<li class="fragment"><strong>Limpieza:</strong> Eliminar T-junctions y recalcular normales.</li>
 </ul>
 </section>
-<section id="productos-digitales" class="slide level2">
-<h2>Productos digitales</h2>
+<section id="caso-de-estudio-erlikosaurus-andrewsi" class="slide level2">
+<h2>Caso de Estudio: <em>Erlikosaurus andrewsi</em></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="validación-del-método-herbst2022-lautenschlager2015">Validación del método <span class="citation" data-cites="Herbst2022 Lautenschlager2015">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Herbst et&nbsp;al. 2022</a>; <a href="#/bibliografía" role="doc-biblioref" onclick="">Lautenschlager 2015</a>)</span></h3>
 <ul>
-<li class="fragment">Manual de fotogrametría en paleontología (disponible en línea)</li>
-<li class="fragment">Museo Virtual Nacional (plataforma digital de divulgación paleontológica)</li>
-<li class="fragment">BFEX (Extensión de Blender para construcción de Análisis de Elementos Finitos)</li>
-<li class="fragment">¿Dónde está mi fósil? (aplicación multiplataforma para divulgación e investigación paleontológica)</li>
+<li class="fragment">Reconstrucción de la musculatura mandibular de este terizinosaurio.</li>
+<li class="fragment"><strong>Comparativa:</strong>
+<ul>
+<li class="fragment">MyoGenerator vs Segmentación manual de CT.</li>
+<li class="fragment">MyoGenerator vs Modelos de cilindros (Frustums).</li>
+</ul></li>
+<li class="fragment"><strong>Resultado:</strong> MyoGenerator produjo volúmenes comparables a la segmentación de CT pero en una fracción del tiempo.</li>
+<li class="fragment">Demostró mayor realismo que los cilindros simples al considerar la curvatura anatómica.</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/blender-paleo-myogenerator.png"></p>
+<figcaption>Musculatura de Erlikosaurus</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="integración-con-el-análisis-biomecánico" class="slide level2">
+<h2>Integración con el Análisis Biomecánico</h2>
+<h3 id="del-modelo-a-los-datos">Del modelo a los datos</h3>
+<ul>
+<li class="fragment"><strong>Exportación CSV:</strong> MyoGenerator exporta automáticamente:
+<ul>
+<li class="fragment">Áreas de Origen/Inserción (<span class="math inline">\(mm^2\)</span>).</li>
+<li class="fragment">Centroides de Origen/Inserción.</li>
+<li class="fragment"><strong>Linear Length:</strong> Distancia euclidiana entre centroides.</li>
+<li class="fragment"><strong>Muscle Length:</strong> Longitud real de la trayectoria curva.</li>
+<li class="fragment">Volumen Muscular (<span class="math inline">\(mm^3\)</span>).</li>
+</ul></li>
+<li class="fragment"><strong>Uso posterior:</strong>
+<ul>
+<li class="fragment"><strong>BFEX:</strong> Exportar estas regiones a Fossils para análisis FEA <span class="citation" data-cites="diazdeleon-munozBFEXToolboxFinite2025">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Díaz de León-Muñoz, Boman, y Ferreira 2025</a>)</span>.</li>
+<li class="fragment"><strong>OpenSim:</strong> Datos de entrada para dinámica multicuerpo.</li>
+</ul></li>
 </ul>
 </section>
-<section id="contacto-y-más-detalles" class="slide level2">
-<h2>Contacto y más detalles</h2>
+<section id="estimación-de-biomasa" class="slide level2">
+<h2>Estimación de Biomasa</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="de-los-músculos-al-animal-completo">De los músculos al animal completo</h3>
 <ul>
-<li class="fragment"><strong>Directorio:</strong> <a href="https://museovirtualnacional.com/directorio/">museovirtualnacional.com/directorio</a></li>
-<li class="fragment"><strong>Correo:</strong> migueldlm1307@gmail.com</li>
+<li class="fragment">El volumen muscular nos da el <strong>PCSA</strong>, y por tanto la fuerza máxima.</li>
+<li class="fragment">A partir del volumen de los principales grupos musculares y su densidad estimamos la <strong>masa muscular</strong>.</li>
+<li class="fragment"><strong>Contexto:</strong> No confundir con la biomasa total del organismo (que usa convex hulls o lofting del esqueleto completo), sino que nos enfocamos en el <strong>componente motor</strong> del animal.</li>
 </ul>
-<iframe src="https://museovirtualnacional.com/directorio/" width="100%" height="80%" style="border: 2px solid #2A7D8C; border-radius: 8px; margin-top: 20px;"></iframe>
-</section></section>
-<section>
-<section id="sobre-el-taller" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Sobre el taller</h1>
-
+</div></div>
 </section>
-<section id="objetivo-general" class="slide level2">
-<h2>Objetivo General</h2>
-<p>Proporcionar una introducción a las técnicas y tecnologías digitales para la creación, análisis e interpretación de modelos 3D en la investigación paleontológica.</p>
-<h3 id="objetivos-específicos">Objetivos Específicos</h3>
+<section id="práctica-guiada" class="slide level2">
+<h2>Práctica Guiada</h2>
+<h3 id="en-esta-sesión">En esta sesión:</h3>
+<ol type="1">
+<li class="fragment">Instalaremos el add-on <strong>MyoGeneratorRemix</strong>.</li>
+<li class="fragment">Pintaremos orígenes e inserciones en un cráneo.</li>
+<li class="fragment">Generaremos el volumen de los músculos aductores.</li>
+<li class="fragment">Exportaremos los datos biomecánicos a CSV.</li>
+</ol>
+</section>
+<section id="enlaces-de-utilidad" class="slide level2">
+<h2>Enlaces de utilidad</h2>
 <ul>
-<li class="fragment">Conocer métodos de obtención (Fotogrametría, Escaneo Láser, CT).</li>
-<li class="fragment">Procesar y optimizar modelos 3D.</li>
-<li class="fragment">Aplicar reconstrucción digital y retro-deformación.</li>
-<li class="fragment">Conocer las alternativas de software libre para su uso en Paleontología.</li>
-<li class="fragment">Aplicar análisis biomecánicos y morfométricos.</li>
-</ul>
-</section>
-<section id="temario-semana-1" class="slide level2">
-<h2>Temario: Semana 1</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 28%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Día</th>
-<th style="text-align: left;">Temas Principales</th>
-<th style="text-align: center;">Horas (S/A)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>Lunes</strong></td>
-<td style="text-align: left;"><strong>Día 1: Introducción y Fundamentos</strong><br>Definición de Paleontología Virtual, bases de datos (MorphoSource, Sketchfab) y tipos de modelos 3D.</td>
-<td style="text-align: center;">3h (S)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Miércoles</strong></td>
-<td style="text-align: left;"><strong>Día 2: Adquisición I (Fotogrametría)</strong><br>Principios de fotogrametría y flujo de trabajo en RealityScan.</td>
-<td style="text-align: center;">3h (S) / 3h (A)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>Viernes</strong></td>
-<td style="text-align: left;"><strong>Día 3: Adquisición II (Sensores y CT)</strong><br>Escaneo láser y procesamiento de tomografías (3D Slicer).</td>
-<td style="text-align: center;">3h (S) / 3h (A)</td>
-</tr>
-</tbody>
-</table>
-<p><em>(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono</em></p>
-</section>
-<section id="temario-semana-2" class="slide level2">
-<h2>Temario: Semana 2</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Día</th>
-<th style="text-align: left;">Temas Principales</th>
-<th style="text-align: center;">Horas (S/A)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>Lunes</strong></td>
-<td style="text-align: left;"><a href="../curso-paleo-virtual/04-optimizacion-y-escultura.html"><strong>Día 4: Optimización y Escultura Digital</strong></a><br>Limpieza de mallas, reparación y reducción de polígonos en Blender.</td>
-<td style="text-align: center;">3h (S)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Miércoles</strong></td>
-<td style="text-align: left;"><a href="../curso-paleo-virtual/05-reconstruccion-muscular.html"><strong>Día 5: Reconstrucción Muscular</strong></a><br>Modelado de músculos y estimación de biomasa (MyoGenerator).</td>
-<td style="text-align: center;">3h (S) / 3h (A)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>Viernes</strong></td>
-<td style="text-align: left;"><strong>Día 6: Análisis Biomecánico (FEA)</strong><br>Simulación de esfuerzos y deformaciones (BFEX y Fossils).</td>
-<td style="text-align: center;">3h (S) / 3h (A)</td>
-</tr>
-</tbody>
-</table>
-<p><em>(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono</em></p>
-</section>
-<section id="temario-semana-3" class="slide level2">
-<h2>Temario: Semana 3</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 28%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Día</th>
-<th style="text-align: left;">Temas Principales</th>
-<th style="text-align: center;">Horas (S/A)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>Lunes</strong></td>
-<td style="text-align: left;"><strong>Día 7: Morfometría y Cierre del Curso</strong><br>Análisis de fuerzas de mordida y Morfometría Geométrica.</td>
-<td style="text-align: center;">3h (S)</td>
-</tr>
-</tbody>
-</table>
-<p><em>(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono</em></p>
-</section></section>
-<section id="requisitos-de-cómputo" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Requisitos de Cómputo</h1>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 26%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Componente</th>
-<th style="text-align: center;">Mínimos (Básico)</th>
-<th style="text-align: center;">Recomendado (Estable)</th>
-<th style="text-align: center;">Profesional</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>CPU</strong></td>
-<td style="text-align: center;">4 núcleos (2.0 GHz)</td>
-<td style="text-align: center;">6–8 núcleos (2.5–3.0 GHz)</td>
-<td style="text-align: center;">8–16+ núcleos (≥3.0 GHz)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>RAM</strong></td>
-<td style="text-align: center;">8 GB</td>
-<td style="text-align: center;">16–32 GB</td>
-<td style="text-align: center;">64–128 GB</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>GPU</strong></td>
-<td style="text-align: center;">2 GB VRAM</td>
-<td style="text-align: center;">4–6 GB VRAM</td>
-<td style="text-align: center;">8–16 GB VRAM (NVIDIA CUDA)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Alm.</strong></td>
-<td style="text-align: center;">SSD SATA / HDD</td>
-<td style="text-align: center;">SSD SATA / NVMe ≥500 GB</td>
-<td style="text-align: center;">NVMe ≥1 TB</td>
-</tr>
-</tbody>
-</table>
-</section>
-
-<section id="software" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Software</h1>
-<ul>
-<li class="fragment">Blender</li>
-<li class="fragment">RealityScan</li>
-<li class="fragment">3D Slicer</li>
-<li class="fragment">Fossils</li>
-<li class="fragment">BFEX</li>
-<li class="fragment">MyoGeneratorRemix</li>
+<li class="fragment"><a href="https://github.com/MiguelDLM/MyoGeneratorRemix">MyoGeneratorRemix</a></li>
+<li class="fragment"><a href="https://github.com/evaherbst/MyoGenerator">MyoGenerator</a></li>
+<li class="fragment"><a href="https://www.blender.org/download/">Blender</a></li>
 </ul>
 </section>
-
-<section id="requisitos-de-aprobación" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Requisitos de aprobación</h1>
-<ul>
-<li class="fragment">Asistencia mínima del 80% al total de sesiones.</li>
-<li class="fragment">Cumplimiento de las actividades asignadas en plataforma y/o por el docente.</li>
-<li class="fragment">Para obtener la constancia de aprobación, la calificación final mínima deberá ser de 6.0, sin redondeo, y se deberá cumplir con el porcentaje de asistencia establecido.</li>
-<li class="fragment">Las grabaciones de clase no son obligatorias.</li>
-</ul>
+<section id="bibliografía" class="slide level2 smaller scrollable">
+<h2>Bibliografía</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-DeVries2022" class="csl-entry" role="listitem">
+DeVries, Raina P., Paul C. Sereno, Daniel Vidal, y Stephanie L. Baumgart. 2022. <span>«Reproducible <span>Digital Restoration</span> of <span>Fossils Using Blender</span>»</span>. <em>Frontiers in Earth Science</em> 10 (February): 1-13. <a href="https://doi.org/10.3389/feart.2022.833379">https://doi.org/10.3389/feart.2022.833379</a>.
+</div>
+<div id="ref-diazdeleon-munozBFEXToolboxFinite2025" class="csl-entry" role="listitem">
+Díaz de León-Muñoz, E. Miguel, Romain Boman, y Gabriel S. Ferreira. 2025. <span>«<span>BFEX</span>: <span>A Toolbox</span> for <span>Finite Element Analysis With Fossils</span> and <span>Blender</span>»</span>. <em>Ecology and Evolution</em> 15 (3): e71093. <a href="https://doi.org/10.1002/ece3.71093">https://doi.org/10.1002/ece3.71093</a>.
+</div>
+<div id="ref-Herbst2022" class="csl-entry" role="listitem">
+Herbst, Eva C., Luke E. Meade, Stephan Lautenschlager, Niccolo Fioritti, y Torsten M. Scheyer. 2022. <span>«A Toolbox for the Retrodeformation and Muscle Reconstruction of Fossil Specimens in <span>Blender</span>»</span>. <em>Royal Society Open Science</em> 9 (8): 1-18. <a href="https://doi.org/10.1098/rsos.220519">https://doi.org/10.1098/rsos.220519</a>.
+</div>
+<div id="ref-Lautenschlager2015" class="csl-entry" role="listitem">
+Lautenschlager, Stephan. 2015. <span>«Estimating Cranial Musculoskeletal Constraints in Theropod Dinosaurs»</span>. <em>Royal Society Open Science</em> 2 (11). <a href="https://doi.org/10.1098/rsos.150495">https://doi.org/10.1098/rsos.150495</a>.
+</div>
+<div id="ref-thomasonCranialMechanicsMarsupial1991" class="csl-entry" role="listitem">
+Thomason, J. J. 1991. <span>«Cranial Mechanics of the Marsupial <span>Didelphis</span> Virginiana and the Arthropod-like Biting of Some Extinct Groups»</span>. <em>Biological Journal of the Linnean Society</em> 43 (2): 141-63. <a href="https://doi.org/10.1111/j.1095-8312.1991.tb00588.x">https://doi.org/10.1111/j.1095-8312.1991.tb00588.x</a>.
+</div>
+<div id="ref-wroeBiteClubComparative2005" class="csl-entry" role="listitem">
+Wroe, S., C. McHenry, y J. Thomason. 2005. <span>«Bite Club: Comparative Bite Force in Big Cats Past and Present»</span>. <em>Proceedings of the Royal Society B: Biological Sciences</em> 272 (1563): 619-25. <a href="https://doi.org/10.1098/rspb.2004.2986">https://doi.org/10.1098/rspb.2004.2986</a>.
+</div>
+</div>
 
 
 </section>
@@ -378,7 +483,7 @@ E. Miguel Díaz de León Muñóz
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../images/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>E. Miguel Díaz de León Muñóz · Museo Virtual Nacional</p>
+<p>E. Miguel Díaz de León Muñoz · Museo Virtual Nacional</p>
 </div>
 </div></div>
 

@@ -91,8 +91,8 @@ Proporcionar una introducción a las técnicas y tecnologías digitales para la 
 
 | Día | Temas Principales | Horas (S/A) |
 |:---:|:---|:---:|
-| **Lunes** | **Día 4: Optimización y Escultura Digital**<br>Limpieza de mallas, reparación y reducción de polígonos en Blender. | 3h (S) |
-| **Miércoles** | **Día 5: Reconstrucción Muscular**<br>Modelado de músculos y estimación de biomasa (MyoGenerator). | 3h (S) / 3h (A) |
+| **Lunes** | [**Día 4: Optimización y Escultura Digital**](04-optimizacion-y-escultura.qmd)<br>Limpieza de mallas, reparación y reducción de polígonos en Blender. | 3h (S) |
+| **Miércoles** | [**Día 5: Reconstrucción Muscular**](05-reconstruccion-muscular.qmd)<br>Modelado de músculos y estimación de biomasa (MyoGenerator). | 3h (S) / 3h (A) |
 | **Viernes** | **Día 6: Análisis Biomecánico (FEA)**<br>Simulación de esfuerzos y deformaciones (BFEX y Fossils). | 3h (S) / 3h (A) |
 
 *(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono*
