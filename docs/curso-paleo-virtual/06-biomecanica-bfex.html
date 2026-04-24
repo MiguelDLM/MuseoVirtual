@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
-  <meta name="author" content="E. Miguel Díaz de León Muñóz">
+  <meta name="author" content="E. Miguel Díaz de León Muñoz">
   <meta name="dcterms.date" content="2026-04-24">
   <title>Museo Virtual Nacional – Paleontología Virtual</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,7 +29,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-4cd4bfdb6ffe5068c37e2add6c01b00f.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -129,256 +149,325 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-image="../images/intro_paleo_virtual.png" data-background-opacity="0.3" class="quarto-title-block center">
   <h1 class="title">Paleontología Virtual</h1>
-  <p class="subtitle">Curso-taller de técnicas digitales aplicadas a la paleontología</p>
+  <p class="subtitle">Día 6: Análisis Biomecánico (FEA)</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-E. Miguel Díaz de León Muñóz 
+E. Miguel Díaz de León Muñoz 
 </div>
 </div>
 </div>
 
   <p class="date">2026-04-24</p>
 </section>
-<section id="bienvenidos-al-curso-taller-de-paleontología-virtual" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Bienvenidos al curso-taller de <strong>Paleontología Virtual</strong></h1>
-
-</section>
-
-<section id="un-poco-sobre-mí" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Un poco sobre mí</h1>
-<ul>
-<li class="fragment">Licenciado en Biología por la Universidad de Guadalajara</li>
-<li class="fragment">Maestría en Ciencias de la Tierra por la Universidad Nacional Autónoma de México</li>
-<li class="fragment">Doctorado en Paleontología por la Universidad de Tübingen, Alemania (en curso)</li>
-</ul>
-</section>
-
 <section>
-<section id="trayectoria-profesional" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Trayectoria profesional</h1>
+<section id="fundamentos-del-fea" class="title-slide slide level1 center" data-background-color="#1E2B3A">
+<h1>Fundamentos del FEA</h1>
+
+</section>
+<section id="qué-es-el-análisis-de-elementos-finitos-fea" class="slide level2">
+<h2>¿Qué es el Análisis de Elementos Finitos (FEA)?</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="simulando-la-física-de-lo-extinto">Simulando la física de lo extinto</h3>
 <ul>
-<li class="fragment">Tesis de licenciatura: “Manual de fotogrametría en paleontología”</li>
-<li class="fragment">Tesis de maestría: “Clasificación taxonómica de elementos postcraneales de mamíferos (Orden Carnívora, Perissodactyla y Artiodactyla) del Oligoceno Temprano de Oaxaca y sus implicaciones palobiológicas”</li>
-<li class="fragment">Tesis de doctorado: “Feeding behavior of Bear wolfs (Amphicyonidae): a biomechanical and macroevolutionary approach”</li>
+<li class="fragment">El <strong>FEA</strong> es un método computacional para predecir cómo un objeto responde a fuerzas físicas <span class="citation" data-cites="brightReviewPaleontologicalFinite2014">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Bright 2014</a>)</span>.</li>
+<li class="fragment"><strong>Esfuerzo (Stress):</strong> Fuerza interna que las partículas de un material ejercen entre sí.</li>
+<li class="fragment"><strong>Deformación (Strain):</strong> Cambio en la forma del material debido al esfuerzo.</li>
+<li class="fragment"><strong>En Paleontología:</strong> Permite testear hipótesis sobre dieta, fuerza de mordida y resistencia mecánica de huesos fósiles.</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/skulls_FEA.png" style="width:100.0%"></p>
+<figcaption>Ejemplo de FEA en craneos de crocodilomorfos</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="el-fea-nació-en-la-ingeniería-llegó-a-los-fósiles" class="slide level2">
+<h2>El FEA nació en la ingeniería, llegó a los fósiles</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<h3 id="de-aviones-a-dinosaurios">De aviones a dinosaurios</h3>
+<ul>
+<li class="fragment"><strong>1940s–1950s:</strong> Desarrollado para análisis estructural en ingeniería aeroespacial y civil.</li>
+<li class="fragment"><strong>Turner, Clough, Martin &amp; Topp (1956):</strong> Primera aplicación formal — análisis de esfuerzos en alas de avión.</li>
+<li class="fragment"><strong>Clough (1960):</strong> Acuñó el término <em>“finite elements”</em>.</li>
+<li class="fragment"><strong>Paleontología:</strong> Rayfield et al.&nbsp;(2001) — primer análisis en cráneo fósil (<em>Allosaurus fragilis</em>).</li>
+<li class="fragment"><strong>Hoy:</strong> Herramienta estándar para estimar fuerza de mordida, resistencia ósea y modos de locomoción.</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="r-stack">
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/FEA_aricraft.png" style="width:100.0%"></p>
+<figcaption>Análisis de elementos finitos en estructura de ala de avión — Boeing (1950s)</figcaption>
+</figure>
+</div>
+</div>
+<p><img data-src="../images/Tuner et al. FEA.png" class="fragment" style="width:100.0%"></p>
+</div>
+</div></div>
+</section>
+<section id="cómo-funciona-la-analogía-de-la-hamaca" class="slide level2">
+<h2>Cómo funciona: la analogía de la hamaca</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li class="fragment">Resolver la física de un sólido continuo de forma exacta es matemáticamente inabordable.</li>
+<li class="fragment"><strong>Solución:</strong> Dividir el objeto en miles de pequeños elementos simples (<strong>discretización</strong>).</li>
+<li class="fragment">Cada elemento sigue las leyes de elasticidad de forma local.</li>
+<li class="fragment">La suma de todos los elementos reproduce el comportamiento global del sólido.</li>
+<li class="fragment">La <strong>malla</strong> es esa red: cuanto más fina, más fiel la simulación.</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/hamaca.png" style="width:90.0%"></p>
+<figcaption>La malla del modelo FEA funciona como la red de una hamaca: la carga se distribuye por los nodos</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="nodos-elementos-y-malla" class="slide level2">
+<h2>Nodos, elementos y malla</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="anatomía-de-un-modelo-fea">Anatomía de un modelo FEA</h3>
+<ul>
+<li class="fragment"><strong>Nodo:</strong> Punto de conexión entre elementos; almacena los resultados (desplazamiento, esfuerzo).</li>
+<li class="fragment"><strong>Elemento:</strong> Unidad mínima de cálculo — en modelos 3D, normalmente un <strong>tetraedro</strong>.</li>
+<li class="fragment"><strong>Malla:</strong> La totalidad de nodos + elementos que describe geométricamente el objeto. <img data-src="../images/element-types-3d-mesh.jpg" style="max-height: 28vh; object-fit: contain;;width:85.0%"></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="resolución-vs.-coste-computacional">Resolución vs.&nbsp;coste computacional</h3>
+<ul>
+<li class="fragment"><strong>Alta densidad</strong> → resultados detallados, tiempo de cómputo elevado.</li>
+<li class="fragment"><strong>Baja densidad</strong> → rápido, pero pierde detalle en zonas de alto gradiente de esfuerzo.</li>
+<li class="fragment"><strong>Convergencia:</strong> Se aumenta la densidad hasta que el resultado no cambia significativamente.</li>
+</ul>
+<p><img data-src="../images/FEA-early-work.webp" style="max-height: 28vh; object-fit: contain;;width:85.0%"></p>
+</div></div>
+</section>
+<section id="tres-ingredientes-de-una-simulación" class="slide level2">
+<h2>Tres ingredientes de una simulación</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="material">1. Material</h3>
+<ul>
+<li class="fragment"><strong>Módulo de Young (<em>E</em>):</strong> Rigidez del tejido ante la deformación.</li>
+<li class="fragment"><strong>Coeficiente de Poisson (<em>ν</em>):</strong> Deformación transversal al comprimir.</li>
+<li class="fragment">Hueso cortical: <em>E</em> ≈ 20 GPa, <em>ν</em> ≈ 0.3</li>
+</ul>
+</div><div class="column" style="width:34%;">
+<h3 id="cargas-loads">2. Cargas (<em>Loads</em>)</h3>
+<ul>
+<li class="fragment">Vectores de fuerza aplicados en nodos o superficies.</li>
+<li class="fragment">En paleontología: fuerzas musculares estimadas con MyoGenerator (Día 5).</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h3 id="restricciones-constraints">3. Restricciones (<em>Constraints</em>)</h3>
+<ul>
+<li class="fragment">Nodos fijos que simulan el punto de apoyo del hueso.</li>
+<li class="fragment">Ej.: cóndilos mandibulares como fulcros de la palanca ósea.</li>
+</ul>
+</div></div>
+</section>
+<section id="el-resultado-mapas-de-von-mises-y-strains" class="slide level2">
+<h2>El resultado: mapas de Von Mises y <em>Strains</em></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li class="fragment"><strong>Von Mises Stress:</strong> Criterio escalar que integra todos los componentes del esfuerzo — indica si el material está cerca de fallar mecánicamente.</li>
+<li class="fragment"><strong>Principal Strains:</strong> Dirección y magnitud de la deformación máxima y mínima.</li>
+<li class="fragment"><strong>Mapa de color:</strong> Zonas rojas = alto esfuerzo; azules = bajo esfuerzo.</li>
+<li class="fragment"><strong>Ley de Wolff:</strong> Los huesos tienden a ser más gruesos en las zonas de mayor esfuerzo histórico — el FEA permite verificarlo en fósiles.</li>
+<li class="fragment"><strong>Fuerza de mordida:</strong> En un análisis estático, la fuerza de mordida puede obtenerse como la fuerza de reacción en el punto de constricción si las fuerzas musculares son aplicadas.</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/tyrannosaurus_biteforce.jpg" style="width:100.0%"></p>
+<figcaption>Fuerza de mordida en <em>Tyrannosaurus rex</em> a distintas edades</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="preguntas-que-el-fea-puede-responder-en-paleontología" class="slide level2">
+<h2>Preguntas que el FEA puede responder en paleontología</h2>
+<ul>
+<li class="fragment">¿Qué tan fuerte mordía un animal extinto?</li>
+<li class="fragment">¿Qué zonas del cráneo soportaban mayor estrés durante la captura de presas?</li>
+<li class="fragment">¿Era una morfología resistente a torsión o a compresión pura?</li>
+<li class="fragment">¿Cómo cambia la biomecánica entre un individuo juvenil y uno adulto?</li>
+<li class="fragment">¿Qué dieta es mecánicamente compatible con la morfología del cráneo?</li>
 </ul>
 </section>
-<section id="congresos-y-publicaciones" class="slide level2">
-<h2>Congresos y publicaciones</h2>
-<ul>
-<li class="fragment">Participación en el 2°, 3° y 5° Congreso Virtual de Paleontología</li>
-<li class="fragment">Participación en la reunión anual de la Palaeontological Association (2024)</li>
-<li class="fragment">Publicación de artículo(s) científicos en revistas internacionales</li>
-</ul>
-</section>
-<section id="cursos-y-talleres-atendidos" class="slide level2">
-<h2>Cursos y talleres atendidos</h2>
-<ul>
-<li class="fragment">Digital Methods in Palaeontology - Lapworth Museum, University of Birmingham (2024)</li>
-<li class="fragment">Geometric Morphometrics in R - University of Copenhagen (2024)</li>
-</ul>
-</section>
-<section id="productos-digitales" class="slide level2">
-<h2>Productos digitales</h2>
-<ul>
-<li class="fragment">Manual de fotogrametría en paleontología (disponible en línea)</li>
-<li class="fragment">Museo Virtual Nacional (plataforma digital de divulgación paleontológica)</li>
-<li class="fragment">BFEX (Extensión de Blender para construcción de Análisis de Elementos Finitos)</li>
-<li class="fragment">¿Dónde está mi fósil? (aplicación multiplataforma para divulgación e investigación paleontológica)</li>
-</ul>
-</section>
-<section id="contacto-y-más-detalles" class="slide level2">
-<h2>Contacto y más detalles</h2>
-<ul>
-<li class="fragment"><strong>Directorio:</strong> <a href="https://museovirtualnacional.com/directorio/">museovirtualnacional.com/directorio</a></li>
-<li class="fragment"><strong>Correo:</strong> migueldlm1307@gmail.com</li>
-</ul>
-<iframe src="https://museovirtualnacional.com/directorio/" width="100%" height="80%" style="border: 2px solid #2A7D8C; border-radius: 8px; margin-top: 20px;"></iframe>
+<section class="slide level2">
+
 </section></section>
 <section>
-<section id="sobre-el-taller" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Sobre el taller</h1>
+<section id="herramientas-de-simulación" class="title-slide slide level1 center" data-background-color="#1E2B3A">
+<h1>Herramientas de Simulación</h1>
 
 </section>
-<section id="objetivo-general" class="slide level2">
-<h2>Objetivo General</h2>
-<p>Proporcionar una introducción a las técnicas y tecnologías digitales para la creación, análisis e interpretación de modelos 3D en la investigación paleontológica.</p>
-<h3 id="objetivos-específicos">Objetivos Específicos</h3>
+<section id="el-software-fossils" class="slide level2">
+<h2>El Software: Fossils</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="un-solver-abierto-y-eficiente">Un solver abierto y eficiente</h3>
 <ul>
-<li class="fragment">Conocer métodos de obtención (Fotogrametría, Escaneo Láser, CT).</li>
-<li class="fragment">Procesar y optimizar modelos 3D.</li>
-<li class="fragment">Aplicar reconstrucción digital y retro-deformación.</li>
-<li class="fragment">Conocer las alternativas de software libre para su uso en Paleontología.</li>
-<li class="fragment">Aplicar análisis biomecánicos y morfométricos.</li>
+<li class="fragment"><strong>Fossils <span class="citation" data-cites="Chatar2023">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Chatar et&nbsp;al. 2023</a>)</span>:</strong> Un protocolo de código abierto diseñado específicamente para simular cargas biomecánicas en huesos.</li>
+<li class="fragment"><strong>Ventajas:</strong>
+<ul>
+<li class="fragment">Optimizado para mallas volumétricas de alta resolución (millones de tetraedros).</li>
+<li class="fragment">Manejo directo de fuerzas musculares distribuidas.</li>
+<li class="fragment">Basado en el motor <em>Metafor</em>, pero con un solver lineal estático rápido.</li>
+</ul></li>
+<li class="fragment"><strong>El reto:</strong> La preparación de datos para FEA suele ser la parte más lenta del proceso.</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/fossils-fea.ico" style="width:100.0%"></p>
+<figcaption>Fossils</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="introducción-a-bfex" class="slide level2">
+<h2>Introducción a BFEX</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="el-puente-entre-blender-y-fossils">El puente entre Blender y Fossils</h3>
+<ul>
+<li class="fragment"><strong>BFEX (Blender Finite Element eXporter) <span class="citation" data-cites="diazdeleon-munozBFEXToolboxFinite2025">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Díaz de León-Muñoz, Boman, y Ferreira 2025</a>)</span>:</strong></li>
+<li class="fragment">Un <em>add-on</em> para Blender diseñado para simplificar la creación de modelos de FEA.</li>
+<li class="fragment"><strong>Objetivo:</strong> Automatizar la limpieza de mallas y la selección de áreas para condiciones de contorno.</li>
+<li class="fragment"><strong>¿Por qué Blender?</strong> Por su potente motor de manipulación de mallas y su accesibilidad.</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/blender-paleo-bfex.png"></p>
+<figcaption>Ejemplo de modelo construido con BFEX</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="flujo-de-trabajo-con-bfex-i" class="slide level2">
+<h2>Flujo de Trabajo con BFEX (I)</h2>
+<h3 id="preparación-y-control-de-calidad">1. Preparación y Control de Calidad</h3>
+<ul>
+<li class="fragment">La malla debe ser <strong>Manifold</strong> (estanca) y sin errores geométricos.</li>
+<li class="fragment"><strong>Uso del 3D Print Toolbox:</strong>
+<ul>
+<li class="fragment"><code>Check All</code> y asegurar que <em>Non-Manifold Edges</em> y <em>Intersecting Faces</em> sean 0.</li>
+</ul></li>
+<li class="fragment"><strong>Escala:</strong> Aplicar transformaciones (<code>Ctrl+A</code>) para asegurar unidades correctas (usualmente mm).</li>
 </ul>
 </section>
-<section id="temario-semana-1" class="slide level2">
-<h2>Temario: Semana 1</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 28%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Día</th>
-<th style="text-align: left;">Temas Principales</th>
-<th style="text-align: center;">Horas (S/A)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>Lunes</strong></td>
-<td style="text-align: left;"><strong>Día 1: Introducción y Fundamentos</strong><br>Definición de Paleontología Virtual, bases de datos (MorphoSource, Sketchfab) y tipos de modelos 3D.</td>
-<td style="text-align: center;">3h (S)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Miércoles</strong></td>
-<td style="text-align: left;"><strong>Día 2: Adquisición I (Fotogrametría)</strong><br>Principios de fotogrametría y flujo de trabajo en RealityScan.</td>
-<td style="text-align: center;">3h (S) / 3h (A)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>Viernes</strong></td>
-<td style="text-align: left;"><strong>Día 3: Adquisición II (Sensores y CT)</strong><br>Escaneo láser y procesamiento de tomografías (3D Slicer).</td>
-<td style="text-align: center;">3h (S) / 3h (A)</td>
-</tr>
-</tbody>
-</table>
-<p><em>(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono</em></p>
+<section id="flujo-de-trabajo-con-bfex-ii" class="slide level2">
+<h2>Flujo de Trabajo con BFEX (II)</h2>
+<h3 id="configuración-del-proyecto">2. Configuración del Proyecto</h3>
+<ul>
+<li class="fragment">Definir un directorio de trabajo y nombre del proyecto.</li>
+<li class="fragment">El add-on crea automáticamente la estructura de archivos necesaria.</li>
+<li class="fragment"><strong>Colección de BFEX:</strong> Organiza los elementos de la simulación de forma independiente al modelo original.</li>
+</ul>
 </section>
-<section id="temario-semana-2" class="slide level2">
-<h2>Temario: Semana 2</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Día</th>
-<th style="text-align: left;">Temas Principales</th>
-<th style="text-align: center;">Horas (S/A)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>Lunes</strong></td>
-<td style="text-align: left;"><a href="../curso-paleo-virtual/04-optimizacion-y-escultura.html"><strong>Día 4: Optimización y Escultura Digital</strong></a><br>Limpieza de mallas, reparación y reducción de polígonos en Blender.</td>
-<td style="text-align: center;">3h (S)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Miércoles</strong></td>
-<td style="text-align: left;"><a href="../curso-paleo-virtual/05-reconstruccion-muscular.html"><strong>Día 5: Reconstrucción Muscular</strong></a><br>Modelado de músculos y estimación de biomasa (MyoGenerator).</td>
-<td style="text-align: center;">3h (S) / 3h (A)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><strong>Viernes</strong></td>
-<td style="text-align: left;"><a href="../curso-paleo-virtual/06-biomecanica-bfex.html"><strong>Día 6: Análisis Biomecánico (FEA)</strong></a><br>Simulación de esfuerzos y deformaciones (BFEX y Fossils).</td>
-<td style="text-align: center;">3h (S) / 3h (A)</td>
-</tr>
-</tbody>
-</table>
-<p><em>(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono</em></p>
+<section id="flujo-de-trabajo-con-bfex-iii" class="slide level2">
+<h2>Flujo de Trabajo con BFEX (III)</h2>
+<h3 id="definición-de-superficies-y-cargas">3. Definición de Superficies y Cargas</h3>
+<ul>
+<li class="fragment"><strong>Zonas de Interés (ROI):</strong> Selección directa en la malla de las áreas de inserción muscular y restricciones.</li>
+<li class="fragment"><strong>Boundary Conditions (BCs):</strong>
+<ul>
+<li class="fragment"><strong>Supports:</strong> Nodos fijados (ej. cóndilos mandibulares).</li>
+<li class="fragment"><strong>Loads:</strong> Aplicación de fuerzas vectoriales (fuerza muscular calculada en el Día 5).</li>
+</ul></li>
+<li class="fragment"><strong>Sub-meshes:</strong> BFEX extrae estas selecciones como archivos separados para que Fossils las reconozca.</li>
+</ul>
 </section>
-<section id="temario-semana-3" class="slide level2">
-<h2>Temario: Semana 3</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 35%">
-<col style="width: 28%">
-<col style="width: 35%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Día</th>
-<th style="text-align: left;">Temas Principales</th>
-<th style="text-align: center;">Horas (S/A)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><strong>Lunes</strong></td>
-<td style="text-align: left;"><strong>Día 7: Morfometría y Cierre del Curso</strong><br>Análisis de fuerzas de mordida y Morfometría Geométrica.</td>
-<td style="text-align: center;">3h (S)</td>
-</tr>
-</tbody>
-</table>
-<p><em>(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono</em></p>
+<section id="flujo-de-trabajo-con-bfex-iv" class="slide level2">
+<h2>Flujo de Trabajo con BFEX (IV)</h2>
+<h3 id="propiedades-y-parámetros">4. Propiedades y Parámetros</h3>
+<ul>
+<li class="fragment"><strong>Materiales:</strong> Definición de propiedades elásticas.
+<ul>
+<li class="fragment"><strong>Módulo de Young (E):</strong> Rigidez del hueso (ej. 20 GPa para hueso cortical).</li>
+<li class="fragment"><strong>Coeficiente de Poisson (<span class="math inline">\(\nu\)</span>):</strong> Deformación transversal.</li>
+</ul></li>
+<li class="fragment"><strong>Script de Parámetros:</strong> BFEX genera un archivo <code>.py</code> que contiene toda la lógica de la simulación lista para Fossils.</li>
+</ul>
+</section>
+<section id="ejecución-y-análisis" class="slide level2">
+<h2>Ejecución y Análisis</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="del-exportar-al-resolver">Del “Exportar” al “Resolver”</h3>
+<ol type="1">
+<li class="fragment"><strong>Exportación:</strong> BFEX genera todos los archivos (mallas y scripts).</li>
+<li class="fragment"><strong>Batch Mode:</strong> Se puede ejecutar Fossils directamente desde la interfaz de BFEX o vía terminal.</li>
+<li class="fragment"><strong>Visualización:</strong>
+<ul>
+<li class="fragment">Los resultados se pueden importar de vuelta a Blender o abrir en <strong>ParaView</strong> para análisis detallado de mapas de color (Von Mises Stress, Principal Strains).</li>
+</ul></li>
+</ol>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../images/bfex-logo.jpg" style="width:100.0%"></p>
+<figcaption>BFEX</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="práctica-de-hoy-mi-primer-fea" class="slide level2">
+<h2>Práctica de hoy: Mi primer FEA</h2>
+<h3 id="objetivos">Objetivos:</h3>
+<ol type="1">
+<li class="fragment">Instalar y configurar <strong>BFEX</strong>.</li>
+<li class="fragment">Limpiar un modelo de mandíbula.</li>
+<li class="fragment">Crear un proyecto de FEA.</li>
+<li class="fragment">Seleccionar los apoyos (cóndilo) y las fuerzas (aductores).</li>
+<li class="fragment">Configurar materiales y exportar el script para <strong>Fossils</strong>.</li>
+</ol>
+</section>
+<section id="enlaces-y-recursos" class="slide level2">
+<h2>Enlaces y Recursos</h2>
+<ul>
+<li class="fragment"><strong>Repositorio BFEX:</strong> <a href="https://github.com/MiguelDLM/BFEX">github.com/MiguelDLM/BFEX</a></li>
+<li class="fragment"><strong>Fossils Solver:</strong> <a href="https://gitlab.uliege.be/rboman/fossils">gitlab.uliege.be/rboman/fossils</a></li>
+<li class="fragment"><strong>Documentación:</strong> <span class="citation" data-cites="diazdeleon-munozBFEXToolboxFinite2025">(<a href="#/bibliografía" role="doc-biblioref" onclick="">Díaz de León-Muñoz, Boman, y Ferreira 2025</a>)</span></li>
+</ul>
+</section>
+<section id="bibliografía" class="slide level2 smaller scrollable">
+<h2>Bibliografía</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-brightReviewPaleontologicalFinite2014" class="csl-entry" role="listitem">
+Bright, Jen A. 2014. <span>«A Review of Paleontological Finite Element Models and Their Validity»</span>. <em>Journal of Paleontology</em> 88 (4): 760-69. <a href="https://doi.org/10.1666/13-090">https://doi.org/10.1666/13-090</a>.
+</div>
+<div id="ref-Chatar2023" class="csl-entry" role="listitem">
+Chatar, Narimane, Romain Boman, Valentin Fallon Gaudichon, Jamie A. MacLaren, y Valentin Fischer. 2023. <span>«<span>“<span>Fossils</span>”</span>: <span>A</span> New, Fast and Open-Source Protocol to Simulate Muscle-Driven Biomechanical Loading of Bone»</span>. <em>Methods in Ecology and Evolution</em> 14 (3): 848-59. <a href="https://doi.org/10.1111/2041-210X.14051">https://doi.org/10.1111/2041-210X.14051</a>.
+</div>
+<div id="ref-diazdeleon-munozBFEXToolboxFinite2025" class="csl-entry" role="listitem">
+Díaz de León-Muñoz, E. Miguel, Romain Boman, y Gabriel S. Ferreira. 2025. <span>«<span>BFEX</span>: <span>A Toolbox</span> for <span>Finite Element Analysis With Fossils</span> and <span>Blender</span>»</span>. <em>Ecology and Evolution</em> 15 (3): e71093. <a href="https://doi.org/10.1002/ece3.71093">https://doi.org/10.1002/ece3.71093</a>.
+</div>
+</div>
+
+
 </section></section>
-<section id="requisitos-de-cómputo" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Requisitos de Cómputo</h1>
-<table class="caption-top">
-<colgroup>
-<col style="width: 21%">
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 26%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Componente</th>
-<th style="text-align: center;">Mínimos (Básico)</th>
-<th style="text-align: center;">Recomendado (Estable)</th>
-<th style="text-align: center;">Profesional</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>CPU</strong></td>
-<td style="text-align: center;">4 núcleos (2.0 GHz)</td>
-<td style="text-align: center;">6–8 núcleos (2.5–3.0 GHz)</td>
-<td style="text-align: center;">8–16+ núcleos (≥3.0 GHz)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>RAM</strong></td>
-<td style="text-align: center;">8 GB</td>
-<td style="text-align: center;">16–32 GB</td>
-<td style="text-align: center;">64–128 GB</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong>GPU</strong></td>
-<td style="text-align: center;">2 GB VRAM</td>
-<td style="text-align: center;">4–6 GB VRAM</td>
-<td style="text-align: center;">8–16 GB VRAM (NVIDIA CUDA)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Alm.</strong></td>
-<td style="text-align: center;">SSD SATA / HDD</td>
-<td style="text-align: center;">SSD SATA / NVMe ≥500 GB</td>
-<td style="text-align: center;">NVMe ≥1 TB</td>
-</tr>
-</tbody>
-</table>
-</section>
-
-<section id="software" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Software</h1>
-<ul>
-<li class="fragment">Blender</li>
-<li class="fragment">RealityScan</li>
-<li class="fragment">3D Slicer</li>
-<li class="fragment">Fossils</li>
-<li class="fragment">BFEX</li>
-<li class="fragment">MyoGeneratorRemix</li>
-</ul>
-</section>
-
-<section id="requisitos-de-aprobación" class="title-slide slide level1 center" data-background-color="#1E2B3A">
-<h1>Requisitos de aprobación</h1>
-<ul>
-<li class="fragment">Asistencia mínima del 80% al total de sesiones.</li>
-<li class="fragment">Cumplimiento de las actividades asignadas en plataforma y/o por el docente.</li>
-<li class="fragment">Para obtener la constancia de aprobación, la calificación final mínima deberá ser de 6.0, sin redondeo, y se deberá cumplir con el porcentaje de asistencia establecido.</li>
-<li class="fragment">Las grabaciones de clase no son obligatorias.</li>
-</ul>
-
-
-</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="../images/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>E. Miguel Díaz de León Muñóz · Museo Virtual Nacional</p>
+<p>E. Miguel Díaz de León Muñoz · Museo Virtual Nacional</p>
 </div>
 </div></div>
 
