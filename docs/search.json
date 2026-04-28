@@ -1286,5 +1286,215 @@
     "title": "Paleontología Virtual",
     "section": "Preguntas que el FEA puede responder en paleontología",
     "text": "Preguntas que el FEA puede responder en paleontología\n\n¿Qué tan fuerte mordía un animal extinto?\n¿Qué zonas del cráneo soportaban mayor estrés durante la captura de presas?\n¿Era una morfología resistente a torsión o a compresión pura?\n¿Cómo cambia la biomecánica entre un individuo juvenil y uno adulto?\n¿Qué dieta es mecánicamente compatible con la morfología del cráneo?"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#introducción-a-la-morfometría-geométrica-gmm",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#introducción-a-la-morfometría-geométrica-gmm",
+    "title": "Paleontología Virtual",
+    "section": "Introducción a la Morfometría Geométrica (GMM)",
+    "text": "Introducción a la Morfometría Geométrica (GMM)\n\n\nMás allá de las medidas lineales\n\nConcepto clave: La morfometría geométrica es el estudio cuantitativo de la forma anatómica utilizando puntos topológicamente homólogos conocidos como landmarks (marcas anatómicas).\nSupera la limitación de usar simples medidas lineales (largo, ancho), conservando la geometría espacial completa de la estructura.\nSemi-landmarks: Para capturar la curvatura de estructuras o superficies fósiles que carecen de puntos homólogos discretos y claros, se emplean curvas y superficies formadas por puntos deslizantes (semi-landmarks).\n\n\n\n\n\nProtocolo general de Morfometría Geométrica"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#procesamiento-técnico-en-morfometría-geométrica",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#procesamiento-técnico-en-morfometría-geométrica",
+    "title": "Paleontología Virtual",
+    "section": "Procesamiento Técnico en Morfometría Geométrica",
+    "text": "Procesamiento Técnico en Morfometría Geométrica\n\n\nSuperposición de Procrustes\n\nAntes de realizar análisis estadísticos, deben eliminarse las diferencias triviales de posición, escala y orientación.\nLa superposición de Procrustes (GPA) remueve los efectos del tamaño absoluto, la rotación y la traslación de los modelos tridimensionales, permitiendo que solo las “formas” (shape) sean estrictamente comparables.\n\n \n\nAnálisis Multivariado\n\nTras la superposición, las coordenadas 3D estandarizadas se analizan matemáticamente.\nPCA (Análisis de Componentes Principales): Agrupa la varianza para cuantificar y explorar los principales ejes de variación morfológica entre los especímenes.\nVisualización: Espacios morfológicos (morphospaces) donde cada punto es una forma."
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#integración-de-gmm-y-biomecánica-fea",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#integración-de-gmm-y-biomecánica-fea",
+    "title": "Paleontología Virtual",
+    "section": "Integración de GMM y Biomecánica (FEA)",
+    "text": "Integración de GMM y Biomecánica (FEA)\n\n\nThin-Plate Splines (TPS)\n\nLa morfometría geométrica se combina frecuentemente con simulaciones biomecánicas (como el FEA) utilizando algoritmos de interpolación espacial.\nWarping / Deformación: Permite doblar el espacio (y las mallas) de una configuración de landmarks de referencia hacia otra.\n\n \n\nAplicación Práctica\n\nEsta integración permite deformar (warp) la malla 3D de un cráneo o hueso conocido hacia morfologías hipotéticas.\nÚtil para testear promedios genéricos, intermediarios evolutivos, o reconstruir especímenes fósiles (retrodeformación automatizada) para poner a prueba hipótesis de convergencia funcional."
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#introducción-a-la-estimación-de-mordida-máxima",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#introducción-a-la-estimación-de-mordida-máxima",
+    "title": "Paleontología Virtual",
+    "section": "Introducción a la Estimación de Mordida Máxima",
+    "text": "Introducción a la Estimación de Mordida Máxima\n\n\nModelando la función mandibular\n\nEl rendimiento de la mordida, la cinemática de las mandíbulas y la tensión mecánica en animales extintos se analizan mediante simulaciones computacionales como el Análisis de Dinámica Multicuerpo (MDA) o FEA.\nReconstrucción previa: Para estas estimaciones, es indispensable reconstruir la musculatura craneal (ej. los músculos aductores).\n\n\n\n\n\nApertura mandibular máxima en terópodos"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#detalles-técnicos-en-la-estimación-de-fuerza",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#detalles-técnicos-en-la-estimación-de-fuerza",
+    "title": "Paleontología Virtual",
+    "section": "Detalles Técnicos en la Estimación de Fuerza",
+    "text": "Detalles Técnicos en la Estimación de Fuerza\n\n\nCálculo del PCSA\n\nLa fuerza máxima (contracción isométrica) que puede generar un músculo fisiológico se calcula a partir de su Área de Sección Transversal Fisiológica (PCSA).\nFórmula: PCSA se obtiene estimando el volumen tridimensional del músculo y dividiéndolo por la longitud de sus fibras multiplicada por el coseno de su ángulo de penación.\nFuerza M. = PCSA \\(\\times\\) Tensión Específica (\\(P_0\\) ≈ 300 kPa).\n\n \n\nEvolución de los Métodos\n\nMétodo clásico (Thomason): Método del cráneo seco (“dry-skull method”) que calculaba la sección transversal proyectada de la fosa temporal.\nMétodos volumétricos 3D modernos: Modelado de músculos mediante conos truncados (frustums) o envolturas complejas 3D entre orígenes e inserciones que evitan intersecciones falsas hueso-músculo."
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#casos-de-estudio-de-dinámica-multicuerpo-mda",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#casos-de-estudio-de-dinámica-multicuerpo-mda",
+    "title": "Paleontología Virtual",
+    "section": "Casos de Estudio de Dinámica Multicuerpo (MDA)",
+    "text": "Casos de Estudio de Dinámica Multicuerpo (MDA)\n\n\nSimulando a Tyrannosaurus rex\n\nAnálisis de cinemática multicuerpo: el cráneo escaneado en 3D se asocia virtualmente modelando las articulaciones funcionales, músculos reactivos y topología de ligamentos.\nParámetros: A cada grupo muscular se le asignaron variables inferidas de cocodrilos y aves, como longitud de fibra (ej. 25% de longitud muscular), velocidad de contracción.\nFuerza Inespecífica: Típicamente \\(\\approx 30 \\ N/cm^2\\).\n\n \n\nResultados Biomecánicos\n\nSimulando una contracción al cerrar la mandíbula (ej. abierta a 45 grados).\nResultados T. rex: El análisis concluyó estimaciones de fuerza de mordida máxima situada entre 35,000 y 57,000 Newtons.\nLa mayor fuerza de mordida funcional estimada de cualquier animal terrestre que haya vivido en la faz de nuestro planeta."
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#bibliografía",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#bibliografía",
+    "title": "Paleontología Virtual",
+    "section": "Bibliografía",
+    "text": "Bibliografía"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#covariación-y-regresión-ecomorfológica",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#covariación-y-regresión-ecomorfológica",
+    "title": "Paleontología Virtual",
+    "section": "Covariación y Regresión Ecomorfológica",
+    "text": "Covariación y Regresión Ecomorfológica\n\n\nCovariación de la Forma\n\nEl análisis estadístico frecuentemente se implementa usando regresiones multivariadas o PLS (Partial Least Squares).\nAsociación de variables: Permite usar la morfología multivariada como variable dependiente o independiente frente a otros datos, probando cómo se asocia estadísticamente con atributos de rendimiento (ej., fuerza de mordida o velocidad).\n\n \n\nAlometría y Ecomorfología\n\nAlometría Evolutiva: Un excelente ejemplo de covariación es modelar si el tamaño anatómico o la fuerza bruta dicta predeciblemente reglas sobre la geometría funcional de las palancas en el cráneo.\nEsto conecta la GMM directamente con ecofisiología y biomecánica evolutiva, probando por qué los cráneos tienen la forma que tienen según su función."
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paisajes-adaptativos-y-funcionales",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paisajes-adaptativos-y-funcionales",
+    "title": "Paleontología Virtual",
+    "section": "Paisajes Adaptativos y Funcionales",
+    "text": "Paisajes Adaptativos y Funcionales\n\n\nConcepto de Paisaje Funcional\n\nDerivado del “Paisaje Adaptativo” evolutivo, un paisaje funcional grafica métricas de rendimiento biomecánico (ej. ventaja mecánica, energía de deformación) en un tercer eje frente a coordenadas morfológicas (Tseng, 2013).\nModela un panorama de todas las morfologías teóricas posibles, originando una topografía de “picos” (óptimos biomecánicos) y “valles” (formas de bajo rendimiento).\n\n \n\nConvergencia Evolutiva\n\nSuperponiendo trayectorias macroevolutivas reales de cráneos fósiles y actuales (ej. hienas, cánidos trituradores de hueso), se comprueba si la morfología evolucionó direccionalmente para escalar los picos óptimos de su nicho.\nPermite detectar casos donde la convergencia morfológica responde directamente a requerimientos mecánicos restrictivos para sobrevivir."
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#superposición-de-procrustes",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#superposición-de-procrustes",
+    "title": "Paleontología Virtual",
+    "section": "Superposición de Procrustes",
+    "text": "Superposición de Procrustes\n\n\nEstandarización de la forma\n\nAntes de realizar análisis estadísticos, deben eliminarse las diferencias triviales de posición, escala y orientación.\nLa superposición de Procrustes (GPA) remueve los efectos del tamaño absoluto, la rotación y la traslación de los modelos tridimensionales, permitiendo que solo las “formas” (shape) sean estrictamente comparables.\n\n\n\n\n\nProcedimiento de Superposición OPA"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#análisis-multivariado-del-morfoespacio",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#análisis-multivariado-del-morfoespacio",
+    "title": "Paleontología Virtual",
+    "section": "Análisis Multivariado del Morfoespacio",
+    "text": "Análisis Multivariado del Morfoespacio\n\n\nPCA y visualización morfológica\n\nTras la superposición, las coordenadas 3D estandarizadas se analizan matemáticamente.\nPCA (Análisis de Componentes Principales): Agrupa la varianza para cuantificar y explorar los principales ejes de variación morfológica entre los especímenes.\nVisualización: Espacios morfológicos (morphospaces) donde cada punto es una forma.\n\n\n\n\n\nMorfoespacio de variación morfológica en peces"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#thin-plate-splines-tps",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#thin-plate-splines-tps",
+    "title": "Paleontología Virtual",
+    "section": "Thin-Plate Splines (TPS)",
+    "text": "Thin-Plate Splines (TPS)\n\n\nInterpolación espacial entre formas\n\nLa morfometría geométrica se combina frecuentemente con simulaciones biomecánicas (como el FEA) utilizando algoritmos de interpolación espacial.\nWarping / Deformación: Permite doblar el espacio (y las mallas) de una configuración de landmarks de referencia hacia otra.\n\n\n\n\n\nConcepto TPS"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#aplicación-práctica-del-warping",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#aplicación-práctica-del-warping",
+    "title": "Paleontología Virtual",
+    "section": "Aplicación Práctica del Warping",
+    "text": "Aplicación Práctica del Warping\n\n\nDeformación de mallas 3D\n\nEsta integración permite deformar (warp) la malla 3D de un cráneo o hueso conocido hacia morfologías hipotéticas.\nÚtil para testear promedios genéricos, intermediarios evolutivos, o reconstruir especímenes fósiles (retrodeformación automatizada) para poner a prueba hipótesis de convergencia funcional.\n\n\n\n\n\nEjemplos de deformación TPS"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#covariación-de-la-forma",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#covariación-de-la-forma",
+    "title": "Paleontología Virtual",
+    "section": "Covariación de la Forma",
+    "text": "Covariación de la Forma\n\n\nRegresión multivariada y PLS\n\nEl análisis estadístico frecuentemente se implementa usando regresiones multivariadas o PLS (Partial Least Squares).\nAsociación de variables: Permite usar la morfología multivariada como variable dependiente o independiente frente a otros datos, probando cómo se asocia estadísticamente con atributos de rendimiento (ej., fuerza de mordida o velocidad).\n\n\n\n\n\nMínimos Cuadrados Parciales (PLS) en Morfometría Geométrica"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#alometría-y-ecomorfología",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#alometría-y-ecomorfología",
+    "title": "Paleontología Virtual",
+    "section": "Alometría y Ecomorfología",
+    "text": "Alometría y Ecomorfología\n\n\nForma, tamaño y función\n\nAlometría Evolutiva: Un excelente ejemplo de covariación es modelar si el tamaño anatómico o la fuerza bruta dicta predeciblemente reglas sobre la geometría funcional de las palancas en el cráneo.\nEsto conecta la GMM directamente con ecofisiología y biomecánica evolutiva, probando por qué los cráneos tienen la forma que tienen según su función.\n\n\n\n\n\nRegresión Lineal Multivariada por Componentes"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paisaje-funcional",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paisaje-funcional",
+    "title": "Paleontología Virtual",
+    "section": "Paisaje Funcional",
+    "text": "Paisaje Funcional\n\n\nTopografía de rendimiento biomecánico\n\nDerivado del “Paisaje Adaptativo” evolutivo, un paisaje funcional grafica métricas de rendimiento biomecánico (ej. ventaja mecánica, energía de deformación) en un tercer eje frente a coordenadas morfológicas (Tseng, 2013).\nModela un panorama de todas las morfologías teóricas posibles, originando una topografía de “picos” (óptimos biomecánicos) y “valles” (formas de bajo rendimiento).\n\n\n\n\n\nTopografía de paisaje funcional interpolado (Tseng 2013)"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#convergencia-evolutiva",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#convergencia-evolutiva",
+    "title": "Paleontología Virtual",
+    "section": "Convergencia Evolutiva",
+    "text": "Convergencia Evolutiva\n\n\nTrayectorias macroevolutivas\n\nSuperponiendo trayectorias macroevolutivas reales de cráneos fósiles y actuales (ej. hienas, cánidos trituradores de hueso), se comprueba si la morfología evolucionó direccionalmente para escalar los picos óptimos de su nicho.\nPermite detectar casos donde la convergencia morfológica responde directamente a requerimientos mecánicos restrictivos para sobrevivir.\n\n\n\n\n\nMorfoespacio y picos de adaptación funcional (Tseng 2013)"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#cálculo-del-pcsa",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#cálculo-del-pcsa",
+    "title": "Paleontología Virtual",
+    "section": "Cálculo del PCSA",
+    "text": "Cálculo del PCSA\n\n\nÁrea de Sección Transversal Fisiológica\n\nLa fuerza máxima (contracción isométrica) que puede generar un músculo fisiológico se calcula a partir de su Área de Sección Transversal Fisiológica (PCSA).\nFórmula: PCSA se obtiene estimando el volumen tridimensional del músculo y dividiéndolo por la longitud de sus fibras multiplicada por el coseno de su ángulo de penación.\nLos cálculos pueden ser realizados mediante software especializado como MyoGeneratorRemix.\n\n\n\n\n\nReconstrucción muscular con MyoGeneratorRemix"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#evolución-de-los-métodos-de-estimación",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#evolución-de-los-métodos-de-estimación",
+    "title": "Paleontología Virtual",
+    "section": "Evolución de los Métodos de Estimación",
+    "text": "Evolución de los Métodos de Estimación\n\n\nDel cráneo seco al modelo 3D\n\nMétodo clásico (Thomason): Método del cráneo seco (“dry-skull method”) que calculaba la sección transversal proyectada de la fosa temporal.\nMétodos volumétricos 3D modernos: Modelado de músculos mediante conos truncados (frustums) o envolturas complejas 3D entre orígenes e inserciones que evitan intersecciones falsas hueso-músculo.\n\n\n\n\n\nApertura máxima estimada en Tyrannosaurus rex"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#simulando-a-tyrannosaurus-rex",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#simulando-a-tyrannosaurus-rex",
+    "title": "Paleontología Virtual",
+    "section": "Simulando a Tyrannosaurus rex",
+    "text": "Simulando a Tyrannosaurus rex\n\n\nConfiguración del modelo multicuerpo\n\nAnálisis de cinemática multicuerpo: el cráneo escaneado en 3D se ensambla virtualmente modelando las articulaciones funcionales, músculos reactivos y topología de ligamentos.\nParámetros: A cada grupo muscular se le asignaron variables inferidas de cocodrilos y aves, como longitud de fibra (ej. 25% de longitud muscular), velocidad de contracción.\nFuerza Inespecífica: Típicamente \\(\\approx 30 \\ N/cm^2\\).\n\n\n\n\n\nModelos craneales 3D para análisis de dinámica multicuerpo"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#resultados-biomecánicos",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#resultados-biomecánicos",
+    "title": "Paleontología Virtual",
+    "section": "Resultados Biomecánicos",
+    "text": "Resultados Biomecánicos\n\n\nFuerza de mordida máxima en T. rex\n\nSimulando una contracción al cerrar la mandíbula (ej. abierta a 45 grados).\nResultados T. rex: El análisis concluyó estimaciones de fuerza de mordida máxima situada entre 35,000 y 57,000 Newtons.\nLa mayor fuerza de mordida funcional estimada de cualquier animal terrestre que haya vivido en la faz de nuestro planeta.\n\n\n\n\n\nFuerza de mordida en Tyrannosaurus rex a distintas edades"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#la-base-de-datos-array-de-landmarks-3d",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#la-base-de-datos-array-de-landmarks-3d",
+    "title": "Paleontología Virtual",
+    "section": "La Base de Datos — Array de Landmarks 3D",
+    "text": "La Base de Datos — Array de Landmarks 3D\n\n\nset.seed(42)\n\n# p landmarks × k coordenadas × n especímenes\ncraneos_3d &lt;- array(\n  data = rnorm(20 * 3 * 30),\n  dim  = c(20, 3, 30),\n  dimnames = list(\n    paste0(\"lm_\", sprintf(\"%02d\", 1:20)),  # 20 landmarks\n    c(\"x\", \"y\", \"z\"),                      # 3 coordenadas 3D\n    paste0(\"sp_\", 1:30)                    # 30 especímenes\n  )\n)\n\ndim(craneos_3d)        # p × k × n\n\n\n[1] 20  3 30\n\ncraneos_3d[1:4, , 1]  # 4 landmarks del espécimen 1\n\n               x          y          z\nlm_01  1.3709584 -0.3066386  0.2059986\nlm_02 -0.5646982 -1.7813084 -0.3610573\nlm_03  0.3631284 -0.1719174  0.7581632\nlm_04  0.6328626  1.2146747 -0.7267048"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paso-1-superposición-de-procrustes-gpa",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paso-1-superposición-de-procrustes-gpa",
+    "title": "Paleontología Virtual",
+    "section": "Paso 1 — Superposición de Procrustes (GPA)",
+    "text": "Paso 1 — Superposición de Procrustes (GPA)\n\n\n\nlibrary(geomorph)\n\n# GPA: elimina posición, escala y orientación\ngpa &lt;- gpagen(craneos_3d, print.progress = FALSE)\n\n# Resultados\ngpa$coords  # coordenadas de Procrustes  (p × k × n)\ngpa$Csize   # tamaño del centroide por espécimen  (n)\n\n\n\ngpagen() aplica la superposición generalizada de Procrustes en un paso.\n$coords — forma pura: sin escala, rotación ni traslación.\n$Csize — proxy del tamaño corporal; útil como covariable en análisis de alometría."
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paso-2-pca-y-morfoespacio",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paso-2-pca-y-morfoespacio",
+    "title": "Paleontología Virtual",
+    "section": "Paso 2 — PCA y Morfoespacio",
+    "text": "Paso 2 — PCA y Morfoespacio\n\n\n\n# PCA sobre coordenadas de Procrustes\npca &lt;- gm.prcomp(gpa$coords)\n\n# Varianza explicada por cada componente\nsummary(pca)\n\n# Morfoespacio (cada punto = un espécimen)\nplot(pca,\n     main = \"Morfoespacio — Carnívora\",\n     pch  = 19,\n     col  = as.factor(familia))\nlegend(\"topright\", legend = levels(familia),\n       pch = 19, col = 1:nlevels(familia))"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paso-3-pls-forma-vs.-fuerza-de-mordida",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#paso-3-pls-forma-vs.-fuerza-de-mordida",
+    "title": "Paleontología Virtual",
+    "section": "Paso 3 — PLS: Forma vs. Fuerza de Mordida",
+    "text": "Paso 3 — PLS: Forma vs. Fuerza de Mordida\n\n\n\n# Vector de fuerza de mordida (un valor por espécimen, en N)\nmordida_N &lt;- c(...)\n\n# PLS de dos bloques: ¿covaria la forma con la fuerza?\npls &lt;- two.b.pls(\n  A1 = two.d.array(gpa$coords),  # bloque 1: forma (matriz 2D)\n  A2 = log(mordida_N),            # bloque 2: log-mordida\n  print.progress = FALSE\n)\n\nsummary(pls)   # r-PLS y p-valor permutacional\nplot(pls,\n     main  = \"Covariación forma–mordida en Carnívora\",\n     label = rownames(mordida_N))"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#metodología-volumétrica-3d-lautenschlager",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#metodología-volumétrica-3d-lautenschlager",
+    "title": "Paleontología Virtual",
+    "section": "Metodología Volumétrica 3D (Lautenschlager)",
+    "text": "Metodología Volumétrica 3D (Lautenschlager)\n\n\nReconstrucción muscular digital\n\nEn contraste con métodos clásicos bidimensionales, la obra de Lautenschlager estandariza el uso de modelos 3D para la estimación de la apertura mandibular máxima\nModelado de cilindros: Utilizando software como Blender, los músculos aductores se modelan como primitivas geométricas (cilindros) entre orígenes e inserciones.\nEste método se basa en estimar el crecimiento relativo de los músculos aductores conforme la mandíbula se abre\n\n\n\n\n\nApertura máxima estimada bajo rangos de tensión fisiológica óptima"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#implementación-mufis-en-blender",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#implementación-mufis-en-blender",
+    "title": "Paleontología Virtual",
+    "section": "Implementación MUFIS en Blender",
+    "text": "Implementación MUFIS en Blender\n\n\nIntegración Dual Biomecánica\n\nInicialmente los flujos 3D eran puramente visuales o requerían scripting manual. De ahí surge MUFIS (Muscle Fiber Simulator).\nUnifica dos métodos fundamentales:\n\nEl método de Lautenschlager (2015) para evaluar y simular el factor de estiramiento y apertura mandibular máxima en la cinemática.\nEl método de Hartstone-Rose et al. (2012) para estimar la fuerza de mordida real basada en el área seccional (PCSA) y los brazos de momento funcional.\n\nCalcula paramétricamente la fuerza isotrópica generada por cada cilindro muscular activo.\n\n\n\n\n\nSimulación de la apertura mandibular máxima en terópodos"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#metodología-de-lautenschlager",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#metodología-de-lautenschlager",
+    "title": "Paleontología Virtual",
+    "section": "Metodología de Lautenschlager",
+    "text": "Metodología de Lautenschlager\n\n\nReconstrucción muscular digital\n\nEn contraste con métodos clásicos bidimensionales, la obra de Lautenschlager estandariza el uso de modelos 3D para la estimación de la apertura mandibular máxima\nModelado de cilindros: Utilizando software como Blender, los músculos aductores se modelan como primitivas geométricas (cilindros) entre orígenes e inserciones.\nEste método se basa en estimar el crecimiento relativo de los músculos aductores conforme la mandíbula se abre\n\n\n\n\n\nApertura máxima estimada bajo rangos de tensión fisiológica óptima"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#introducción-a-la-estimación-de-apertura-mandibular",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#introducción-a-la-estimación-de-apertura-mandibular",
+    "title": "Paleontología Virtual",
+    "section": "Introducción a la Estimación de apertura mandibular",
+    "text": "Introducción a la Estimación de apertura mandibular\n\n\nModelando la función mandibular\n\nEl rendimiento de la mordida, la cinemática de las mandíbulas y la tensión mecánica en animales extintos se analizan mediante simulaciones computacionales como el Análisis de Dinámica Multicuerpo (MDA) o FEA.\nReconstrucción previa: Para estas estimaciones, es indispensable reconstruir la musculatura craneal (ej. los músculos aductores).\n\n\n\n\n\nApertura mandibular máxima en terópodos"
+  },
+  {
+    "objectID": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#metodología-de-lautenschlager-gape",
+    "href": "curso-paleo-virtual/07-estimacion-mordida-morfometria.html#metodología-de-lautenschlager-gape",
+    "title": "Paleontología Virtual",
+    "section": "Metodología de Lautenschlager (Gape)",
+    "text": "Metodología de Lautenschlager (Gape)\n\n\nEstimación de Apertura Mandibular\n\nLa metodología de Stephan Lautenschlager se centra en calcular la apertura mandibular máxima (gape) a través de los límites de deformación muscular.\nModelado de cilindros: Utilizando modelos 3D en Blender, los músculos aductores se modelan como primitivas (cilindros) anclados entre orígenes e inserciones.\nMidiendo el estiramiento (strain) relativo conforme la mandíbula se abre, determina el límite de tensión óptimo y máximo fisiológico antes del desgarro (ej. 130%-170%).\n\n\n\n\n\nApertura máxima estimada bajo rangos de tensión fisiológica óptima"
   }
 ]
