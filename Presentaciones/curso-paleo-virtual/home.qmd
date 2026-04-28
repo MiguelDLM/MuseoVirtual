@@ -101,7 +101,7 @@ Proporcionar una introducción a las técnicas y tecnologías digitales para la 
 
 | Día | Temas Principales | Horas (S/A) |
 |:---:|:---|:---:|
-| **Lunes** | **Día 7: Morfometría y Cierre del Curso**<br>Análisis de fuerzas de mordida y Morfometría Geométrica. | 3h (S) |
+| **Lunes** | [**Día 7: Morfometría Geométrica y Estimación de Mordida Máxima**](07-estimacion-mordida-morfometria.qmd)<br>GMM, GPA, PCA, PLS y estimación de fuerza de mordida en carnívoros extintos. | 3h (S) |
 
 *(S) Sesiones Síncronas (6pm - 9pm) | (A) Trabajo Asíncrono*
 

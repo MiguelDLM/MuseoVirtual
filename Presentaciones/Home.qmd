@@ -335,6 +335,26 @@ format:
                 <span style="color: #2A7D8C; font-size: 1rem; flex-shrink: 0;">→</span>
               </a>
 
+              <!-- Día 7 — disponible -->
+              <a href="curso-paleo-virtual/07-estimacion-mordida-morfometria.qmd"
+                 style="display: flex; align-items: center; gap: 14px; padding: 13px 16px;
+                        background: #f8f9fa; border-radius: 9px; text-decoration: none;
+                        border-left: 3px solid #2A7D8C;">
+                <span style="background: #2A7D8C; color: white; border-radius: 50%;
+                             width: 30px; height: 30px; display: flex; align-items: center;
+                             justify-content: center; font-size: 0.78rem; font-weight: 700;
+                             flex-shrink: 0;">7</span>
+                <div style="flex: 1;">
+                  <div style="color: #1E2B3A; font-weight: 600; font-size: 0.9rem;">
+                    Día 7: Morfometría Geométrica y Estimación de Mordida Máxima
+                  </div>
+                  <div style="color: #888; font-size: 0.78rem; margin-top: 3px;">
+                    GMM, GPA, PCA, PLS y estimación de fuerza de mordida en carnívoros extintos
+                  </div>
+                </div>
+                <span style="color: #2A7D8C; font-size: 1rem; flex-shrink: 0;">→</span>
+              </a>
+
             </div>
           </div>
         </div>
